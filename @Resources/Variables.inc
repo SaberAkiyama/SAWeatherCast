@@ -1,0 +1,3 @@
+[Variables]
+
+SunToggle=0
