@@ -1,2 +1,2 @@
-# sa-weather-cast
+# SA Weather Cast
 A weather skin with a full transparent background
