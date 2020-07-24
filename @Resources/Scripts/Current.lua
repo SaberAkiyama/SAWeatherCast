@@ -2,27 +2,8 @@
 --; Lua Weather Current
 --; ==================================================
 
-connSelect = {
-	["No Internet"] = {
-		connAction = "Connect to internet and try again."
-	},
-	["Internet"] = {
-		connAction = "Try again in a couple seconds."
-	}
-}
-
-function connInternet(selectedConnect)
-	SKIN:Bang('!Log "' .. connSelect[selectedConnect]['connAction'] .. '" Error')
-
-end
-
-function errorCurrent()
-	SKIN:Bang('!Log "No connection or timeout" Error')
-
-end
-
 function updateCurrent()
-	SKIN:Bang('!UpdateMeasure MeasureCurrentLocation')
+	SKIN:Bang('!UpdateMeasure MeasureCurrent')
 
 	SKIN:Bang('!Log "Retrieving..."')
 	SKIN:Bang('!HideMeter MeterCurrentIcon')
@@ -40,7 +21,7 @@ function updateCurrent()
 	SKIN:Bang('!HideMeter MeterCurrentTemperature')
 	SKIN:Bang('!HideMeter MeterCurrentCondition')
 	SKIN:Bang('!HideMeter MeterCurrentFeelsLike')
-	SKIN:Bang('!HideMeter MeterCurrentLocation')
+	SKIN:Bang('!HideMeter MeterCurrentValidTimeLocation')
 	SKIN:Bang('!HideMeter MeterCurrentTemperatureMaxMin')
 	SKIN:Bang('!HideMeter MeterCurrentSunrise')
 	SKIN:Bang('!HideMeter MeterCurrentSunset')
@@ -53,6 +34,7 @@ function updateCurrent()
 	SKIN:Bang('!HideMeter MeterCurrentVisibility')
 	SKIN:Bang('!HideMeter MeterCurrentMoonPhase')
 
+	SKIN:Bang('!DisableMeasure MeasureCurrentTime')
 	SKIN:Bang('!DisableMeasure MeasureCountry')
 	SKIN:Bang('!DisableMeasure MeasureCity')
 	SKIN:Bang('!DisableMeasure MeasureCurrentIcon')
@@ -74,8 +56,8 @@ function updateCurrent()
 	SKIN:Bang('!DisableMeasure MeasureCurrentFeelsLikeF')
 	SKIN:Bang('!DisableMeasure MeasureCurrentFeelsLikeC')
 	SKIN:Bang('!DisableMeasure MeasureCurrentUVIndex')
---;	SKIN:Bang('!DisableMeasure MeasureCurrentValidTime24H')
---;	SKIN:Bang('!DisableMeasure MeasureCurrentValidTime12H')
+	SKIN:Bang('!DisableMeasure MeasureCurrentValidTime24H')
+	SKIN:Bang('!DisableMeasure MeasureCurrentValidTime12H')
 	SKIN:Bang('!DisableMeasure MeasureCurrentVisibility')
 	SKIN:Bang('!DisableMeasure MeasureCurrentVisibilityMi')
 	SKIN:Bang('!DisableMeasure MeasureCurrentVisibilityKm')
@@ -120,7 +102,7 @@ function finishCurrent()
 	SKIN:Bang('!ShowMeter MeterCurrentCondition')
 	SKIN:Bang('!ShowMeter MeterCurrentFeelsLike')
 	SKIN:Bang('!ShowMeter MeterCurrentTemperatureMaxMin')
-	SKIN:Bang('!ShowMeter MeterCurrentLocation')
+	SKIN:Bang('!ShowMeter MeterCurrentValidTimeLocation')
 	SKIN:Bang('!ShowMeter MeterCurrentSunrise')
 	SKIN:Bang('!ShowMeter MeterCurrentSunset')
 	SKIN:Bang('!ShowMeter MeterCurrentWindCardinal')
@@ -132,6 +114,7 @@ function finishCurrent()
 	SKIN:Bang('!ShowMeter MeterCurrentVisibility')
 	SKIN:Bang('!ShowMeter MeterCurrentMoonPhase')
 	
+	SKIN:Bang('!EnableMeasure MeasureCurrentTime')
 	SKIN:Bang('!EnableMeasure MeasureCountry')
 	SKIN:Bang('!EnableMeasure MeasureCity')
 	SKIN:Bang('!EnableMeasure MeasureCurrentIcon')
@@ -153,8 +136,8 @@ function finishCurrent()
 	SKIN:Bang('!EnableMeasure MeasureCurrentFeelsLikeF')
 	SKIN:Bang('!EnableMeasure MeasureCurrentFeelsLikeC')
 	SKIN:Bang('!EnableMeasure MeasureCurrentUVIndex')
---;	SKIN:Bang('!EnableMeasure MeasureCurrentValidTime24H')
---;	SKIN:Bang('!EnableMeasure MeasureCurrentValidTime12H')
+	SKIN:Bang('!EnableMeasure MeasureCurrentValidTime24H')
+	SKIN:Bang('!EnableMeasure MeasureCurrentValidTime12H')
 	SKIN:Bang('!EnableMeasure MeasureCurrentVisibility')
 	SKIN:Bang('!EnableMeasure MeasureCurrentVisibilityMi')
 	SKIN:Bang('!EnableMeasure MeasureCurrentVisibilityKm')
@@ -183,31 +166,54 @@ function finishCurrent()
 
 end
 
+hoverSelect = {
+	["Location"] = {
+		metStyle = "WeatherCurrentLocStyle",
+		measAction1 = "MeasureCity",
+		measAction2 = "MeasureCountry",
+		metText = "%1, %2"
+	},
+	["Valid"] = {
+		metStyle = "WeatherCurrentValidStyle",
+		measAction1 = "MeasureCurrentValidTime12H",
+		measAction2 = "",
+		metText = "Updated at %1"
+	}
+}	
+
+function setAction(selectedText)
+	SKIN:Bang('!SetOption MeterCurrentValidTimeLocation MeterStyle "' .. hoverSelect[selectedText]['metStyle'] .. '"')
+	SKIN:Bang('!SetOption MeterCurrentValidTimeLocation MeasureName "' .. hoverSelect[selectedText]['measAction1'] .. '"')
+	SKIN:Bang('!SetOption MeterCurrentValidTimeLocation MeasureName2 "' .. hoverSelect[selectedText]['measAction2'] .. '"')
+	SKIN:Bang('!SetOption MeterCurrentValidTimeLocation Text "' .. hoverSelect[selectedText]['metText'] .. '"')
+
+end
+
 currentTime = {
 	["12 Hours"] = {
 		measSunrise = "MeasureCurrentSunrise12H",
 		measSunset = "MeasureCurrentSunset12H",
---;		measValid = "MeasureCurrentValidTime12H",
+		measValid = "MeasureCurrentValidTime12H",
 		coreSMTime = "12H",
 		varSMToggle = "0"
 	},
 	["24 Hours"] = {
 		measSunrise = "MeasureCurrentSunrise24H",
 		measSunset = "MeasureCurrentSunset24H",
---;		measValid = "MeasureCurrentValidTime24H",
+		measValid = "MeasureCurrentValidTime24H",
 		coreSMTime = "24H",
 		varSMToggle = "1"
 	}
 }
 
-function setCurrentSun(selectedTime)
-	SKIN:Bang('!SetVariable CurrentSunTime "' .. currentTime[selectedTime]['coreSMTime'] .. '" "#CoreFilePath#"')
-	SKIN:Bang('!WriteKeyValue Variables SunToggle "' .. currentTime[selectedTime]['varSMToggle'] .. '" "#@#Variables.inc"')
+function setCurrent(selectedTime)
+	SKIN:Bang('!SetVariable CurrentTime "' .. currentTime[selectedTime]['coreSMTime'] .. '" "#CoreFilePath#"')
+	SKIN:Bang('!WriteKeyValue Variables CurrentToggle "' .. currentTime[selectedTime]['varSMToggle'] .. '" "#@#Variables.inc"')
 
 	SKIN:Bang('!SetOption MeterCurrentSunrise MeasureName "' .. currentTime[selectedTime]['measSunrise'] .. '"')
 	SKIN:Bang('!SetOption MeterCurrentSunset MeasureName "' .. currentTime[selectedTime]['measSunset'] .. '"')
---;	SKIN:Bang('!SetOption MeterCurrentSunset MeasureName "' .. currentTime[selectedTime]['measSunset'] .. '"')
+	SKIN:Bang('!SetOption MeterCurrentValidTime MeasureName "' .. currentTime[selectedTime]['measValid'] .. '"')
 
 	SKIN:Bang('!UpdateMeterGroup WeatherCurrentMeter')
-	
+
 end

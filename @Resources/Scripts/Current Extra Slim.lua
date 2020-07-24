@@ -1,28 +1,9 @@
 --; ==================================================
---; Lua Weather Current
+--; Lua Weather Current Extra Slim
 --; ==================================================
 
-connSelect = {
-	["No Internet"] = {
-		connAction = "Connect to internet and try again."
-	},
-	["Internet"] = {
-		connAction = "Try again in a couple seconds."
-	}
-}
-
-function connInternet(selectedConnect)
-	SKIN:Bang('!Log "' .. connSelect[selectedConnect]['connAction'] .. '" Error')
-
-end
-
-function errorCurrent()
-	SKIN:Bang('!Log "No connection or timeout" Error')
-
-end
-
 function updateCurrent()
-	SKIN:Bang('!UpdateMeasure MeasureCurrentLocation')
+	SKIN:Bang('!UpdateMeasure MeasureCurrent')
 
 	SKIN:Bang('!Log "Retrieving..."')
 	SKIN:Bang('!HideMeter MeterCurrentIcon')
