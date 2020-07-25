@@ -1,20 +1,20 @@
 {
-	"name": "SAWeatherCast",
-	"version": "0.2.0-alpha",
-	"main": "plugins.index.js",
-	"description": "A weather skin with a full transparent background",
-	"scripts": {
-		"test": "lab -c"
-	},
-	"repository": {
-	"type": "git",
-	"url": "https://github.com/SaberAkiyama/SAWeatherCast"
-	},
-	"keywords": [
-		"weather",
-		"weather-cast"
-	],
-	"author": "Saber Akiyama",
-	"license": "CC0-1.0",
-	}
+  "name": "SAWeatherCast",
+  "version": "0.2.0",
+  "description": "A weather skin with a full transparent background",
+  "main": "plugin/index.js",
+  "scripts": {
+    "test": "lab -c"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SaberAkiyama/SAWeatherCast"
+  },
+  "keywords": [
+    "weather",
+    "weather-cast"
+  ],
+  "author": "Saber Akiyama",
+  "license": "CC0-1.0",
+  }
 }
