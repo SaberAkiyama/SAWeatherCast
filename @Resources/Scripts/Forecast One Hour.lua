@@ -5,15 +5,15 @@
 function updateOneHour()
 	SKIN:Bang('!UpdateMeasure MeasureOneHourForecast')
 
-	SKIN:Bang('!Log "Retrieving Forecast..."')
+	SKIN:Bang('!Log "Retrieving Hour Forecast..."')
 	SKIN:Bang('!HideMeter MeterOneHourIcon')
 	SKIN:Bang('!HideMeter MeterFeelsLikeImage')
 	SKIN:Bang('!HideMeter MeterWindImage')
 	SKIN:Bang('!HideMeter MeterHumidityImage')
 	SKIN:Bang('!HideMeter MeterUVImage')
 	
-	SKIN:Bang('!HideMeter MeterOneHourTemperature')
 	SKIN:Bang('!HideMeter MeterOneHourValidTime')
+	SKIN:Bang('!HideMeter MeterOneHourTemperature')
 	SKIN:Bang('!HideMeter MeterOneHourCondition')
 	SKIN:Bang('!HideMeter MeterOneHourFeelsLikeText')
 	SKIN:Bang('!HideMeter MeterOneHourFeelsLike')
@@ -24,6 +24,7 @@ function updateOneHour()
 	SKIN:Bang('!HideMeter MeterOneHourUVIndexText')
 	SKIN:Bang('!HideMeter MeterOneHourUVIndex')
 
+	SKIN:Bang('!DisableMeasure MeasureOneHourForecastTime')
 	SKIN:Bang('!DisableMeasure MeasureOneHourIcon')
 	SKIN:Bang('!DisableMeasure MeasureOneHourPrecipitation')
 	SKIN:Bang('!DisableMeasure MeasureOneHourHumidity')
@@ -53,15 +54,15 @@ function updateOneHour()
 end
 
 function finishOneHour()
-	SKIN:Bang('!Log "Retrieved"')
+	SKIN:Bang('!Log "Retrieved Hour Forecast"')
 	SKIN:Bang('!ShowMeter MeterOneHourIcon')
 	SKIN:Bang('!ShowMeter MeterFeelsLikeImage')
 	SKIN:Bang('!ShowMeter MeterWindImage')
 	SKIN:Bang('!ShowMeter MeterHumidityImage')
 	SKIN:Bang('!ShowMeter MeterUVImage')
 	
-	SKIN:Bang('!ShowMeter MeterOneHourTemperature')
 	SKIN:Bang('!ShowMeter MeterOneHourValidTime')
+	SKIN:Bang('!ShowMeter MeterOneHourTemperature')
 	SKIN:Bang('!ShowMeter MeterOneHourCondition')
 	SKIN:Bang('!ShowMeter MeterOneHourFeelsLikeText')
 	SKIN:Bang('!ShowMeter MeterOneHourFeelsLike')
@@ -99,6 +100,20 @@ function finishOneHour()
 	SKIN:Bang('!EnableMeasure MeasureOneHourUVIndexText')
 
 	SKIN:Bang('!UpdateMeter *')
+
+end
+
+function scaleUpOneHour()
+	SKIN:Bang('!WriteKeyValue Variables OneHourScale "(#OneHourScale#+#ScrollMouseIncrement#)" "#@#Variables.inc"')
+	SKIN:Bang('!SetVariable OneHourScale "(#OneHourScale#+#ScrollMouseIncrement#)" "#CoreFilePath#"')
+	SKIN:Bang('!UpdateMeterGroup OneHourGroup')
+	
+end
+
+function scaleDownOneHour()
+	SKIN:Bang('!WriteKeyValue Variables OneHourScale "(#OneHourScale#-#ScrollMouseIncrement# < 0.5 ? 0.5 : #OneHourScale#-#ScrollMouseIncrement#)" "#@#Variables.inc"')
+	SKIN:Bang('!SetVariable OneHourScale "(#OneHourScale#-#ScrollMouseIncrement# < 0.5 ? 0.5 : #OneHourScale#-#ScrollMouseIncrement#)" "#CoreFilePath#"')
+	SKIN:Bang('!UpdateMeterGroup OneHourGroup')
 
 end
 

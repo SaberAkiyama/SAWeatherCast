@@ -5,7 +5,7 @@
 function updateSixHour()
 	SKIN:Bang('!UpdateMeasure MeasureSixHourForecast')
 
-	SKIN:Bang('!Log "Retrieving Forecast..."')
+	SKIN:Bang('!Log "Retrieving Hour Forecast..."')
 	SKIN:Bang('!HideMeter MeterIconHour1')
 	SKIN:Bang('!HideMeter MeterIconHour2')
 	SKIN:Bang('!HideMeter MeterIconHour3')
@@ -37,12 +37,6 @@ function updateSixHour()
 	SKIN:Bang('!HideMeter MeterValidTimeHour4')
 	SKIN:Bang('!HideMeter MeterValidTimeHour5')
 	SKIN:Bang('!HideMeter MeterValidTimeHour6')
-	SKIN:Bang('!HideMeter MeterConditionHour1')
-	SKIN:Bang('!HideMeter MeterConditionHour2')
-	SKIN:Bang('!HideMeter MeterConditionHour3')
-	SKIN:Bang('!HideMeter MeterConditionHour4')
-	SKIN:Bang('!HideMeter MeterConditionHour5')
-	SKIN:Bang('!HideMeter MeterConditionHour6')
 	SKIN:Bang('!HideMeter MeterPrecipitationHour1')
 	SKIN:Bang('!HideMeter MeterPrecipitationHour2')
 	SKIN:Bang('!HideMeter MeterPrecipitationHour3')
@@ -56,6 +50,7 @@ function updateSixHour()
 	SKIN:Bang('!HideMeter MeterWindCardinalSpeedHour5')
 	SKIN:Bang('!HideMeter MeterWindCardinalSpeedHour6')
 
+	SKIN:Bang('!DisableMeasure MeasureSixHourTime')
 	SKIN:Bang('!DisableMeasure MeasureIconHour1')
 	SKIN:Bang('!DisableMeasure MeasureIconHour2')
 	SKIN:Bang('!DisableMeasure MeasureIconHour3')
@@ -134,7 +129,7 @@ function updateSixHour()
 end
 
 function finishSixHour()
-	SKIN:Bang('!Log "Retrieved Forecast"')
+	SKIN:Bang('!Log "Retrieved Hour Forecast"')
 	SKIN:Bang('!ShowMeter MeterIconHour1')
 	SKIN:Bang('!ShowMeter MeterIconHour2')
 	SKIN:Bang('!ShowMeter MeterIconHour3')
@@ -166,12 +161,6 @@ function finishSixHour()
 	SKIN:Bang('!ShowMeter MeterValidTimeHour4')
 	SKIN:Bang('!ShowMeter MeterValidTimeHour5')
 	SKIN:Bang('!ShowMeter MeterValidTimeHour6')
-	SKIN:Bang('!ShowMeter MeterConditionHour1')
-	SKIN:Bang('!ShowMeter MeterConditionHour2')
-	SKIN:Bang('!ShowMeter MeterConditionHour3')
-	SKIN:Bang('!ShowMeter MeterConditionHour4')
-	SKIN:Bang('!ShowMeter MeterConditionHour5')
-	SKIN:Bang('!ShowMeter MeterConditionHour6')
 	SKIN:Bang('!ShowMeter MeterPrecipitationHour1')
 	SKIN:Bang('!ShowMeter MeterPrecipitationHour2')
 	SKIN:Bang('!ShowMeter MeterPrecipitationHour3')
@@ -261,6 +250,20 @@ function finishSixHour()
 	SKIN:Bang('!EnableMeasure MeasureWindKmhSixHour')
 	
 	SKIN:Bang('!UpdateMeter *')
+
+end
+
+function scaleUpSixHour()
+	SKIN:Bang('!WriteKeyValue Variables SixHourScale "(#SixHourScale#+#ScrollMouseIncrement#)" "#@#Variables.inc"')
+	SKIN:Bang('!SetVariable SixHourScale "(#SixHourScale#+#ScrollMouseIncrement#)" "#CoreFilePath#"')
+	SKIN:Bang('!UpdateMeterGroup SixHourGroup')
+	
+end
+
+function scaleDownSixHour()
+	SKIN:Bang('!WriteKeyValue Variables SixHourScale "(#SixHourScale#-#ScrollMouseIncrement# < 0.5 ? 0.5 : #SixHourScale#-#ScrollMouseIncrement#)" "#@#Variables.inc"')
+	SKIN:Bang('!SetVariable SixHourScale "(#SixHourScale#-#ScrollMouseIncrement# < 0.5 ? 0.5 : #SixHourScale#-#ScrollMouseIncrement#)" "#CoreFilePath#"')
+	SKIN:Bang('!UpdateMeterGroup SixHourGroup')
 
 end
 

@@ -5,7 +5,7 @@
 function updateCurrent()
 	SKIN:Bang('!UpdateMeasure MeasureCurrent')
 
-	SKIN:Bang('!Log "Retrieving..."')
+	SKIN:Bang('!Log "Retrieving Current..."')
 	SKIN:Bang('!HideMeter MeterCurrentIcon')
 	SKIN:Bang('!HideMeter MeterTemperatureMaxMinImage')
 	SKIN:Bang('!HideMeter MeterSunriseImage')
@@ -25,8 +25,7 @@ function updateCurrent()
 	SKIN:Bang('!HideMeter MeterCurrentTemperatureMaxMin')
 	SKIN:Bang('!HideMeter MeterCurrentSunrise')
 	SKIN:Bang('!HideMeter MeterCurrentSunset')
-	SKIN:Bang('!HideMeter MeterCurrentWindCardinal')
-	SKIN:Bang('!HideMeter MeterCurrentWindSpeed')
+	SKIN:Bang('!HideMeter MeterCurrentWindCardinalSpeed')
 	SKIN:Bang('!HideMeter MeterCurrentHumidity')
 	SKIN:Bang('!HideMeter MeterCurrentDewPoint')
 	SKIN:Bang('!HideMeter MeterCurrentPressure')
@@ -85,7 +84,7 @@ function updateCurrent()
 end
 
 function finishCurrent()
-	SKIN:Bang('!Log "Retrieved"')
+	SKIN:Bang('!Log "Current Retrieved"')
 	SKIN:Bang('!ShowMeter MeterCurrentIcon')
 	SKIN:Bang('!ShowMeter MeterTemperatureMaxMinImage')
 	SKIN:Bang('!ShowMeter MeterSunriseImage')
@@ -105,8 +104,7 @@ function finishCurrent()
 	SKIN:Bang('!ShowMeter MeterCurrentValidTimeLocation')
 	SKIN:Bang('!ShowMeter MeterCurrentSunrise')
 	SKIN:Bang('!ShowMeter MeterCurrentSunset')
-	SKIN:Bang('!ShowMeter MeterCurrentWindCardinal')
-	SKIN:Bang('!ShowMeter MeterCurrentWindSpeed')
+	SKIN:Bang('!ShowMeter MeterCurrentWindCardinalSpeed')
 	SKIN:Bang('!ShowMeter MeterCurrentHumidity')
 	SKIN:Bang('!ShowMeter MeterCurrentDewPoint')
 	SKIN:Bang('!ShowMeter MeterCurrentPressure')
@@ -166,23 +164,34 @@ function finishCurrent()
 
 end
 
+function scaleUpCurrent()
+	SKIN:Bang('!WriteKeyValue Variables CurrentScale "(#CurrentScale#+#ScrollMouseIncrement#)" "#@#Variables.inc"')
+	SKIN:Bang('!SetVariable CurrentScale "(#CurrentScale#+#ScrollMouseIncrement#)" "#CoreFilePath#"')
+	SKIN:Bang('!UpdateMeterGroup CurrentGroup')
+	
+end
+
+function scaleDownCurrent()
+	SKIN:Bang('!WriteKeyValue Variables CurrentScale "(#CurrentScale#-#ScrollMouseIncrement# < 0.5 ? 0.5 : #CurrentScale#-#ScrollMouseIncrement#)" "#@#Variables.inc"')
+	SKIN:Bang('!SetVariable CurrentScale "(#CurrentScale#-#ScrollMouseIncrement# < 0.5 ? 0.5 : #CurrentScale#-#ScrollMouseIncrement#)" "#CoreFilePath#"')
+	SKIN:Bang('!UpdateMeterGroup CurrentGroup')
+
+end
+
 hoverSelect = {
 	["Location"] = {
-		metStyle = "WeatherCurrentLocStyle",
 		measAction1 = "MeasureCity",
 		measAction2 = "MeasureCountry",
 		metText = "%1, %2"
 	},
 	["Valid"] = {
-		metStyle = "WeatherCurrentValidStyle",
 		measAction1 = "MeasureCurrentValidTime12H",
 		measAction2 = "",
 		metText = "Updated at %1"
 	}
 }	
 
-function setAction(selectedText)
-	SKIN:Bang('!SetOption MeterCurrentValidTimeLocation MeterStyle "' .. hoverSelect[selectedText]['metStyle'] .. '"')
+function setHover(selectedText)
 	SKIN:Bang('!SetOption MeterCurrentValidTimeLocation MeasureName "' .. hoverSelect[selectedText]['measAction1'] .. '"')
 	SKIN:Bang('!SetOption MeterCurrentValidTimeLocation MeasureName2 "' .. hoverSelect[selectedText]['measAction2'] .. '"')
 	SKIN:Bang('!SetOption MeterCurrentValidTimeLocation Text "' .. hoverSelect[selectedText]['metText'] .. '"')
