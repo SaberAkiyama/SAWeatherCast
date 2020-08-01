@@ -33,7 +33,7 @@ function updateCurrent()
 	SKIN:Bang('!HideMeter MeterCurrentVisibility')
 	SKIN:Bang('!HideMeter MeterCurrentMoonPhase')
 
-	SKIN:Bang('!DisableMeasure MeasureCurrentTime')
+	SKIN:Bang('!DisableMeasure MeasureCurrentUnits')
 	SKIN:Bang('!DisableMeasure MeasureCountry')
 	SKIN:Bang('!DisableMeasure MeasureCity')
 	SKIN:Bang('!DisableMeasure MeasureCurrentIcon')
@@ -65,19 +65,20 @@ function updateCurrent()
 	SKIN:Bang('!DisableMeasure MeasureCurrentWindSpeedMph')
 	SKIN:Bang('!DisableMeasure MeasureCurrentWindSpeedKmh')
 	SKIN:Bang('!DisableMeasure MeasureCurrentCondition')
+	SKIN:Bang('!DisableMeasure MeasureCurrentMoonPhase')
 	SKIN:Bang('!DisableMeasure MeasureCurrentTempMax')
 	SKIN:Bang('!DisableMeasure MeasureCurrentTempMaxF')
 	SKIN:Bang('!DisableMeasure MeasureCurrentTempMaxC')
 	SKIN:Bang('!DisableMeasure MeasureCurrentTempMin')
 	SKIN:Bang('!DisableMeasure MeasureCurrentTempMinF')
 	SKIN:Bang('!DisableMeasure MeasureCurrentTempMinC')
-	SKIN:Bang('!DisableMeasure MeasureCurrentMoonPhase')
 	SKIN:Bang('!DisableMeasure MeasureCurrentWindMph')
 	SKIN:Bang('!DisableMeasure MeasureCurrentWindKmh')
 	SKIN:Bang('!DisableMeasure MeasureCurrentPressMb')
 	SKIN:Bang('!DisableMeasure MeasureCurrentPressIn')
 	SKIN:Bang('!DisableMeasure MeasureCurrentVisMi')
 	SKIN:Bang('!DisableMeasure MeasureCurrentVisKm')
+	SKIN:Bang('!DisableMeasure MeasureCurrentUVOf')
 	SKIN:Bang('!DisableMeasure MeasureCurrentUVExtreme')
 	SKIN:Bang('!DisableMeasure MeasureCurrentFeelsLikeText')
 	
@@ -112,7 +113,7 @@ function finishCurrent()
 	SKIN:Bang('!ShowMeter MeterCurrentVisibility')
 	SKIN:Bang('!ShowMeter MeterCurrentMoonPhase')
 	
-	SKIN:Bang('!EnableMeasure MeasureCurrentTime')
+	SKIN:Bang('!EnableMeasure MeasureCurrentUnits')
 	SKIN:Bang('!EnableMeasure MeasureCountry')
 	SKIN:Bang('!EnableMeasure MeasureCity')
 	SKIN:Bang('!EnableMeasure MeasureCurrentIcon')
@@ -144,13 +145,13 @@ function finishCurrent()
 	SKIN:Bang('!EnableMeasure MeasureCurrentWindSpeedMph')
 	SKIN:Bang('!EnableMeasure MeasureCurrentWindSpeedKmh')
 	SKIN:Bang('!EnableMeasure MeasureCurrentCondition')
+	SKIN:Bang('!EnableMeasure MeasureCurrentMoonPhase')
 	SKIN:Bang('!EnableMeasure MeasureCurrentTempMax')
 	SKIN:Bang('!EnableMeasure MeasureCurrentTempMaxF')
 	SKIN:Bang('!EnableMeasure MeasureCurrentTempMaxC')
 	SKIN:Bang('!EnableMeasure MeasureCurrentTempMin')
 	SKIN:Bang('!EnableMeasure MeasureCurrentTempMinF')
 	SKIN:Bang('!EnableMeasure MeasureCurrentTempMinC')
-	SKIN:Bang('!EnableMeasure MeasureCurrentMoonPhase')
 	SKIN:Bang('!EnableMeasure MeasureCurrentFeelsLikeText')
 	SKIN:Bang('!EnableMeasure MeasureCurrentWindMph')
 	SKIN:Bang('!EnableMeasure MeasureCurrentWindKmh')
@@ -158,7 +159,9 @@ function finishCurrent()
 	SKIN:Bang('!EnableMeasure MeasureCurrentPressIn')
 	SKIN:Bang('!EnableMeasure MeasureCurrentVisMi')
 	SKIN:Bang('!EnableMeasure MeasureCurrentVisKm')
+	SKIN:Bang('!EnableMeasure MeasureCurrentUVOf')
 	SKIN:Bang('!EnableMeasure MeasureCurrentUVExtreme')
+	SKIN:Bang('!EnableMeasure MeasureCurrentFeelsLikeText')
 
 	SKIN:Bang('!UpdateMeter *')
 
@@ -195,34 +198,5 @@ function setHover(selectedText)
 	SKIN:Bang('!SetOption MeterCurrentValidTimeLocation MeasureName "' .. hoverSelect[selectedText]['measAction1'] .. '"')
 	SKIN:Bang('!SetOption MeterCurrentValidTimeLocation MeasureName2 "' .. hoverSelect[selectedText]['measAction2'] .. '"')
 	SKIN:Bang('!SetOption MeterCurrentValidTimeLocation Text "' .. hoverSelect[selectedText]['metText'] .. '"')
-
-end
-
-currentTime = {
-	["12 Hours"] = {
-		measSunrise = "MeasureCurrentSunrise12H",
-		measSunset = "MeasureCurrentSunset12H",
-		measValid = "MeasureCurrentValidTime12H",
-		coreSMTime = "12H",
-		varSMToggle = "0"
-	},
-	["24 Hours"] = {
-		measSunrise = "MeasureCurrentSunrise24H",
-		measSunset = "MeasureCurrentSunset24H",
-		measValid = "MeasureCurrentValidTime24H",
-		coreSMTime = "24H",
-		varSMToggle = "1"
-	}
-}
-
-function setCurrent(selectedTime)
-	SKIN:Bang('!SetVariable CurrentTime "' .. currentTime[selectedTime]['coreSMTime'] .. '" "#CoreFilePath#"')
-	SKIN:Bang('!WriteKeyValue Variables CurrentToggle "' .. currentTime[selectedTime]['varSMToggle'] .. '" "#@#Variables.inc"')
-
-	SKIN:Bang('!SetOption MeterCurrentSunrise MeasureName "' .. currentTime[selectedTime]['measSunrise'] .. '"')
-	SKIN:Bang('!SetOption MeterCurrentSunset MeasureName "' .. currentTime[selectedTime]['measSunset'] .. '"')
-	SKIN:Bang('!SetOption MeterCurrentValidTime MeasureName "' .. currentTime[selectedTime]['measValid'] .. '"')
-
-	SKIN:Bang('!UpdateMeterGroup WeatherCurrentMeter')
 
 end

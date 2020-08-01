@@ -50,7 +50,7 @@ function updateSixHour()
 	SKIN:Bang('!HideMeter MeterWindCardinalSpeedHour5')
 	SKIN:Bang('!HideMeter MeterWindCardinalSpeedHour6')
 
-	SKIN:Bang('!DisableMeasure MeasureSixHourTime')
+	SKIN:Bang('!DisableMeasure MeasureSixHourUnits')
 	SKIN:Bang('!DisableMeasure MeasureIconHour1')
 	SKIN:Bang('!DisableMeasure MeasureIconHour2')
 	SKIN:Bang('!DisableMeasure MeasureIconHour3')
@@ -174,6 +174,7 @@ function finishSixHour()
 	SKIN:Bang('!ShowMeter MeterWindCardinalSpeedHour5')
 	SKIN:Bang('!ShowMeter MeterWindCardinalSpeedHour6')
 
+	SKIN:Bang('!EnableMeasure MeasureSixHourUnits')
 	SKIN:Bang('!EnableMeasure MeasureIconHour1')
 	SKIN:Bang('!EnableMeasure MeasureIconHour2')
 	SKIN:Bang('!EnableMeasure MeasureIconHour3')
@@ -265,32 +266,4 @@ function scaleDownSixHour()
 	SKIN:Bang('!SetVariable SixHourScale "(#SixHourScale#-#ScrollMouseIncrement# < 0.5 ? 0.5 : #SixHourScale#-#ScrollMouseIncrement#)" "#CoreFilePath#"')
 	SKIN:Bang('!UpdateMeterGroup SixHourGroup')
 
-end
-
-sixhourTime = {
-	["12 Hours"] = {
-		measValid = "MeasureValidTime12H",
-		coreSHTime = "12H",
-		varSHToggle = "0"
-	},
-	["24 Hours"] = {
-		measValid = "MeasureValidTime24H",
-		coreSHTime = "24H",
-		varSHToggle = "1"
-	}
-}
-
-function setSixHour(selectedTime)
-	SKIN:Bang('!SetVariable SixHourTime "' .. sixhourTime[selectedTime]['coreSHTime'] .. '" "#CoreFilePath#"')
-	SKIN:Bang('!WriteKeyValue Variables SixHourToggle "' .. sixhourTime[selectedTime]['varSHToggle'] .. '" "#@#Variables.inc"')
-
-	SKIN:Bang('!SetOption MeterValidTimeHour1 MeasureName "' .. sixhourTime[selectedTime]['measValid'] .. 'Hour1"')
-	SKIN:Bang('!SetOption MeterValidTimeHour2 MeasureName "' .. sixhourTime[selectedTime]['measValid'] .. 'Hour2"')
-	SKIN:Bang('!SetOption MeterValidTimeHour3 MeasureName "' .. sixhourTime[selectedTime]['measValid'] .. 'Hour3"')
-	SKIN:Bang('!SetOption MeterValidTimeHour4 MeasureName "' .. sixhourTime[selectedTime]['measValid'] .. 'Hour4"')
-	SKIN:Bang('!SetOption MeterValidTimeHour5 MeasureName "' .. sixhourTime[selectedTime]['measValid'] .. 'Hour5"')
-	SKIN:Bang('!SetOption MeterValidTimeHour6 MeasureName "' .. sixhourTime[selectedTime]['measValid'] .. 'Hour6"')
-
-	SKIN:Bang('!UpdateMeterGroup WeatherSixHourMeter')
-	
 end
