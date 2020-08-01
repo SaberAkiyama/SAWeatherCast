@@ -24,7 +24,7 @@ function updateOneHour()
 	SKIN:Bang('!HideMeter MeterOneHourUVIndexText')
 	SKIN:Bang('!HideMeter MeterOneHourUVIndex')
 
-	SKIN:Bang('!DisableMeasure MeasureOneHourForecastTime')
+	SKIN:Bang('!DisableMeasure MeasureOneHourUnits')
 	SKIN:Bang('!DisableMeasure MeasureOneHourIcon')
 	SKIN:Bang('!DisableMeasure MeasureOneHourPrecipitation')
 	SKIN:Bang('!DisableMeasure MeasureOneHourHumidity')
@@ -73,6 +73,7 @@ function finishOneHour()
 	SKIN:Bang('!ShowMeter MeterOneHourUVIndexText')
 	SKIN:Bang('!ShowMeter MeterOneHourUVIndex')
 	
+	SKIN:Bang('!EnableMeasure MeasureOneHourUnits')
 	SKIN:Bang('!EnableMeasure MeasureOneHourIcon')
 	SKIN:Bang('!EnableMeasure MeasureOneHourPrecipitation')
 	SKIN:Bang('!EnableMeasure MeasureOneHourHumidity')
@@ -115,27 +116,4 @@ function scaleDownOneHour()
 	SKIN:Bang('!SetVariable OneHourScale "(#OneHourScale#-#ScrollMouseIncrement# < 0.5 ? 0.5 : #OneHourScale#-#ScrollMouseIncrement#)" "#CoreFilePath#"')
 	SKIN:Bang('!UpdateMeterGroup OneHourGroup')
 
-end
-
-onehourTime = {
-	["12 Hours"] = {
-		measValid = "MeasureOneHourValidTime12H",
-		coreOHTime = "12H",
-		varOHToggle = "0"
-	},
-	["24 Hours"] = {
-		measValid = "MeasureOneHourValidTime24H",
-		coreOHTime = "24H",
-		varOHToggle = "1"
-	}
-}
-
-function setOneHour(selectedTime)
-	SKIN:Bang('!SetVariable OneHourTime "' .. onehourTime[selectedTime]['coreOHTime'] .. '" "#CoreFilePath#"')
-	SKIN:Bang('!WriteKeyValue Variables OneHourToggle "' .. onehourTime[selectedTime]['varOHToggle'] .. '" "#@#Variables.inc"')
-
-	SKIN:Bang('!SetOption MeterOneHourValidTime MeasureName "' .. onehourTime[selectedTime]['measValid'] .. '"')
-
-	SKIN:Bang('!UpdateMeterGroup WeatherOneHourMeter')
-	
 end
