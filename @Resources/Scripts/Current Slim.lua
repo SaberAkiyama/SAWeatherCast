@@ -90,14 +90,14 @@ end
 
 function scaleUpCurrentSlim()
 	SKIN:Bang('!WriteKeyValue Variables CurrentSlimScale "(#CurrentSlimScale#+#ScrollMouseIncrement#)" "#@#Variables.inc"')
-	SKIN:Bang('!SetVariable CurrentSlimScale "(#CurrentSlimScale#+#ScrollMouseIncrement#)" "#CoreFilePath#"')
+	SKIN:Bang('!SetVariable CurrentSlimScale "(#CurrentSlimScale#+#ScrollMouseIncrement#)" "#CoreScaleFilePath#"')
 	SKIN:Bang('!UpdateMeterGroup CurrentSlimGroup')
 	
 end
 
 function scaleDownCurrentSlim()
 	SKIN:Bang('!WriteKeyValue Variables CurrentSlimScale "(#CurrentSlimScale#-#ScrollMouseIncrement# < 0.5 ? 0.5 : #CurrentSlimScale#-#ScrollMouseIncrement#)" "#@#Variables.inc"')
-	SKIN:Bang('!SetVariable CurrentSlimScale "(#CurrentSlimScale#-#ScrollMouseIncrement# < 0.5 ? 0.5 : #CurrentSlimScale#-#ScrollMouseIncrement#)" "#CoreFilePath#"')
+	SKIN:Bang('!SetVariable CurrentSlimScale "(#CurrentSlimScale#-#ScrollMouseIncrement# < 0.5 ? 0.5 : #CurrentSlimScale#-#ScrollMouseIncrement#)" "#CoreScaleFilePath#"')
 	SKIN:Bang('!UpdateMeterGroup CurrentGroup')
 
 end

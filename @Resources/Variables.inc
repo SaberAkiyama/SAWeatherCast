@@ -3,48 +3,57 @@
 CurrentToggle=1
 CurrentSlimToggle=1
 CurrentExtraSlimToggle=1
-OneHourToggle=0
-SixHourToggle=0
+OneHourToggle=1
+SixHourToggle=1
 OneDayToggle=1
 OneDaySlimToggle=1
 SevenDayToggle=1
 
 ; ====================================================================================================
 
-CurrentPress=Mb
 CurrentTemp=F
-CurrentTime=12H
-CurrentVis=Mi
 CurrentWind=Mph
+CurrentVis=Mi
+CurrentPress=Mb
 
 CurrentSlimTemp=F
-CurrentSlimVis=Mi
 CurrentSlimWind=Mph
+CurrentSlimVis=Mi
 
 CurrentExtraSlimTemp=F
 
 ; ====================================================================================================
 
-OneHourTime=12H
 OneHourTemp=F
 OneHourWind=Mph
 
-SixHourTime=24H
-SixHourTemp=C
-SixHourWind=Kmh
+SixHourTemp=F
+SixHourWind=Mph
 
 ; ====================================================================================================
 
 OneDayTemp=F
 OneDayWind=Mph
-OneDayTime=12H
 
 OneDaySlimTemp=F
 OneDaySlimWind=Mph
-OneDaySlimTime=12H
 
 SevenDayTemp=F
 SevenDayWind=Mph
+
+; ====================================================================================================
+
+CurrentTimeToggle=1
+OneHourTimeToggle=1
+SixHourTimeToggle=1
+OneDayTimeToggle=1
+OneDaySlimTimeToggle=1
+
+CurrentTime=12H
+OneHourTime=12H
+SixHourTime=12H
+OneDayTime=12H
+OneDaySlimTime=12H
 
 ; ====================================================================================================
 

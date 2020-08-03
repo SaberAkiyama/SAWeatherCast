@@ -106,14 +106,14 @@ end
 
 function scaleUpOneHour()
 	SKIN:Bang('!WriteKeyValue Variables OneHourScale "(#OneHourScale#+#ScrollMouseIncrement#)" "#@#Variables.inc"')
-	SKIN:Bang('!SetVariable OneHourScale "(#OneHourScale#+#ScrollMouseIncrement#)" "#CoreFilePath#"')
+	SKIN:Bang('!SetVariable OneHourScale "(#OneHourScale#+#ScrollMouseIncrement#)" "#CoreScaleFilePath#"')
 	SKIN:Bang('!UpdateMeterGroup OneHourGroup')
 	
 end
 
 function scaleDownOneHour()
 	SKIN:Bang('!WriteKeyValue Variables OneHourScale "(#OneHourScale#-#ScrollMouseIncrement# < 0.5 ? 0.5 : #OneHourScale#-#ScrollMouseIncrement#)" "#@#Variables.inc"')
-	SKIN:Bang('!SetVariable OneHourScale "(#OneHourScale#-#ScrollMouseIncrement# < 0.5 ? 0.5 : #OneHourScale#-#ScrollMouseIncrement#)" "#CoreFilePath#"')
+	SKIN:Bang('!SetVariable OneHourScale "(#OneHourScale#-#ScrollMouseIncrement# < 0.5 ? 0.5 : #OneHourScale#-#ScrollMouseIncrement#)" "#CoreScaleFilePath#"')
 	SKIN:Bang('!UpdateMeterGroup OneHourGroup')
 
 end

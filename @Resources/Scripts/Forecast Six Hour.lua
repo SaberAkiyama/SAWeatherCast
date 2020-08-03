@@ -256,14 +256,14 @@ end
 
 function scaleUpSixHour()
 	SKIN:Bang('!WriteKeyValue Variables SixHourScale "(#SixHourScale#+#ScrollMouseIncrement#)" "#@#Variables.inc"')
-	SKIN:Bang('!SetVariable SixHourScale "(#SixHourScale#+#ScrollMouseIncrement#)" "#CoreFilePath#"')
+	SKIN:Bang('!SetVariable SixHourScale "(#SixHourScale#+#ScrollMouseIncrement#)" "#CoreScaleFilePath#"')
 	SKIN:Bang('!UpdateMeterGroup SixHourGroup')
 	
 end
 
 function scaleDownSixHour()
 	SKIN:Bang('!WriteKeyValue Variables SixHourScale "(#SixHourScale#-#ScrollMouseIncrement# < 0.5 ? 0.5 : #SixHourScale#-#ScrollMouseIncrement#)" "#@#Variables.inc"')
-	SKIN:Bang('!SetVariable SixHourScale "(#SixHourScale#-#ScrollMouseIncrement# < 0.5 ? 0.5 : #SixHourScale#-#ScrollMouseIncrement#)" "#CoreFilePath#"')
+	SKIN:Bang('!SetVariable SixHourScale "(#SixHourScale#-#ScrollMouseIncrement# < 0.5 ? 0.5 : #SixHourScale#-#ScrollMouseIncrement#)" "#CoreScaleFilePath#"')
 	SKIN:Bang('!UpdateMeterGroup SixHourGroup')
 
 end

@@ -326,14 +326,14 @@ end
 
 function scaleUpSevenDay()
 	SKIN:Bang('!WriteKeyValue Variables SevenDayScale "(#SevenDayScale#+#ScrollMouseIncrement#)" "#@#Variables.inc"')
-	SKIN:Bang('!SetVariable SevenDayScale "(#SevenDayScale#+#ScrollMouseIncrement#)" "#CoreFilePath#"')
+	SKIN:Bang('!SetVariable SevenDayScale "(#SevenDayScale#+#ScrollMouseIncrement#)" "#CoreScaleFilePath#"')
 	SKIN:Bang('!UpdateMeterGroup SevenDayGroup')
 	
 end
 
 function scaleDownSevenDay()
 	SKIN:Bang('!WriteKeyValue Variables SevenDayScale "(#SevenDayScale#-#ScrollMouseIncrement# < 0.5 ? 0.5 : #SevenDayScale#-#ScrollMouseIncrement#)" "#@#Variables.inc"')
-	SKIN:Bang('!SetVariable SevenDayScale "(#SevenDayScale#-#ScrollMouseIncrement# < 0.5 ? 0.5 : #SevenDayScale#-#ScrollMouseIncrement#)" "#CoreFilePath#"')
+	SKIN:Bang('!SetVariable SevenDayScale "(#SevenDayScale#-#ScrollMouseIncrement# < 0.5 ? 0.5 : #SevenDayScale#-#ScrollMouseIncrement#)" "#CoreScaleFilePath#"')
 	SKIN:Bang('!UpdateMeterGroup SevenDayGroup')
 
 end

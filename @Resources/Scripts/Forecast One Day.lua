@@ -222,14 +222,14 @@ end
 
 function scaleUpOneDay()
 	SKIN:Bang('!WriteKeyValue Variables OneDayScale "(#OneDayScale#+#ScrollMouseIncrement#)" "#@#Variables.inc"')
-	SKIN:Bang('!SetVariable OneDayScale "(#OneDayScale#+#ScrollMouseIncrement#)" "#CoreFilePath#"')
+	SKIN:Bang('!SetVariable OneDayScale "(#OneDayScale#+#ScrollMouseIncrement#)" "#CoreScaleFilePath#"')
 	SKIN:Bang('!UpdateMeterGroup OneDayGroup')
 	
 end
 
 function scaleDownOneDay()
 	SKIN:Bang('!WriteKeyValue Variables OneDayScale "(#OneDayScale#-#ScrollMouseIncrement# < 0.5 ? 0.5 : #OneDayScale#-#ScrollMouseIncrement#)" "#@#Variables.inc"')
-	SKIN:Bang('!SetVariable OneDayScale "(#OneDayScale#-#ScrollMouseIncrement# < 0.5 ? 0.5 : #OneDayScale#-#ScrollMouseIncrement#)" "#CoreFilePath#"')
+	SKIN:Bang('!SetVariable OneDayScale "(#OneDayScale#-#ScrollMouseIncrement# < 0.5 ? 0.5 : #OneDayScale#-#ScrollMouseIncrement#)" "#CoreScaleFilePath#"')
 	SKIN:Bang('!UpdateMeterGroup OneDayGroup')
 
 end
@@ -249,6 +249,8 @@ function matchTonight()
 	SKIN:Bang('!SetOption MeterSunsetText MeasureName "MeasureOneDayMoonsetText"')
 	SKIN:Bang('!SetOption MeterSunset MeasureName "MeasureOneDayMoonset#OneDayTime#"')
 
+	SKIN:Bang('!UpdateMeterGroup WeatherOneDayMeter')
+
 end	
 
 function matchTomorrow()
@@ -265,5 +267,7 @@ function matchTomorrow()
 	SKIN:Bang('!SetOption MeterMoonsetImage ImageName "Sunset.png"')
 	SKIN:Bang('!SetOption MeterMoonsetText MeasureName "MeasureOneDaySunsetText"')
 	SKIN:Bang('!SetOption MeterMoonset MeasureName "MeasureOneDaySunset#OneDayTime#"')
+
+	SKIN:Bang('!UpdateMeterGroup WeatherOneDayMeter')
 	
 end	

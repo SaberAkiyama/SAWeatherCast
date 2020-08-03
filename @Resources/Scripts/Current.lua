@@ -169,14 +169,14 @@ end
 
 function scaleUpCurrent()
 	SKIN:Bang('!WriteKeyValue Variables CurrentScale "(#CurrentScale#+#ScrollMouseIncrement#)" "#@#Variables.inc"')
-	SKIN:Bang('!SetVariable CurrentScale "(#CurrentScale#+#ScrollMouseIncrement#)" "#CoreFilePath#"')
+	SKIN:Bang('!SetVariable CurrentScale "(#CurrentScale#+#ScrollMouseIncrement#)" "#CoreScaleFilePath#"')
 	SKIN:Bang('!UpdateMeterGroup CurrentGroup')
 	
 end
 
 function scaleDownCurrent()
 	SKIN:Bang('!WriteKeyValue Variables CurrentScale "(#CurrentScale#-#ScrollMouseIncrement# < 0.5 ? 0.5 : #CurrentScale#-#ScrollMouseIncrement#)" "#@#Variables.inc"')
-	SKIN:Bang('!SetVariable CurrentScale "(#CurrentScale#-#ScrollMouseIncrement# < 0.5 ? 0.5 : #CurrentScale#-#ScrollMouseIncrement#)" "#CoreFilePath#"')
+	SKIN:Bang('!SetVariable CurrentScale "(#CurrentScale#-#ScrollMouseIncrement# < 0.5 ? 0.5 : #CurrentScale#-#ScrollMouseIncrement#)" "#CoreScaleFilePath#"')
 	SKIN:Bang('!UpdateMeterGroup CurrentGroup')
 
 end
@@ -188,7 +188,7 @@ hoverSelect = {
 		metText = "%1, %2"
 	},
 	["Valid"] = {
-		measAction1 = "MeasureCurrentValidTime12H",
+		measAction1 = "MeasureCurrentValidTime#CurrentTime#",
 		measAction2 = "",
 		metText = "Updated at %1"
 	}

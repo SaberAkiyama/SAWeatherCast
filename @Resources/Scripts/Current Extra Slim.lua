@@ -39,14 +39,14 @@ end
 
 function scaleUpCurrentExtraSlim()
 	SKIN:Bang('!WriteKeyValue Variables CurrentExtraSlimScale "(#CurrentExtraSlimScale#+#ScrollMouseIncrement#)" "#@#Variables.inc"')
-	SKIN:Bang('!SetVariable CurrentExtraSlimScale "(#CurrentExtraSlimScale#+#ScrollMouseIncrement#)" "#CoreFilePath#"')
+	SKIN:Bang('!SetVariable CurrentExtraSlimScale "(#CurrentExtraSlimScale#+#ScrollMouseIncrement#)" "#CoreScaleFilePath#"')
 	SKIN:Bang('!UpdateMeterGroup CurrentExtraSlimGroup')
 	
 end
 
 function scaleDownCurrentExtraSlim()
 	SKIN:Bang('!WriteKeyValue Variables CurrentExtraSlimScale "(#CurrentExtraSlimScale#-#ScrollMouseIncrement# < 0.5 ? 0.5 : #CurrentExtraSlimScale#-#ScrollMouseIncrement#)" "#@#Variables.inc"')
-	SKIN:Bang('!SetVariable CurrentExtraSlimScale "(#CurrentExtraSlimScale#-#ScrollMouseIncrement# < 0.5 ? 0.5 : #CurrentExtraSlimScale#-#ScrollMouseIncrement#)" "#CoreFilePath#"')
+	SKIN:Bang('!SetVariable CurrentExtraSlimScale "(#CurrentExtraSlimScale#-#ScrollMouseIncrement# < 0.5 ? 0.5 : #CurrentExtraSlimScale#-#ScrollMouseIncrement#)" "#CoreScaleFilePath#"')
 	SKIN:Bang('!UpdateMeterGroup CurrentExtraSlimGroup')
 
 end
