@@ -152,6 +152,7 @@ DynamicVariables=1
 
 
 
+
 ; ===========================================================================
 ; 							CURRENT SLIM STYLES
 ; ===========================================================================
@@ -387,7 +388,6 @@ DynamicVariables=1
 
 
 
-
 ; ===========================================================================
 ; 							SIX HOUR STYLES
 ; ===========================================================================
@@ -433,6 +433,9 @@ FontWeight=300
 FontColor=255,255,255
 AntiAlias=1
 DynamicVariables=1
+
+
+
 
 
 
@@ -649,6 +652,7 @@ DynamicVariables=1
 
 
 
+
 ; ===========================================================================
 ; 							SEVEN DAY STYLES
 ; ===========================================================================
@@ -690,6 +694,163 @@ DynamicVariables=1
 StringAlign=LeftCenter
 FontFace=Roboto
 FontSize=(15*#SevenDayScale#)
+FontWeight=300
+FontColor=255,255,255
+AntiAlias=1
+DynamicVariables=1
+
+
+
+
+
+
+
+
+
+
+; ===========================================================================
+; 							AIR QUALITY STYLES
+; ===========================================================================
+
+[WeatherAQShape]
+Shape=Rectangle 0,0,(100*#AirQualityScale#),(100*#AirQualityScale#),(50*#AirQualityScale#) | Fill Color 0,0,0,1 | StrokeWidth 5 | Extend FillColorExchange
+FillColorExchange=Stroke Color FFFFFF40
+AntiAlias=1
+DynamicVariables=1
+
+[WeatherAQPrimaryRound]
+RotationAngle=(Rad(60))
+StartAngle=(Rad(90))
+LineStart=(53*#AirQualityScale#)
+LineLength=(48*#AirQualityScale#)
+LineColor=00E83880
+W=(110*#AirQualityScale#)
+H=(110*#AirQualityScale#)
+Solid=1
+Antialias=1
+DynamicVariables=1
+
+[WeatherAQPrimeIndex]
+StringAlign=CenterCenter
+FontFace=Roboto
+FontSize=(30*#AirQualityScale#)
+FontWeight=300
+FontColor=255,255,255
+AntiAlias=1
+DynamicVariables=1
+
+[WeatherAQPrimePollutant]
+StringAlign=LeftCenter
+FontFace=Roboto
+FontSize=(10*#AirQualityScale#)
+FontWeight=300
+FontColor=255,255,255
+AntiAlias=1
+DynamicVariables=1
+
+[WeatherAQPrimeCategory]
+StringAlign=LeftCenter
+FontFace=Roboto
+FontSize=(20*#AirQualityScale#)
+FontWeight=300
+FontColor=255,255,255
+AntiAlias=1
+DynamicVariables=1
+
+[WeatherAQNO2Round]
+RotationAngle=(Rad(60))
+StartAngle=(Rad(90))
+LineStart=(53*#AirQualityScale#)
+LineLength=(48*#AirQualityScale#)
+LineColor=00E83880
+W=(110*#AirQualityScale#)
+H=(110*#AirQualityScale#)
+Solid=1
+Antialias=1
+DynamicVariables=1
+
+[WeatherAQO3Round]
+RotationAngle=(Rad(60))
+StartAngle=(Rad(90))
+LineStart=(53*#AirQualityScale#)
+LineLength=(48*#AirQualityScale#)
+LineColor=00E83880
+W=(110*#AirQualityScale#)
+H=(110*#AirQualityScale#)
+Solid=1
+Antialias=1
+DynamicVariables=1
+
+[WeatherAQSO2Round]
+RotationAngle=(Rad(60))
+StartAngle=(Rad(90))
+LineStart=(53*#AirQualityScale#)
+LineLength=(48*#AirQualityScale#)
+LineColor=00E83880
+W=(110*#AirQualityScale#)
+H=(110*#AirQualityScale#)
+Solid=1
+Antialias=1
+DynamicVariables=1
+
+[WeatherAQPM25Round]
+RotationAngle=(Rad(60))
+StartAngle=(Rad(90))
+LineStart=(53*#AirQualityScale#)
+LineLength=(48*#AirQualityScale#)
+LineColor=00E83880
+W=(110*#AirQualityScale#)
+H=(110*#AirQualityScale#)
+Solid=1
+Antialias=1
+DynamicVariables=1
+
+[WeatherAQPM10Round]
+RotationAngle=(Rad(60))
+StartAngle=(Rad(90))
+LineStart=(53*#AirQualityScale#)
+LineLength=(48*#AirQualityScale#)
+LineColor=00E83880
+W=(110*#AirQualityScale#)
+H=(110*#AirQualityScale#)
+Solid=1
+Antialias=1
+DynamicVariables=1
+
+[WeatherAQCORound]
+RotationAngle=(Rad(60))
+StartAngle=(Rad(90))
+LineStart=(53*#AirQualityScale#)
+LineLength=(48*#AirQualityScale#)
+LineColor=00E83880
+W=(110*#AirQualityScale#)
+H=(110*#AirQualityScale#)
+Solid=1
+Antialias=1
+DynamicVariables=1
+
+[WeatherAQIndex]
+StringAlign=CenterCenter
+FontFace=Roboto
+FontSize=(15*#AirQualityScale#)
+FontWeight=300
+FontColor=255,255,255
+AntiAlias=1
+DynamicVariables=1
+
+[WeatherAQCategory]
+StringAlign=LeftCenter
+FontFace=Roboto
+FontSize=(15*#AirQualityScale#)
+FontWeight=300
+FontColor=255,255,255
+AntiAlias=1
+DynamicVariables=1
+
+[WeatherAQUnits]
+StringAlign=CenterCenter
+FontFace=Roboto
+FontSize=(10*#AirQualityScale#)
 FontWeight=300
 FontColor=255,255,255
 AntiAlias=1

@@ -2,17 +2,17 @@
 --; Lua Weather Update Connection
 --; ==================================================
 
-connSelect = {
-	["No Internet"] = {
-		connAction = "Connect to internet and try again."
-	},
-	["Internet"] = {
-		connAction = "Try again in a couple seconds."
-	}
-}
+function netError()
+	SKIN:Bang('!Log "Connect to internet and try again." Warning')
+	SKIN:Bang('!PauseMeasure MeasureUserAgent')
 
-function connInternet(selectedConnect)
-	SKIN:Bang('!Log "' .. connSelect[selectedConnect]['connAction'] .. '" Error')
+end
+
+function netConnect()
+	SKIN:Bang('!Log "Connecting..." Notice')
+	SKIN:Bang('!Log "Updating User Agent..." Notice')
+	SKIN:Bang('!UnpauseMeasure MeasureUserAgent')
+	SKIN:Bang('!UpdateMeasure MeasureUserAgent')
 
 end
 
