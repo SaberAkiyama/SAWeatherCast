@@ -57,6 +57,24 @@ OneDaySlimTime=12H
 
 ; ====================================================================================================
 
+AQPrimaryColor=00E83880
+AQNO2Color=00E83880
+AQO3Color=00E83880
+AQSO2Color=00E83880
+AQPM25Color=00E83880
+AQPM10Color=00E83880
+AQCOColor=00E83880
+
+AQPrimaryIndex=60
+AQNO2Index=60
+AQO3Index=60
+AQSO2Index=60
+AQPM25Index=60
+AQPM10Index=60
+AQCOIndex=60
+
+; ====================================================================================================
+
 CurrentScale=1
 CurrentSlimScale=1
 CurrentExtraSlimScale=1
@@ -65,4 +83,5 @@ SixHourScale=1
 OneDayScale=1
 OneDaySlimScale=1
 SevenDayScale=1
+AirQualityScale=1
 ScrollMouseIncrement=0.1
