@@ -1,9 +1,9 @@
 ---
-name: Bug report
+name: 'Bug: Forecast Skins'
 about: Create a report to help us improve
-title: "[Bug]"
-labels: 'Bug: Air Quality, Bug: Allergies & Pollen, Bug: Current, Bug: Forecast'
-assignees: SaberAkiyama
+title: "[Bug: Forecast]"
+labels: 'Bug: Forecast'
+assignees: ''
 
 ---
 
@@ -11,7 +11,7 @@ assignees: SaberAkiyama
 A clear and concise description of what the bug is.
 
 **To Reproduce**
-Steps to reproduce the behavior (make sure use "```" to create syntax):
+Steps to reproduce the behavior (make sure add "```" to create syntax):
 1. Go to '...'
 2. Click on '....'
 3. Scroll down to '....'
