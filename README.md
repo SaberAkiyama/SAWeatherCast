@@ -1,8 +1,7 @@
 # SA Weather Cast
 
-![Version](https://img.shields.io/static/v1?label=Version&message=0.4.0-alpha&color=4169e1&style=for-the-badge&link=https://github.com/SaberAkiyama/SAWeatherCast/releases/tag/v0.4.0-alpha) ![Build](https://img.shields.io/static/v1?label=Build&message=Concept&color=e14169&style=for-the-badge&link=https://github.com/SaberAkiyama/SAWeatherCast/blob/concept/README.md)
+![Version](https://img.shields.io/static/v1?label=Version&message=0.5.0-alpha&color=4169e1&style=for-the-badge&link=https://github.com/SaberAkiyama/SAWeatherCast/releases/tag/v0.5.0-alpha) ![Build](https://img.shields.io/static/v1?label=Build&message=Concept&color=e14169&style=for-the-badge&link=https://github.com/SaberAkiyama/SAWeatherCast/blob/concept/README.md) ![Git License](https://img.shields.io/static/v1?label=LICENSE&message=CC0-1.0&color=e1b941&style=for-the-badge&link=https://github.com/SaberAkiyama/SAWeatherCast/raw/master/LICENSE)
 
- ![Git License](https://img.shields.io/static/v1?label=LICENSE&message=CC0-1.0&color=e1b941&style=for-the-badge&link=https://github.com/SaberAkiyama/SAWeatherCast/raw/master/LICENSE)
 
 
 
