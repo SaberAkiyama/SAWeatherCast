@@ -34,39 +34,39 @@ end
 qualityPollutant = {
 	["Good"] = {
 		angleQuality = "60",
-		colorQuality = "00E83880",
+		colorQuality = "00E838",
 		angleVarQuality = "60",
-		colorVarQuality = "00E83880"
+		colorVarQuality = "00E838"
 	},
 	["Moderate"] = {
 		angleQuality = "120",
-		colorQuality = "FFFF2480",
+		colorQuality = "FFFF24",
 		angleVarQuality = "120",
-		colorVarQuality = "FFFF2480"
+		colorVarQuality = "FFFF24"
 	},
 	["Unhealthy for Sensitive Groups"] = {
 		angleQuality = "180",
-		colorQuality = "FF720080",
+		colorQuality = "FF7200",
 		angleVarQuality = "180",
-		colorVarQuality = "FF720080"
+		colorVarQuality = "FF7200"
 	},
 	["Unhealthy"] = {
 		angleQuality = "240",
-		colorQuality = "FF000080",
+		colorQuality = "FF0000",
 		angleVarQuality = "240",
-		colorVarQuality = "FF000080"
+		colorVarQuality = "FF0000"
 	},
 	["Very Unhealthy"] = {
 		angleQuality = "300",
-		colorQuality = "9D3D8C80",
+		colorQuality = "9D3D8C",
 		angleVarQuality = "300",
-		colorVarQuality = "9D3D8C80"
+		colorVarQuality = "9D3D8C"
 	},
 	["Hazardous"] = {
 		angleQuality = "360",
-		colorQuality = "8D002180",
+		colorQuality = "8D0021",
 		angleVarQuality = "360",
-		colorVarQuality = "8D002180"
+		colorVarQuality = "8D0021"
 	}
 }
 

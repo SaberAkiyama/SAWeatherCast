@@ -44,40 +44,12 @@ function scaleDownOneDaySlim()
 end
 
 function matchTonight()
-	SKIN:Bang('!SetOption MeterTodayIcon ImageName "[MeasureTonightIcon].png"')
-	SKIN:Bang('!SetOption MeterTodayIcon ToolTipText "[MeasureTonightCondition]"')
-	SKIN:Bang('!SetOption MeterTodayTemperature MeasureName "MeasureTonightTemperature#OneDayTemp#"')
-	SKIN:Bang('!SetOption MeterTodayPrecipitation MeasureName "MeasureTonightPrecipitation"')
-	SKIN:Bang('!SetOption MeterTodayWindCardinalSpeed MeasureName "MeasureTonightWindCardinal"')
-	SKIN:Bang('!SetOption MeterTodayWindCardinalSpeed MeasureName2 "MeasureTonightWindSpeed#OneDayWind#"')
-	SKIN:Bang('!SetOption MeterTodayHumidity MeasureName "MeasureTonightHumidity"')
-	SKIN:Bang('!SetOption MeterTodayUVIndex MeasureName "MeasureTonightUVIndex"')
-	SKIN:Bang('!SetOption MeterSunriseImage ImageName "Moonrise.png"')
-	SKIN:Bang('!SetOption MeterSunriseText MeasureName "MeasureOneDayMoonriseText"')
-	SKIN:Bang('!SetOption MeterSunrise MeasureName "MeasureOneDayMoonrise#OneDayTime#"')
-	SKIN:Bang('!SetOption MeterSunsetImage ImageName "Moonset.png"')
-	SKIN:Bang('!SetOption MeterSunsetText MeasureName "MeasureOneDayMoonsetText"')
-	SKIN:Bang('!SetOption MeterSunset MeasureName "MeasureOneDayMoonset#OneDayTime#"')
+	SKIN:Bang('!HideMeterGroup WeatherTodaySlimMeter')
+	SKIN:Bang('!SetOption MeterTonightIcon X "(10*#OneDayScale#)"')
+	SKIN:Bang('!SetOption MeterTonightText MeasureName "MeasureToday"')
+	SKIN:Bang('!SetOption MeterTonightWindCardinalSpeed MeasureName "MeasureTodayWindCardinal"')
+	SKIN:Bang('!ShowMeterGroup WeatherTonightSlimMeter')
 
-	SKIN:Bang('!UpdateMeterGroup WeatherOneDaySlimMeter')
+	SKIN:Bang('!UpdateMeterGroup WeatherOneDayMeter')
 
-end	
-
-function matchTomorrow()
-	SKIN:Bang('!SetOption MeterTonightIcon ImageName "[MeasureNextDayIcon].png"')
-	SKIN:Bang('!SetOption MeterTonightTemperature MeasureName "MeasureNextDayTemperature#OneDayTemp#"')
-	SKIN:Bang('!SetOption MeterTonightPrecipitation MeasureName "MeasureNextDayPrecipitation"')
-	SKIN:Bang('!SetOption MeterTonightWindCardinalSpeed MeasureName "MeasureNextDayWindCardinal"')
-	SKIN:Bang('!SetOption MeterTonightWindCardinalSpeed MeasureName2 "MeasureNextDayWindSpeed#OneDayWind#"')
-	SKIN:Bang('!SetOption MeterTonightHumidity MeasureName "MeasureNextDayHumidity"')
-	SKIN:Bang('!SetOption MeterTonightUVIndex MeasureName "MeasureNextDayUVIndex"')
-	SKIN:Bang('!SetOption MeterMoonriseImage ImageName "Sunrise.png"')
-	SKIN:Bang('!SetOption MeterMoonriseText MeasureName "MeasureOneDaySunriseText"')
-	SKIN:Bang('!SetOption MeterMoonrise MeasureName "MeasureOneDaySunrise#OneDayTime#"')
-	SKIN:Bang('!SetOption MeterMoonsetImage ImageName "Sunset.png"')
-	SKIN:Bang('!SetOption MeterMoonsetText MeasureName "MeasureOneDaySunsetText"')
-	SKIN:Bang('!SetOption MeterMoonset MeasureName "MeasureOneDaySunset#OneDayTime#"')
-
-	SKIN:Bang('!UpdateMeterGroup WeatherOneDaySlimMeter')
-
-end	
+end

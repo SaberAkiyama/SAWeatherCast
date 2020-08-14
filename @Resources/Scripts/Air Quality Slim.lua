@@ -82,7 +82,7 @@ end
 
 --; ====================================================================================================
 
-function scaleUpAirQuality()
+function scaleUpAirQualitySlim()
 	SKIN:Bang('!WriteKeyValue Variables AirQualityScale "(#AirQualityScale#+#ScrollMouseIncrement#)" "#@#Variables.inc"')
 	SKIN:Bang('!SetVariable AirQualityScale "(#AirQualityScale#+#ScrollMouseIncrement#)" "#CoreScaleFilePath#"')
 
@@ -90,7 +90,7 @@ function scaleUpAirQuality()
 	
 end
 
-function scaleDownAirQuality()
+function scaleDownAirQualitySlim()
 	SKIN:Bang('!WriteKeyValue Variables AirQualityScale "(#AirQualityScale#-#ScrollMouseIncrement# < 0.5 ? 0.5 : #AirQualityScale#-#ScrollMouseIncrement#)" "#@#Variables.inc"')
 	SKIN:Bang('!SetVariable AirQualityScale "(#AirQualityScale#-#ScrollMouseIncrement# < 0.5 ? 0.5 : #AirQualityScale#-#ScrollMouseIncrement#)" "#CoreScaleFilePath#"')
 
