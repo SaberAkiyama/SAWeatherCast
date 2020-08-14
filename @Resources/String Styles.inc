@@ -723,7 +723,7 @@ RotationAngle=(Rad(60))
 StartAngle=(Rad(90))
 LineStart=(53*#AirQualityScale#)
 LineLength=(48*#AirQualityScale#)
-LineColor=00E83880
+LineColor=00E838
 W=(110*#AirQualityScale#)
 H=(110*#AirQualityScale#)
 Solid=1
@@ -762,7 +762,7 @@ RotationAngle=(Rad(60))
 StartAngle=(Rad(90))
 LineStart=(53*#AirQualityScale#)
 LineLength=(48*#AirQualityScale#)
-LineColor=00E83880
+LineColor=00E838
 W=(110*#AirQualityScale#)
 H=(110*#AirQualityScale#)
 Solid=1
@@ -774,7 +774,7 @@ RotationAngle=(Rad(60))
 StartAngle=(Rad(90))
 LineStart=(53*#AirQualityScale#)
 LineLength=(48*#AirQualityScale#)
-LineColor=00E83880
+LineColor=00E838
 W=(110*#AirQualityScale#)
 H=(110*#AirQualityScale#)
 Solid=1
@@ -786,7 +786,7 @@ RotationAngle=(Rad(60))
 StartAngle=(Rad(90))
 LineStart=(53*#AirQualityScale#)
 LineLength=(48*#AirQualityScale#)
-LineColor=00E83880
+LineColor=00E838
 W=(110*#AirQualityScale#)
 H=(110*#AirQualityScale#)
 Solid=1
@@ -798,7 +798,7 @@ RotationAngle=(Rad(60))
 StartAngle=(Rad(90))
 LineStart=(53*#AirQualityScale#)
 LineLength=(48*#AirQualityScale#)
-LineColor=00E83880
+LineColor=00E838
 W=(110*#AirQualityScale#)
 H=(110*#AirQualityScale#)
 Solid=1
@@ -810,7 +810,7 @@ RotationAngle=(Rad(60))
 StartAngle=(Rad(90))
 LineStart=(53*#AirQualityScale#)
 LineLength=(48*#AirQualityScale#)
-LineColor=00E83880
+LineColor=00E838
 W=(110*#AirQualityScale#)
 H=(110*#AirQualityScale#)
 Solid=1
@@ -822,7 +822,7 @@ RotationAngle=(Rad(60))
 StartAngle=(Rad(90))
 LineStart=(53*#AirQualityScale#)
 LineLength=(48*#AirQualityScale#)
-LineColor=00E83880
+LineColor=00E838
 W=(110*#AirQualityScale#)
 H=(110*#AirQualityScale#)
 Solid=1
@@ -853,5 +853,160 @@ FontFace=Roboto
 FontSize=(10*#AirQualityScale#)
 FontWeight=300
 FontColor=255,255,255
+AntiAlias=1
+DynamicVariables=1
+
+
+
+
+
+
+
+
+; ===========================================================================
+; 							POLLEN STYLES
+; ===========================================================================
+
+[WeatherPollenTreeTextStyle]
+StringAlign=LeftCenter
+FontFace=Roboto
+FontSize=(20*#PollenScale#)
+FontWeight=300
+FontColor=255,255,255
+AntiAlias=1
+DynamicVariables=1
+
+[WeatherPollenTreeDPStyle]
+StringAlign=LeftCenter
+FontFace=Roboto
+FontSize=(15*#PollenScale#)
+FontWeight=300
+FontColor=255,255,255
+AntiAlias=1
+DynamicVariables=1
+
+[WeatherPollenTreeShape1]
+Shape=Ellipse 0,0,(15*#PollenScale#),(15*#PollenScale#),(25*#PollenScale#) | StrokeWidth 0 | Extend FillColorExchange
+FillColorExchange=Fill Color CECECE
+AntiAlias=1
+DynamicVariables=1
+
+[WeatherPollenTreeShape2]
+Shape=Ellipse 0,0,(15*#PollenScale#),(15*#PollenScale#),(25*#PollenScale#) | StrokeWidth 0 | Extend FillColorExchange
+FillColorExchange=Fill Color CECECE
+AntiAlias=1
+DynamicVariables=1
+
+[WeatherPollenTreeShape3]
+Shape=Ellipse 0,0,(15*#PollenScale#),(15*#PollenScale#),(25*#PollenScale#) | StrokeWidth 0 | Extend FillColorExchange
+FillColorExchange=Fill Color CECECE
+AntiAlias=1
+DynamicVariables=1
+
+[WeatherPollenTreeShape4]
+Shape=Ellipse 0,0,(15*#PollenScale#),(15*#PollenScale#),(25*#PollenScale#) | StrokeWidth 0 | Extend FillColorExchange
+FillColorExchange=Fill Color CECECE
+AntiAlias=1
+DynamicVariables=1
+
+[WeatherPollenTreeShape5]
+Shape=Ellipse 0,0,(15*#PollenScale#),(15*#PollenScale#),(25*#PollenScale#) | StrokeWidth 0 | Extend FillColorExchange
+FillColorExchange=Fill Color CECECE
+AntiAlias=1
+DynamicVariables=1
+
+[WeatherPollenGrassTextStyle]
+StringAlign=LeftCenter
+FontFace=Roboto
+FontSize=(20*#PollenScale#)
+FontWeight=300
+FontColor=255,255,255
+AntiAlias=1
+DynamicVariables=1
+
+[WeatherPollenGrassDPStyle]
+StringAlign=LeftCenter
+FontFace=Roboto
+FontSize=(15*#PollenScale#)
+FontWeight=300
+FontColor=255,255,255
+AntiAlias=1
+DynamicVariables=1
+
+[WeatherPollenGrassShape1]
+Shape=Ellipse 0,0,(15*#PollenScale#),(15*#PollenScale#),(25*#PollenScale#) | StrokeWidth 0 | Extend FillColorExchange
+FillColorExchange=Fill Color CECECE
+AntiAlias=1
+DynamicVariables=1
+
+[WeatherPollenGrassShape2]
+Shape=Ellipse 0,0,(15*#PollenScale#),(15*#PollenScale#),(25*#PollenScale#) | StrokeWidth 0 | Extend FillColorExchange
+FillColorExchange=Fill Color CECECE
+AntiAlias=1
+DynamicVariables=1
+
+[WeatherPollenGrassShape3]
+Shape=Ellipse 0,0,(15*#PollenScale#),(15*#PollenScale#),(25*#PollenScale#) | StrokeWidth 0 | Extend FillColorExchange
+FillColorExchange=Fill Color CECECE
+AntiAlias=1
+DynamicVariables=1
+
+[WeatherPollenGrassShape4]
+Shape=Ellipse 0,0,(15*#PollenScale#),(15*#PollenScale#),(25*#PollenScale#) | StrokeWidth 0 | Extend FillColorExchange
+FillColorExchange=Fill Color CECECE
+AntiAlias=1
+DynamicVariables=1
+
+[WeatherPollenGrassShape5]
+Shape=Ellipse 0,0,(15*#PollenScale#),(15*#PollenScale#),(25*#PollenScale#) | StrokeWidth 0 | Extend FillColorExchange
+FillColorExchange=Fill Color CECECE
+AntiAlias=1
+DynamicVariables=1
+
+[WeatherPollenRagweedTextStyle]
+StringAlign=LeftCenter
+FontFace=Roboto
+FontSize=(20*#PollenScale#)
+FontWeight=300
+FontColor=255,255,255
+AntiAlias=1
+DynamicVariables=1
+
+[WeatherPollenRagweedDPStyle]
+StringAlign=LeftCenter
+FontFace=Roboto
+FontSize=(15*#PollenScale#)
+FontWeight=300
+FontColor=255,255,255
+AntiAlias=1
+DynamicVariables=1
+
+[WeatherPollenRagweedShape1]
+Shape=Ellipse 0,0,(15*#PollenScale#),(15*#PollenScale#),(25*#PollenScale#) | StrokeWidth 0 | Extend FillColorExchange
+FillColorExchange=Fill Color CECECE
+AntiAlias=1
+DynamicVariables=1
+
+[WeatherPollenRagweedShape2]
+Shape=Ellipse 0,0,(15*#PollenScale#),(15*#PollenScale#),(25*#PollenScale#) | StrokeWidth 0 | Extend FillColorExchange
+FillColorExchange=Fill Color CECECE
+AntiAlias=1
+DynamicVariables=1
+
+[WeatherPollenRagweedShape3]
+Shape=Ellipse 0,0,(15*#PollenScale#),(15*#PollenScale#),(25*#PollenScale#) | StrokeWidth 0 | Extend FillColorExchange
+FillColorExchange=Fill Color CECECE
+AntiAlias=1
+DynamicVariables=1
+
+[WeatherPollenRagweedShape4]
+Shape=Ellipse 0,0,(15*#PollenScale#),(15*#PollenScale#),(25*#PollenScale#) | StrokeWidth 0 | Extend FillColorExchange
+FillColorExchange=Fill Color CECECE
+AntiAlias=1
+DynamicVariables=1
+
+[WeatherPollenRagweedShape5]
+Shape=Ellipse 0,0,(15*#PollenScale#),(15*#PollenScale#),(25*#PollenScale#) | StrokeWidth 0 | Extend FillColorExchange
+FillColorExchange=Fill Color CECECE
 AntiAlias=1
 DynamicVariables=1
