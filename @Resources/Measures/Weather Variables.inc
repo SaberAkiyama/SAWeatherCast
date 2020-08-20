@@ -19,7 +19,7 @@
 
 LocationCode=USNY0996
 
-;LocationCode=8f0658124f5f5b725ca5ed254decc028fd2099a8ac1843faa2ceb206c9b464d1
+;LocationCode=7564f06c0af541b1f05a40f2f8720c3c34546165ceaf76006e1458864eca5616
 
 
 
@@ -52,7 +52,7 @@ URLHourly=https://weather.com/en-US/weather/hourbyhour/l/#LocationCode#
 
 URLTenday=https://weather.com/en-US/weather/tenday/l/#LocationCode#
 
-URLAirQuality=https://weather.com/en-US/forecast/air-quality/l/#LocationCode#
+URLAirQuality=https://weather.com/en-US/weather/today/l/#LocationCode#
 
 URLPollen=https://weather.com/en-US/forecast/allergy/l/#LocationCode#
 
@@ -71,6 +71,6 @@ OneDayForecast=(?siU)"getSunV3DailyForecastUrlConfig.*":.*{.*"moonriseTimeLocal.
 
 SevenDayForecast=(?siU)"getSunV3DailyForecastUrlConfig.*":.*{.*"dayOfWeek.*":\D.*"(.*)\D",\D"(.*)\D",\D"(.*)\D",\D"(.*)\D",\D"(.*)\D",\D"(.*)\D",\D"(.*)\D",.*"temperatureMax.*":\D(.*),(.*),(.*),(.*),(.*),(.*),(.*),.*"temperatureMin.*":\D(.*),(.*),(.*),(.*),(.*),(.*),(.*),.*"iconCode.*":\D(.*),(.*),(.*),.*,(.*),.*,(.*),.*,(.*),.*,(.*),.*,(.*),.*"precipChance.*":\D(.*),(.*),(.*),.*,(.*),.*,(.*),.*,(.*),.*,(.*),.*,(.*),.*"windDirectionCardinal.*":\D.*"(.*)\D",\D"(.*)\D",\D"(.*)\D",\D"(.*)\D",\D"(.*)\D",\D"(.*)\D",\D"(.*)\D",\D"(.*)\D",\D"(.*)\D",\D"(.*)\D",\D"(.*)\D",\D"(.*)\D",\D"(.*)\D",\D"(.*)\D",.*"windSpeed.*":\D(.*),(.*),(.*),.*,(.*),.*,(.*),.*,(.*),.*,(.*),.*,(.*),.*"wxPhraseLong.*":\D.*"(.*)\D",\D"(.*)\D",\D"(.*)\D",\D"(.*)\D",\D"(.*)\D",\D"(.*)\D",\D"(.*)\D",\D"(.*)\D",\D"(.*)\D",\D"(.*)\D",\D"(.*)\D",\D"(.*)\D",\D"(.*)\D",\D"(.*)\D",.*}.*"wxu-general.*":{.*"mph.*":.*"(.*)\D",.*"km.*h.*":.*"(.*)\D",.*}
 
-AirQuality=(?siU)"GlobalAirQualityV3":.*{.*"airQualityIndex":(.*),"airQualityCategory":"(.*)","airQualityCategoryIndex":(.*),.*"primaryPollutant":"(.*)","pollutants":{"NO2":{"name":"(.*)",.*"amount":(.*),"unit":"(.*)","category":"(.*)","categoryIndex":(.*),.*},"O3":{"name":"(.*)",.*"amount":(.*),.*"category":"(.*)","categoryIndex":(.*),.*},"SO2":{"name":"(.*)",.*"amount":(.*),.*"category":"(.*)","categoryIndex":(.*),.*},"PM2.5":{"name":"(.*)",.*"amount":(.*),.*"category":"(.*)","categoryIndex":(.*),.*},"PM10":{"name":"(.*)",.*"amount":(.*),.*"category":"(.*)","categoryIndex":(.*),.*},"CO":{"name":"(.*)",.*"amount":(.*),.*"category":"(.*)","categoryIndex":(.*),.*}},"messages":{.*"General":{.*"text":"(.*)"}},.*}.*"airQuality":{.*"Primary Pollutant":"(.*)",.*}
+AirQuality=(?siU)"getSunV3GlobalAirQualityUrlConfig.*":.*{.*"airQualityIndex.*":(.*),.*"airQualityCategory.*":\D"(.*)\D",.*"airQualityCategoryIndex.*":(.*),.*"primaryPollutant.*":\D"(.*)\D",.*"pollutants.*":{.*"NO2.*":{.*"name.*":\D"(.*)\D",.*"amount.*":(.*),.*"unit.*":\D"(.*)\D",.*"category.*":\D"(.*)\D",.*"categoryIndex.*":(.*),.*},.*"O3.*":{.*"name.*":\D"(.*)\D",.*"amount.*":(.*),.*"category.*":\D"(.*)\D",.*"categoryIndex.*":(.*),.*},.*"SO2.*":{.*"name.*":\D"(.*)\D",.*"amount.*":(.*),.*"category.*":\D"(.*)\D",.*"categoryIndex.*":(.*),.*},.*"PM2.5.*":{.*"name.*":\D"(.*)\D",.*"amount.*":(.*),.*"category.*":\D"(.*)\D",.*"categoryIndex.*":(.*),.*},.*"PM10.*":{.*"name.*":\D"(.*)\D",.*"amount.*":(.*),.*"category.*":\D"(.*)\D",.*"categoryIndex.*":(.*),.*},.*"CO.*":{.*"name.*":\D"(.*)\D",.*"amount.*":(.*),.*"category.*":\D"(.*)\D",.*"categoryIndex.*":(.*),.*}},.*"messages.*":{.*"General.*":{.*"text.*":\D"(.*)\D"}}.*"wxu-air-quality.*":{.*"airQuality.*":\D"(.*)\D".*}}
 
 Pollen=(?siU)"getSunIndexPollenDaypartUrlConfig.*":{.*"daypartName.*":\D.*"(.*)\D",\D"(.*)\D",\D"(.*)\D",\D"(.*)\D",\D"(.*)\D",\D".*\D",.*"grassPollenIndex.*":\D(.*),(.*),(.*),(.*),(.*),.*\D.*"grassPollenCategory.*":\D.*"(.*)\D",\D"(.*)\D",\D"(.*)\D",\D"(.*)\D",\D"(.*)\D",.*"treePollenIndex.*":\D(.*),(.*),(.*),(.*),(.*),.*\D.*"treePollenCategory.*":\D.*"(.*)\D",\D"(.*)\D",\D"(.*)\D",\D"(.*)\D",\D"(.*)\D",.*"ragweedPollenIndex.*":\D(.*),(.*),(.*),(.*),(.*),.*\D.*"ragweedPollenCategory.*":\D.*"(.*)\D",\D"(.*)\D",\D"(.*)\D",\D"(.*)\D",\D"(.*)\D",.*}.*"wxu-allergy-pollen.*":{.*"grassPollen.*":\D"(.*)\D",.*"ragweedPollen.*":\D"(.*)\D",.*"treePollen.*":\D"(.*)\D",.*}
