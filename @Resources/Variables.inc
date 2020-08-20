@@ -1,5 +1,10 @@
 [Variables]
 
+Page=Info
+PageLine=80
+
+; ====================================================================================================
+
 CurrentToggle=1
 CurrentSlimToggle=1
 CurrentExtraSlimToggle=1
@@ -57,29 +62,29 @@ OneDaySlimTime=12H
 
 ; ====================================================================================================
 
-AQPrimaryColor=FF720080
+AQPrimaryColor=FFFF2480
 AQNO2Color=00E838
 AQO3Color=00E838
-AQSO2Color=00E838
-AQPM25Color=FF7200
-AQPM10Color=FFFF24
+AQSO2Color=FFFF24
+AQPM25Color=FFFF24
+AQPM10Color=00E838
 AQCOColor=00E838
 
-AQPrimaryIndex=180
+AQPrimaryIndex=120
 AQNO2Index=60
 AQO3Index=60
-AQSO2Index=60
-AQPM25Index=180
-AQPM10Index=120
+AQSO2Index=120
+AQPM25Index=120
+AQPM10Index=60
 AQCOIndex=60
 
 ; ====================================================================================================
 
-PollenGrassColor1=CECECE
-PollenGrassColor2=CECECE
-PollenGrassColor3=CECECE
-PollenGrassColor4=CECECE
-PollenGrassColor5=CECECE
+PollenGrassColor1=EBBB02
+PollenGrassColor2=EBBB02
+PollenGrassColor3=A5EB02
+PollenGrassColor4=A5EB02
+PollenGrassColor5=A5EB02
 PollenTreeColor1=CECECE
 PollenTreeColor2=CECECE
 PollenTreeColor3=CECECE
