@@ -6,14 +6,14 @@ function finishUserAgent()
 	SKIN:Bang('!Log "Retrieving Air Quality..."')
 
 	SKIN:Bang('!UnpauseMeasureGroup WeatherAirQualityMeasure')
-	SKIN:Bang('!UnpauseMeasure MeasureAirQuality')
+	SKIN:Bang('!UnpauseMeasure MeasureWeatherCore')
 	SKIN:Bang('!HideMeterGroup WeatherAirQualityMeter')
-	SKIN:Bang('!UpdateMeasure MeasureAirQuality')
+	SKIN:Bang('!UpdateMeasure MeasureWeatherCore')
 
 end
 
 function updateAirQuality()
-	SKIN:Bang('!UpdateMeasure MeasureAirQuality')
+	SKIN:Bang('!UpdateMeasure MeasureWeatherCore')
 	SKIN:Bang('!HideMeterGroup WeatherAirQualityMeter')
 	SKIN:Bang('!DisableMeasureGroup WeatherAirQualityMeasure')
 

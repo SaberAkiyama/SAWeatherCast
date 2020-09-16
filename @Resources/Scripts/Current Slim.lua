@@ -6,16 +6,16 @@ function finishUserAgent()
 	SKIN:Bang('!Log "Retrieving Current..."')
 
 	SKIN:Bang('!UnpauseMeasureGroup WeatherCurrentSlimMeasure')
-	SKIN:Bang('!UnpauseMeasure MeasureCurrent')
+	SKIN:Bang('!UnpauseMeasure MeasureWeatherCore')
 	SKIN:Bang('!UnpauseMeasure MeasureCurrentWindDirection')
 	SKIN:Bang('!EnableMeasure MeasureCurrentWindDirection')
 	SKIN:Bang('!HideMeterGroup WeatherCurrentSlimMeter')
-	SKIN:Bang('!UpdateMeasure MeasureCurrent')
+	SKIN:Bang('!UpdateMeasure MeasureWeatherCore')
 
 end
 
 function updateCurrent()
-	SKIN:Bang('!UpdateMeasure MeasureCurrent')
+	SKIN:Bang('!UpdateMeasure MeasureWeatherCore')
 	SKIN:Bang('!HideMeterGroup WeatherCurrentSlimMeter')
 	SKIN:Bang('!DisableMeasureGroup WeatherCurrentSlimMeasure')
 	

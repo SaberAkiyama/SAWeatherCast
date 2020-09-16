@@ -1,7 +1,7 @@
 [MeterWeatherText]
 Meter=String
 MeterStyle=WeatherText
-X=555
+X=770
 Y=150
 Text="< <  Weather  > >"
 
@@ -11,25 +11,25 @@ Text="< <  Weather  > >"
 [MeterWeatherActive]
 Meter=String
 MeterStyle=WeatherActive
-X=555
+X=770
 Y=200
 Text="Open Weather Codes"
 LeftMouseUpAction=[!CommandMeasure LuaPage "openLocation()"]
-MouseOverAction=[!CommandMeasure LuaPage "setCode('Over')"]
-MouseLeaveAction=[!CommandMeasure LuaPage "setCode('Leave')"]
+MouseOverAction=[!CommandMeasure LuaPage "setWeatherCode('Over')"]
+MouseLeaveAction=[!CommandMeasure LuaPage "setWeatherCode('Leave')"]
 
 [MeterLocationActive]
 Meter=String
 MeterStyle=WeatherActive
-X=555
+X=770
 Y=75r
-W=500
+W=750
 H=50
 Text=Click here for Location Code
 SolidColor=0,0,0,32
 LeftMouseUpAction=[!CommandMeasure LuaPage "setWeatherInput()"]
-MouseOverAction=[!CommandMeasure LuaPage "setWeather('Over')"]
-MouseLeaveAction=[!CommandMeasure LuaPage "setWeather('Leave')"]
+MouseOverAction=[!CommandMeasure LuaPage "setWeatherInsert('Over')"]
+MouseLeaveAction=[!CommandMeasure LuaPage "setWeatherInsert('Leave')"]
 
 ; ============================================================
 ; ============================================================
@@ -37,7 +37,7 @@ MouseLeaveAction=[!CommandMeasure LuaPage "setWeather('Leave')"]
 [MeterWeatherNote]
 Meter=String
 MeterStyle=WeatherNote
-X=555
+X=770
 Y=115r
 Text="Copy and enter that as the value for LocationCode#CRLF#The Country/Region codes (e.g.: USNY0996)#CRLF#will also work as the LocationCode#CRLF#Or use the long number at the end of the resulting URL"
 
@@ -47,13 +47,13 @@ Text="Copy and enter that as the value for LocationCode#CRLF#The Country/Region 
 [MeterApplyButton]
 Meter=String
 MeterStyle=WeatherActive
-X=555
+X=770
 Y=85r
 Text="Apply Changes"
 ToolTipText="Once is done, click "Apply" button to retrieve Weather skin"
 LeftMouseUpAction=[!CommandMeasure LuaPage "setWeatherApply()"]
-MouseOverAction=[!CommandMeasure LuaPage "setApply('Over')"]
-MouseLeaveAction=[!CommandMeasure LuaPage "setApply('Leave')"]
+MouseOverAction=[!CommandMeasure LuaPage "setWeatherApply('Over')"]
+MouseLeaveAction=[!CommandMeasure LuaPage "setWeatherApply('Leave')"]
 
 ; ============================================================
 ; ============================================================
@@ -64,9 +64,9 @@ Plugin=InputText
 StringAlign=Center
 FontFace=Segoe UI
 FontSize=15
-X=305
+X=395
 Y=250
-W=500
+W=750
 H=50
 Command1=[!WriteKeyValue Variables LocationCode "$UserInput$" "#@#Measures\Weather Variables.inc"][!RefreshGroup WeatherSetting]
 AntiAlias=1

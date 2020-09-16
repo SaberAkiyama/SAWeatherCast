@@ -6,14 +6,14 @@ function finishUserAgent()
 	SKIN:Bang('!Log "Retrieving Hour Forecast..."')
 
 	SKIN:Bang('!UnpauseMeasureGroup WeatherSixHourMeasure')
-	SKIN:Bang('!UnpauseMeasure MeasureSixHourForecast')
+	SKIN:Bang('!UnpauseMeasure MeasureWeatherCore')
 	SKIN:Bang('!HideMeterGroup WeatherSixHourMeter')
-	SKIN:Bang('!UpdateMeasure MeasureSixHourForecast')
+	SKIN:Bang('!UpdateMeasure MeasureWeatherCore')
 
 end
 
 function updateSixHour()
-	SKIN:Bang('!UpdateMeasure MeasureSixHourForecast')
+	SKIN:Bang('!UpdateMeasure MeasureWeatherCore')
 	SKIN:Bang('!HideMeterGroup WeatherSixHourMeter')
 	SKIN:Bang('!DisableMeasureGroup WeatherSixHourMeasure')
 	

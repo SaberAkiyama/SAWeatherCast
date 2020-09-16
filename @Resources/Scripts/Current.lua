@@ -6,15 +6,15 @@ function finishUserAgent()
 	SKIN:Bang('!Log "Retrieving Current..."')
 
 	SKIN:Bang('!UnpauseMeasureGroup WeatherCurrentMeasure')
-	SKIN:Bang('!UnpauseMeasure MeasureCurrent')
+	SKIN:Bang('!UnpauseMeasure MeasureWeatherCore')
 	SKIN:Bang('!UnpauseMeasure MeasureCurrentWindDirection')
 	SKIN:Bang('!HideMeterGroup WeatherCurrentMeter')
-	SKIN:Bang('!UpdateMeasure MeasureCurrent')
+	SKIN:Bang('!UpdateMeasure MeasureWeatherCore')
 
 end
 
 function updateCurrent()
-	SKIN:Bang('!UpdateMeasure MeasureCurrent')
+	SKIN:Bang('!UpdateMeasure MeasureWeatherCore')
 	SKIN:Bang('!HideMeterGroup WeatherCurrentMeter')
 	SKIN:Bang('!DisableMeasureGroup WeatherCurrentMeasure')
 	SKIN:Bang('!EnableMeasure MeasureCurrentWindDirection')
@@ -65,6 +65,6 @@ function setHover(selectedText)
 	SKIN:Bang('!SetOption MeterCurrentValidTimeLocation MeasureName2 "' .. hoverSelect[selectedText]['measAction2'] .. '"')
 	SKIN:Bang('!SetOption MeterCurrentValidTimeLocation Text "' .. hoverSelect[selectedText]['metText'] .. '"')
 
-	SKIN:Bang('!UpdateMeter MeterCurrentValidTimeLocation')
+	SKIN:Bang('!Redraw')
 	
 end
