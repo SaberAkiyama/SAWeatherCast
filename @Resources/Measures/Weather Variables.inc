@@ -55,7 +55,7 @@ URLPollen=https://weather.com/#LangLoc#/forecast/allergy/l/#LocationCode#
 
 
 ; ===========================================================================
-; WEATHER CURRENT REGEXP
+; WEATHER CORE REGEXP
 
 CurrentLocation=(?siU)\\"getSunV3LocationPointUrlConfig\\":.*{.*\\"country\\":\\"(.*)\\",.*\\"displayName\\":\\"(.*)\\",.*}.*\\"getSunV3CurrentObservationsUrlConfig\\":.*{.*\\"iconCode\\":(.*),.*\\"pressureAltimeter\\":(.*),.*\\"relativeHumidity\\":(.*),.*\\"sunriseTimeLocal\\":\\"(.*)\\",.*\\"sunsetTimeLocal\\":\\"(.*)\\",.*\\"temperature\\":(.*),.*\\"temperatureDewPoint\\":(.*),\\"temperatureFeelsLike\\":(.*),.*\\"uvIndex\\":(.*),\\"validTimeLocal\\":\\"(.*)\\",.*\\"visibility\\":(.*),\\"windDirection\\":(.*),\\"windDirectionCardinal\\":\\"(.*)\\",.*\\"windSpeed\\":(.*),\\"wxPhraseLong\\":\\"(.*)\\",.*}.*\\"getSunV3DailyForecastWithHeadersUrlConfig\\":.*{.*\\"moonPhase\\":.\\"(.*)\\",.*\\"temperatureMax\\":\D(.*),.*\\"temperatureMin\\":\D(.*),.*}
 
@@ -63,20 +63,19 @@ OneHourForecast=(?siU)\\"getSunV3HourlyForecastUrlConfig\\":{.*\\"iconCode\\":\D
 
 SixHourForecast=(?siU)\\"getSunV3HourlyForecastUrlConfig\\":{.*\\"iconCode\\":\D(.*),(.*),(.*),(.*),(.*),(.*),.*\\"precipChance\\":\D(.*),(.*),(.*),(.*),(.*),(.*),.*\\"temperature\\":\D(.*),(.*),(.*),(.*),(.*),(.*),.*\\"validTimeLocal\\":.\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",.*\\"windDirectionCardinal\\":.\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",.*\\"windSpeed\\":\D(.*),(.*),(.*),(.*),(.*),(.*),.*\\"wxPhraseLong\\":.\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",.*"}
 
-AirQuality=(?siU)\\"getSunV3GlobalAirQualityUrlConfig\\":.*{.*\\"airQualityIndex\\":(.*),.*\\"airQualityCategory\\":\\"(.*)\\",.*\\"airQualityCategoryIndex\\":(.*),.*\\"primaryPollutant\\":\\"(.*)\\",.*\\"pollutants\\":.*(?(?=.*\\"NO2\\").*:{\\"name\\":\\"(.*)\\",.*\\"amount\\":(.*),\\"unit\\":\\"(.*)\\",\\"category\\":\\"(.*)\\",\\"categoryIndex\\":(.*),.*).*(?(?=.*\\"O3\\").*{\\"name\\":\\"(.*)\\",.*\\"amount\\":(.*),.*\\"category\\":\\"(.*)\\",\\"categoryIndex\\":(.*),.*).*(?(?=.*\\"SO2\\").*:{\\"name\\":\\"(.*)\\",.*\\"amount\\":(.*),.*\\"category\\":\\"(.*)\\",\\"categoryIndex\\":(.*),.*).*(?(?=.*\\"PM2.5\\").*:{\\"name\\":\\"(.*)\\",.*\\"amount\\":(.*),.*\\"category\\":\\"(.*)\\",\\"categoryIndex\\":(.*),.*).*(?(?=.*\\"PM10\\").*:{\\"name\\":\\"(.*)\\",.*\\"amount\\":(.*),.*\\"category\\":\\"(.*)\\",\\"categoryIndex\\":(.*),.*).*(?(?=.*\\"CO\\").*:{\\"name\\":\\"(.*)\\",.*\\"amount\\":(.*),.*\\"category\\":\\"(.*)\\",\\"categoryIndex\\":(.*),.*),.*\\"messages\\":{.*\\"General\\":{.*\\"text\\":\\"(.*)\\"}}
-
-CurrentUnits=(?siU)\\"wxu-today-details\\":{.*\\"feelsLike\\":\\"(.*)\\",.*\\"wind\\":\\"(.*)\\",\\"humidity\\":\\"(.*)\\",.*\\"uvIndex\\":\\"(.*)\\",.*}.*\\"wxu-general\\":{.*\\"mph\\":\\"(.*)\\",\\"km.*h\\":\\"(.*)\\",\\"in\\":\\"(.*)\\",\\"mb\\":\\"(.*)\\",\\"mi\\":\\"(.*)\\",\\"km\\":\\"(.*)\\",.*\\"uvIndexVal\\":\\".*\s(.*)\s.*",\\"uvIndexExtreme\\":\\"(.*)\\",.*}.*\\"wxu-air-quality\\":{\\"airQuality\\":\\"(.*)\\",.*}
-
-; ===========================================================================
-; WEATHER TENDAY REGEXP
-
 OneDayForecast=(?siU)\\"getSunV3DailyForecastWithHeadersUrlConfig\\":.*{.*\\"moonriseTimeLocal\\":.\\"(.*)\\",\\"(.*)\\",.*\\"moonsetTimeLocal\\":.\\"(.*)\\",\\"(.*)\\",.*\\"sunriseTimeLocal\\":.\\"(.*)\\",\\"(.*)\\",.*\\"sunsetTimeLocal\\":.\\"(.*)\\",\\"(.*)\\",.*\\"daypartName\\":.\\"(.*)\\",\\"(.*)\\",.*\\"iconCode\\":\D(.*),(.*),(.*),.*\\"precipChance\\":\D(.*),(.*),(.*),.*\\"relativeHumidity\\":\D(.*),(.*),(.*),.*\\"temperature\\":\D(.*),(.*),(.*),.*\\"uvIndex\\":\D(.*),(.*),(.*),.*\\"windDirectionCardinal\\":.\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",.*\\"windSpeed\\":\D(.*),(.*),(.*),.*\\"wxPhraseLong\\":.\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",.*}
 
 SevenDayForecast=(?siU)\\"getSunV3DailyForecastWithHeadersUrlConfig\\":.*{.*\\"dayOfWeek\\":.\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",.*\\"temperatureMax\\":\D(.*),(.*),(.*),(.*),(.*),(.*),(.*),.*\\"temperatureMin\\":\D(.*),(.*),(.*),(.*),(.*),(.*),(.*),.*\\"iconCode\\":\D(.*),(.*),(.*),.*,(.*),.*,(.*),.*,(.*),.*,(.*),.*,(.*),.*\\"precipChance\\":\D(.*),(.*),(.*),.*,(.*),.*,(.*),.*,(.*),.*,(.*),.*,(.*),.*\\"windDirectionCardinal\\":.\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",.*\\"windSpeed\\":\D(.*),(.*),(.*),.*,(.*),.*,(.*),.*,(.*),.*,(.*),.*,(.*),.*\\"wxPhraseLong\\":.\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",.*}
 
-TendayUnits=(?siU)\\"wxu-weather-data\\":{.*\\"humidity\\":\\"(.*)\\",.*\\"uvIndex\\":\\"(.*)\\",.*\\"sunrise\\":\\"(.*)\\",\\"sunset\\":\\"(.*)\\",\\"moonrise\\":\\"(.*)\\",\\"moonset\\":\\"(.*)\\"}.*\\"wxu-general\\":{.*\\"mph\\":\\"(.*)\\",\\"km.*h\\":\\"(.*)\\",.*\\"uvIndexVal\\":\\".*\s(.*)\s.*",\\"uvIndexExtreme\\":\\"(.*)\\",.*}
+AirQuality=(?siU)\\"getSunV3GlobalAirQualityUrlConfig\\":.*{.*\\"airQualityIndex\\":(.*),.*\\"airQualityCategory\\":\\"(.*)\\",.*\\"airQualityCategoryIndex\\":(.*),.*\\"primaryPollutant\\":\\"(.*)\\",.*\\"pollutants\\":.*(?(?=.*\\"NO2\\").*:{\\"name\\":\\"(.*)\\",.*\\"amount\\":(.*),\\"unit\\":\\"(.*)\\",\\"category\\":\\"(.*)\\",\\"categoryIndex\\":(.*),.*).*(?(?=.*\\"O3\\").*{\\"name\\":\\"(.*)\\",.*\\"amount\\":(.*),.*\\"category\\":\\"(.*)\\",\\"categoryIndex\\":(.*),.*).*(?(?=.*\\"SO2\\").*:{\\"name\\":\\"(.*)\\",.*\\"amount\\":(.*),.*\\"category\\":\\"(.*)\\",\\"categoryIndex\\":(.*),.*).*(?(?=.*\\"PM2.5\\").*:{\\"name\\":\\"(.*)\\",.*\\"amount\\":(.*),.*\\"category\\":\\"(.*)\\",\\"categoryIndex\\":(.*),.*).*(?(?=.*\\"PM10\\").*:{\\"name\\":\\"(.*)\\",.*\\"amount\\":(.*),.*\\"category\\":\\"(.*)\\",\\"categoryIndex\\":(.*),.*).*(?(?=.*\\"CO\\").*:{\\"name\\":\\"(.*)\\",.*\\"amount\\":(.*),.*\\"category\\":\\"(.*)\\",\\"categoryIndex\\":(.*),.*),.*\\"messages\\":{.*\\"General\\":{.*\\"text\\":\\"(.*)\\"}}
 
 ; ===========================================================================
-; WEATHER POLLEN REGEXP
+; WEATHER UNITS REGEXP
 
-Pollen=(?siU)"getSunIndexPollenDaypartUrlConfig.*":{.*\\"daypartName\\":.\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",.*\\"grassPollenIndex\\":\D(.*),(.*),(.*),.*\\"grassPollenCategory\\":.\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",.*\\"treePollenIndex\\":\D(.*),(.*),(.*),.*\\"treePollenCategory\\":.\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",.*\\"ragweedPollenIndex\\":\D(.*),(.*),(.*),.*\\"ragweedPollenCategory\\":.\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",.*}.*\\"wxu-allergy-pollen\\":{.*\\"grassPollen\\":\\"(.*)\\",\\"ragweedPollen\\":\\"(.*)\\",\\"treePollen\\":\\"(.*)\\",.*}
+CurrentUnits=(?siU)\\"wxu-today-details\\":{.*\\"feelsLike\\":\\"(.*)\\",.*\\"wind\\":\\"(.*)\\",\\"humidity\\":\\"(.*)\\",.*\\"uvIndex\\":\\"(.*)\\",.*}
+
+TendayUnits=(?siU)\\"wxu-weather-data\\":{.*\\"sunrise\\":\\"(.*)\\",\\"sunset\\":\\"(.*)\\",\\"moonrise\\":\\"(.*)\\",\\"moonset\\":\\"(.*)\\"}
+
+WeatherUnits=(?siU)\\"wxu-general\\":{.*\\"mph\\":\\"(.*)\\",\\"km.*h\\":\\"(.*)\\",\\"in\\":\\"(.*)\\",\\"mb\\":\\"(.*)\\",\\"mi\\":\\"(.*)\\",\\"km\\":\\"(.*)\\",.*\\"uvIndexVal\\":\\".*\s(.*)\s.*",\\"uvIndexExtreme\\":\\"(.*)\\",.*}
+
+AirQualityDatail=(?siU)\\"wxu-air-quality\\":{\\"airQuality\\":\\"(.*)\\",.*}
