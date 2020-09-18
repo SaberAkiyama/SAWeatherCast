@@ -32,19 +32,19 @@ hoverSelect = {
 	}
 }
 
-function setCode(selectedHover)
+function setWeatherCode(selectedHover)
 	SKIN:Bang('!SetOption MeterWeatherActive FontColor "' .. hoverSelect[selectedHover]['colorCode'] .. '"')
 	SKIN:Bang('!Update')
 
 end
 
-function setWeather(selectedHover)
+function setWeatherInsert(selectedHover)
 	SKIN:Bang('!SetOption MeterLocationActive FontColor "' .. hoverSelect[selectedHover]['colorWeather'] .. '"')
 	SKIN:Bang('!Update')
 
 end
 
-function setApply(selectedHover)
+function setWeatherApply(selectedHover)
 	SKIN:Bang('!SetOption MeterApplyButton FontColor "' .. hoverSelect[selectedHover]['colorApply'] .. '"')
 	SKIN:Bang('!Update')
 

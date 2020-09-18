@@ -54,43 +54,43 @@ hoverSelect = {
 	}
 }
 
-function setAuthor(selectedHover)
+function setInfoAuthor(selectedHover)
 	SKIN:Bang('!SetOption AuthorLinkActive FontColor "' .. hoverSelect[selectedHover]['colorAuthor'] .. '"')
 	SKIN:Bang('!Update')
 
 end
 
-function setLicense(selectedHover)
+function setInfoLicense(selectedHover)
 	SKIN:Bang('!SetOption LicenseImageActive ImageTint "' .. hoverSelect[selectedHover]['colorLicense'] .. '"')
 	SKIN:Bang('!Update')
 
 end
 
-function setCreditOne(selectedHover)
+function setInfoCreditOne(selectedHover)
 	SKIN:Bang('!SetOption Cred1Active FontColor "' .. hoverSelect[selectedHover]['colorCred1'] .. '"')
 	SKIN:Bang('!Update')
 
 end
 
-function setCreditTwo(selectedHover)
+function setInfoCreditTwo(selectedHover)
 	SKIN:Bang('!SetOption Cred2Active FontColor "' .. hoverSelect[selectedHover]['colorCred2'] .. '"')
 	SKIN:Bang('!Update')
 
 end
 
-function setCreditThree(selectedHover)
+function setInfoCreditThree(selectedHover)
 	SKIN:Bang('!SetOption Cred3Active FontColor "' .. hoverSelect[selectedHover]['colorCred3'] .. '"')
 	SKIN:Bang('!Update')
 
 end
 
-function setCreditFour(selectedHover)
+function setInfoCreditFour(selectedHover)
 	SKIN:Bang('!SetOption Cred4Active FontColor "' .. hoverSelect[selectedHover]['colorCred4'] .. '"')
 	SKIN:Bang('!Update')
 
 end
 
-function setCreditFive(selectedHover)
+function setInfoCreditFive(selectedHover)
 	SKIN:Bang('!SetOption Cred5Active FontColor "' .. hoverSelect[selectedHover]['colorCred5'] .. '"')
 	SKIN:Bang('!Update')
 

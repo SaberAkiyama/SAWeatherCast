@@ -111,22 +111,29 @@ AntiAlias=1
 
 [LanguageText]
 StringAlign=CenterCenter
-FontFace=Merienda
-FontSize=24
+FontFace=TT Squares Condensed
+FontSize=18
 FontColor=255,255,255
 AntiAlias=1
 
-; [LanguageCurrent]
-; StringAlign=CenterCenter
-; FontFace=Merienda
-; FontSize=24
-; FontColor=255,215,0
-; AntiAlias=1
+[LanguageCurrent]
+StringAlign=CenterCenter
+FontFace=Merienda
+FontSize=24
+FontColor=255,215,0
+AntiAlias=1
 
-; [LanguageActive]
-; StringAlign=CenterCenter
-; FontFace=TT Squares Condensed
-; FontSize=18
-; FontColor=255,255,255
-; SolidColor=0,0,0,1
-; AntiAlias=1
+[LanguageInfo]
+StringAlign=CenterCenter
+FontFace=TT Squares Condensed
+FontSize=18
+FontColor=255,255,255
+AntiAlias=1
+
+[LanguageActive]
+StringAlign=CenterCenter
+FontFace=TT Squares Condensed
+FontSize=18
+FontColor=255,255,255
+SolidColor=0,0,0,1
+AntiAlias=1

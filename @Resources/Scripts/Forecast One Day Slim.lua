@@ -6,14 +6,14 @@ function finishUserAgent()
 	SKIN:Bang('!Log "Retrieving Daily Forecast..."')
 
 	SKIN:Bang('!UnpauseMeasureGroup WeatherOneDaySlimMeasure')
-	SKIN:Bang('!UnpauseMeasure MeasureOneDayForecast')
+	SKIN:Bang('!UnpauseMeasure MeasureWeatherCore')
 	SKIN:Bang('!HideMeterGroup WeatherOneDaySlimMeter')
-	SKIN:Bang('!UpdateMeasure MeasureOneDayForecast')
+	SKIN:Bang('!UpdateMeasure MeasureWeatherCore')
 
 end
 
 function updateOneDay()
-	SKIN:Bang('!UpdateMeasure MeasureOneDayForecast')
+	SKIN:Bang('!UpdateMeasure MeasureWeatherCore')
 	SKIN:Bang('!HideMeterGroup WeatherOneDaySlimMeter')
 	SKIN:Bang('!DisableMeasureGroup WeatherOneDaySlimMeasure')
 	
@@ -45,7 +45,6 @@ end
 
 function matchTonight()
 	SKIN:Bang('!HideMeterGroup WeatherTodaySlimMeter')
-	SKIN:Bang('!SetOption MeterTonightIcon X "(10*#OneDayScale#)"')
 	SKIN:Bang('!SetOption MeterTonightText MeasureName "MeasureToday"')
 	SKIN:Bang('!SetOption MeterTonightWindCardinalSpeed MeasureName "MeasureTodayWindCardinal"')
 	SKIN:Bang('!ShowMeterGroup WeatherTonightSlimMeter')
