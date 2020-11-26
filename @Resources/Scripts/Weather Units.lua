@@ -15,15 +15,11 @@ timeCurrentSelect = {
 
 function setCurrentTime(selectedTime)
 	SKIN:Bang('!SetVariable CurrentTime "' .. timeCurrentSelect[selectedTime]['curTime'] .. '"')
-
 	SKIN:Bang('!WriteKeyValue Variables CurrentTimeToggle "' .. timeCurrentSelect[selectedTime]['curTimeVar'] .. '" "#@#Variables.inc"')
-
 	SKIN:Bang('!WriteKeyValue Variables CurrentTime "' .. timeCurrentSelect[selectedTime]['curTime'] .. '" "#CoreUnitFilePath#"')
-
 	SKIN:Bang('!WriteKeyValue Variables CurrentTime "' .. timeCurrentSelect[selectedTime]['curTime'] .. '" "#@#Variables.inc"')
 
 	SKIN:Bang('!UpdateMeterGroup WeatherCurrentMeter')
-	SKIN:Bang('!UpdateMeter MeterCurrentValidTimeLocation')
 	
 end
 
@@ -53,11 +49,8 @@ timeSixHourSelect = {
 
 function setOneHourTime(selectedOHTime)
 	SKIN:Bang('!SetVariable OneHourTime "' .. timeOneHourSelect[selectedOHTime]['oneHourTime'] .. '"')
-
 	SKIN:Bang('!WriteKeyValue Variables OneHourTimeToggle "' .. timeOneHourSelect[selectedOHTime]['oneHourTimeVar'] .. '" "#@#Variables.inc"')
-
 	SKIN:Bang('!WriteKeyValue Variables OneHourTime "' .. timeOneHourSelect[selectedOHTime]['oneHourTime'] .. '" "#CoreUnitFilePath#"')
-
 	SKIN:Bang('!WriteKeyValue Variables OneHourTime "' .. timeOneHourSelect[selectedOHTime]['oneHourTime'] .. '" "#@#Variables.inc"')
 
 	SKIN:Bang('!UpdateMeterGroup WeatherOneHourMeter')
@@ -66,11 +59,8 @@ end
 
 function setSixHourTime(selectedSHTime)
 	SKIN:Bang('!SetVariable SixHourTime "' .. timeSixHourSelect[selectedSHTime]['sixHourTime'] .. '"')
-
 	SKIN:Bang('!WriteKeyValue Variables SixHourTimeToggle "' .. timeSixHourSelect[selectedSHTime]['sixHourTimeVar'] .. '" "#@#Variables.inc"')
-
 	SKIN:Bang('!WriteKeyValue Variables SixHourTime "' .. timeSixHourSelect[selectedSHTime]['sixHourTime'] .. '" "#CoreUnitFilePath#"')
-
 	SKIN:Bang('!WriteKeyValue Variables SixHourTime "' .. timeSixHourSelect[selectedSHTime]['sixHourTime'] .. '" "#@#Variables.inc"')
 
 	SKIN:Bang('!UpdateMeterGroup WeatherSixHourMeter')
@@ -103,11 +93,8 @@ timeOneDaySlimSelect = {
 
 function setOneDayTime(selectedODTime)
 	SKIN:Bang('!SetVariable OneDayTime "' .. timeOneDaySelect[selectedODTime]['oneDayTime'] .. '"')
-
 	SKIN:Bang('!WriteKeyValue Variables OneDayTimeToggle "' .. timeOneDaySelect[selectedODTime]['oneDayVar'] .. '" "#@#Variables.inc"')
-
 	SKIN:Bang('!WriteKeyValue Variables OneDayTime "' .. timeOneDaySelect[selectedODTime]['oneDayTime'] .. '" "#CoreUnitFilePath#"')
-
 	SKIN:Bang('!WriteKeyValue Variables OneDayTime "' .. timeOneDaySelect[selectedODTime]['oneDayTime'] .. '" "#@#Variables.inc"')
 
 	SKIN:Bang('!UpdateMeterGroup WeatherOneDayMeter')
@@ -116,11 +103,8 @@ end
 
 function setOneDaySlimTime(selectedODSTime)
 	SKIN:Bang('!SetVariable OneDaySlimTime "' .. timeOneDaySlimSelect[selectedODSTime]['oneDaySlimTime'] .. '"')
-
 	SKIN:Bang('!WriteKeyValue Variables OneDaySlimTimeToggle "' .. timeOneDaySlimSelect[selectedODSTime]['oneDaySlimVar'] .. '" "#@#Variables.inc"')
-
 	SKIN:Bang('!WriteKeyValue Variables OneDaySlimTime "' .. timeOneDaySlimSelect[selectedODSTime]['oneDaySlimTime'] .. '" "#CoreUnitFilePath#"')
-
 	SKIN:Bang('!WriteKeyValue Variables OneDaySlimTime "' .. timeOneDaySlimSelect[selectedODSTime]['oneDaySlimTime'] .. '" "#@#Variables.inc"')
 
 	SKIN:Bang('!UpdateMeterGroup WeatherOneDaySlimMeter')

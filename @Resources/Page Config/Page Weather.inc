@@ -52,8 +52,8 @@ Y=85r
 Text="Apply Changes"
 ToolTipText="Once is done, click "Apply" button to retrieve Weather skin"
 LeftMouseUpAction=[!CommandMeasure LuaPage "setWeatherApply()"]
-MouseOverAction=[!CommandMeasure LuaPage "setWeatherApply('Over')"]
-MouseLeaveAction=[!CommandMeasure LuaPage "setWeatherApply('Leave')"]
+MouseOverAction=[!CommandMeasure LuaPage "setHoverWeatherApply('Over')"]
+MouseLeaveAction=[!CommandMeasure LuaPage "setHoverWeatherApply('Leave')"]
 
 ; ============================================================
 ; ============================================================

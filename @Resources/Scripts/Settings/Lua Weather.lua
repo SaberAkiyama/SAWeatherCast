@@ -44,7 +44,7 @@ function setWeatherInsert(selectedHover)
 
 end
 
-function setWeatherApply(selectedHover)
+function setHoverWeatherApply(selectedHover)
 	SKIN:Bang('!SetOption MeterApplyButton FontColor "' .. hoverSelect[selectedHover]['colorApply'] .. '"')
 	SKIN:Bang('!Update')
 
