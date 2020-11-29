@@ -47,7 +47,7 @@ X=r
 Y=20r
 W=180
 AntiAlias=1
-LeftMouseUpAction=!CommandMeasure LuaPage "setInfo('Creative Commons')"
+LeftMouseUpAction=[!CommandMeasure LuaPage "setInfo('Creative Commons')"]
 MouseOverAction=[!CommandMeasure LuaPage "setInfoLicense('Over')"]
 MouseLeaveAction=[!CommandMeasure LuaPage "setInfoLicense('Leave')"]
 
@@ -74,7 +74,7 @@ MeterStyle=InfoActive
 Text=Eduardo Tunni - Merienda fonts
 X=r
 Y=30r
-LeftMouseUpAction=!CommandMeasure LuaPage "setInfo('Credit1')"
+LeftMouseUpAction=[!CommandMeasure LuaPage "setInfo('Credit1')"]
 MouseOverAction=[!CommandMeasure LuaPage "setInfoCreditOne('Over')"]
 MouseLeaveAction=[!CommandMeasure LuaPage "setInfoCreditOne('Leave')"]
 
@@ -84,7 +84,7 @@ MeterStyle=InfoActive
 Text=Olexa Volochay - TT Squares Condensed fonts
 X=r
 Y=5R
-LeftMouseUpAction=!CommandMeasure LuaPage "setInfo('Credit2')"
+LeftMouseUpAction=[!CommandMeasure LuaPage "setInfo('Credit2')"]
 MouseOverAction=[!CommandMeasure LuaPage "setInfoCreditTwo('Over')"]
 MouseLeaveAction=[!CommandMeasure LuaPage "setInfoCreditTwo('Leave')"]
 
@@ -94,7 +94,7 @@ MeterStyle=InfoActive
 X=r
 Y=5R
 Text=Christian Robertson - Roboto fonts
-LeftMouseUpAction=!CommandMeasure "LuaPage" "setInfo('Credit3')"
+LeftMouseUpAction=[!CommandMeasure "LuaPage" "setInfo('Credit3')"]
 MouseOverAction=[!CommandMeasure LuaPage "setInfoCreditThree('Over')"]
 MouseLeaveAction=[!CommandMeasure LuaPage "setInfoCreditThree('Leave')"]
 
@@ -103,8 +103,8 @@ Meter=String
 MeterStyle=InfoActive
 X=r
 Y=5R
-Text="Roberto Ierusalimschy - Programming Language (Lua)"
-LeftMouseUpAction=!CommandMeasure LuaPage "setInfo('Credit4')"
+Text="theAzack9 - FrostedGlass (Plugin)"
+LeftMouseUpAction=[!CommandMeasure LuaPage "setInfo('Credit4')"]
 MouseOverAction=[!CommandMeasure LuaPage "setInfoCreditFour('Over')"]
 MouseLeaveAction=[!CommandMeasure LuaPage "setInfoCreditFour('Leave')"]
 
@@ -113,7 +113,17 @@ Meter=String
 MeterStyle=InfoActive
 X=r
 Y=5R
-Text="Rainmeter Developer Team"
-LeftMouseUpAction=!CommandMeasure LuaPage "setInfo('Credit5')"
+Text="Roberto Ierusalimschy - Programming Language (Lua)"
+LeftMouseUpAction=[!CommandMeasure LuaPage "setInfo('Credit5')"]
 MouseOverAction=[!CommandMeasure LuaPage "setInfoCreditFive('Over')"]
 MouseLeaveAction=[!CommandMeasure LuaPage "setInfoCreditFive('Leave')"]
+
+[Cred6Active]
+Meter=String
+MeterStyle=InfoActive
+X=r
+Y=5R
+Text="Rainmeter Developer Team"
+LeftMouseUpAction=[!CommandMeasure LuaPage "setInfo('Credit6')"]
+MouseOverAction=[!CommandMeasure LuaPage "setInfoCreditSix('Over')"]
+MouseLeaveAction=[!CommandMeasure LuaPage "setInfoCreditSix('Leave')"]

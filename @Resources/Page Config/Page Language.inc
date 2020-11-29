@@ -28,7 +28,6 @@ MeterStyle=LanguageActive
 X=0r
 Y=435
 Text="Apply Changes"
-ToolTipText="Once is done, click "Apply" button to refresh language skin."
 LeftMouseUpAction=[!CommandMeasure LuaPage "setApply()"]
 MouseOverAction=[!CommandMeasure LuaPage "setHoverApply('Over')"]
 MouseLeaveAction=[!CommandMeasure LuaPage "setHoverApply('Leave')"]

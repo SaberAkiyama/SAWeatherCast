@@ -2,15 +2,25 @@
 --; Lua Settings
 --; ============================================================
 
+function setRefreshAction()
+	SKIN:Bang('!FadeDuration "100"')
+	SKIN:Bang('!Move (#ScreenAreaWidth#/2)-640 (#ScreenAreaHeight#/2)-320')
+	SKIN:Bang('!Draggable "0"')
+
+end
+
 settingSelect = {
 	["Info"] = {
 		pageLine = "80"
 	},
-	["Weather"] = {
+	["Skins"] = {
 		pageLine = "130"
 	},
-	["Language"] = {
+	["Weather"] = {
 		pageLine = "180"
+	},
+	["Language"] = {
+		pageLine = "230"
 	}
 }
 
@@ -33,13 +43,15 @@ end
 
 hoverSelect = {
 	["Over"] = {
-		colorCode = "255,215,0",
+		colorInfo = "255,215,0",
+		colorSkins = "255,215,0",
 		colorWeather = "255,215,0",
 		colorApply = "255,215,0",
 		colorClose = "225,65,105"
 	},
 	["Leave"] = {
-		colorCode = "255,255,255",
+		colorInfo = "255,255,255",
+		colorSkins = "255,255,255",
 		colorWeather = "255,255,255",
 		colorApply = "255,255,255",
 		colorClose = "255,255,255"
@@ -47,19 +59,25 @@ hoverSelect = {
 }
 
 function setSettingsInfo(selectedHover)
-	SKIN:Bang('!SetOption Page1 FontColor "' .. hoverSelect[selectedHover]['colorCode'] .. '"')
+	SKIN:Bang('!SetOption Page1 FontColor "' .. hoverSelect[selectedHover]['colorInfo'] .. '"')
+	SKIN:Bang('!Update')
+
+end
+
+function setSettingsSkins(selectedHover)
+	SKIN:Bang('!SetOption Page2 FontColor "' .. hoverSelect[selectedHover]['colorSkins'] .. '"')
 	SKIN:Bang('!Update')
 
 end
 
 function setSettingsWeather(selectedHover)
-	SKIN:Bang('!SetOption Page2 FontColor "' .. hoverSelect[selectedHover]['colorWeather'] .. '"')
+	SKIN:Bang('!SetOption Page3 FontColor "' .. hoverSelect[selectedHover]['colorWeather'] .. '"')
 	SKIN:Bang('!Update')
 
 end
 
 function setSettingsLanguage(selectedHover)
-	SKIN:Bang('!SetOption Page3 FontColor "' .. hoverSelect[selectedHover]['colorApply'] .. '"')
+	SKIN:Bang('!SetOption Page4 FontColor "' .. hoverSelect[selectedHover]['colorApply'] .. '"')
 	SKIN:Bang('!Update')
 
 end

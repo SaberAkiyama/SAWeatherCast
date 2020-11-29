@@ -50,7 +50,6 @@ MeterStyle=WeatherActive
 X=770
 Y=85r
 Text="Apply Changes"
-ToolTipText="Once is done, click "Apply" button to retrieve Weather skin"
 LeftMouseUpAction=[!CommandMeasure LuaPage "setWeatherApply()"]
 MouseOverAction=[!CommandMeasure LuaPage "setHoverWeatherApply('Over')"]
 MouseLeaveAction=[!CommandMeasure LuaPage "setHoverWeatherApply('Leave')"]

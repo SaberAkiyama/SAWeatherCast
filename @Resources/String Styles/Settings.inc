@@ -66,6 +66,47 @@ SolidColor=0,0,0,1
 AntiAlias=1
 
 ; ==================================================
+; PAGE SKINS
+; ==================================================
+
+[SkinText]
+StringAlign=CenterCenter
+FontFace=Merienda
+FontSize=24
+FontColor=255,255,255
+AntiAlias=1
+
+[SkinInfo]
+StringAlign=LeftCenter
+FontFace=TT Squares Condensed
+FontSize=18
+FontColor=255,255,255
+AntiAlias=1
+
+[SkinArrow]
+StringAlign=CenterCenter
+FontFace=TT Squares Condensed
+FontSize=18
+FontColor=255,255,255
+AntiAlias=1
+
+[SkinTypefaceActive]
+StringAlign=CenterCenter
+FontFace=TT Squares Condensed
+FontSize=14
+FontColor=255,255,255
+SolidColor=0,0,0,1
+AntiAlias=1
+
+[SkinActive]
+StringAlign=CenterCenter
+FontFace=TT Squares Condensed
+FontSize=18
+FontColor=255,255,255
+SolidColor=0,0,0,1
+AntiAlias=1
+
+; ==================================================
 ; PAGE WEATHER
 ; ==================================================
 

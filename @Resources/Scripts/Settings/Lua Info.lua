@@ -19,9 +19,12 @@ infoSelect = {
 		infoLink = "https://fonts.google.com/specimen/Roboto"
 	},
 	["Credit4"] = {
-		infoLink = "https://www.lua.org/"
+		infoLink = "https://forum.rainmeter.net/viewtopic.php?f=18&t=23106"
 	},
 	["Credit5"] = {
+		infoLink = "https://www.lua.org/"
+	},
+	["Credit6"] = {
 		infoLink = "https://github.com/orgs/rainmeter/people"
 	}
 }
@@ -41,7 +44,8 @@ hoverSelect = {
 		colorCred2 = "255,215,0",
 		colorCred3 = "255,215,0",
 		colorCred4 = "255,215,0",
-		colorCred5 = "255,215,0"
+		colorCred5 = "255,215,0",
+		colorCred6 = "255,215,0"
 	},
 	["Leave"] = {
 		colorAuthor = "255,255,255",
@@ -50,7 +54,8 @@ hoverSelect = {
 		colorCred2 = "255,255,255",
 		colorCred3 = "255,255,255",
 		colorCred4 = "255,255,255",
-		colorCred5 = "255,255,255"
+		colorCred5 = "255,255,255",
+		colorCred6 = "255,255,255"
 	}
 }
 
@@ -92,6 +97,12 @@ end
 
 function setInfoCreditFive(selectedHover)
 	SKIN:Bang('!SetOption Cred5Active FontColor "' .. hoverSelect[selectedHover]['colorCred5'] .. '"')
+	SKIN:Bang('!Update')
+
+end
+
+function setInfoCreditSix(selectedHover)
+	SKIN:Bang('!SetOption Cred6Active FontColor "' .. hoverSelect[selectedHover]['colorCred6'] .. '"')
 	SKIN:Bang('!Update')
 
 end

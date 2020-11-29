@@ -2,139 +2,147 @@
 ; 							WEATHER STRING STYLES
 ; ===========================================================================
 
+[WeatherStyleRetreieve]
+StringAlign=CenterCenter
+FontFace=#TypeFace#
+FontColor=#ColorCode#
+FontSize=(30*#WeatherScale#)
+AntiAlias=1
+DynamicVariables=1
+
 ; ===========================================================================
 ; 							CURRENT STYLES
 ; ===========================================================================
 
 [WeatherCurrentImageStyle]
 ImagePath=#@#Images\Weather
-ImageTint=255,255,255
+ImageTint=#ColorCode#
 AntiAlias=1
 DynamicVariables=1
 
 [WeatherCurrentTempStyle]
 StringAlign=LeftCenter
-FontFace=Roboto
-FontSize=(62*#CurrentScale#)
+FontFace=#TypeFace#
+FontSize=(62*#WeatherScale#)
 FontWeight=300
-FontColor=255,255,255
+FontColor=#ColorCode#
 AntiAlias=1
 DynamicVariables=1
 
 [WeatherCurrentCondStyle]
 StringAlign=LeftCenter
-FontFace=Roboto
-FontSize=(25*#CurrentScale#)
+FontFace=#TypeFace#
+FontSize=(25*#WeatherScale#)
 FontWeight=300
-FontColor=255,255,255
+FontColor=#ColorCode#
 AntiAlias=1
 DynamicVariables=1
 
 [WeatherCurrentFeelsStyle]
 StringAlign=LeftCenter
-FontFace=Roboto
-FontSize=(15*#CurrentScale#)
+FontFace=#TypeFace#
+FontSize=(15*#WeatherScale#)
 FontWeight=300
-FontColor=255,255,255,128
+FontColor=#ColorCode#,128
 AntiAlias=1
 DynamicVariables=1
 
 [WeatherCurrentFeelsStyle]
 StringAlign=LeftCenter
-FontFace=Roboto
-FontSize=(15*#CurrentScale#)
+FontFace=#TypeFace#
+FontSize=(15*#WeatherScale#)
 FontWeight=300
-FontColor=255,255,255,128
+FontColor=#ColorCode#,128
 AntiAlias=1
 DynamicVariables=1
 
 [WeatherCurrentValidLocStyle]
 StringAlign=LeftCenter
-FontFace=Roboto
-FontSize=(15*#CurrentScale#)
+FontFace=#TypeFace#
+FontSize=(15*#WeatherScale#)
 FontWeight=300
-FontColor=255,255,255,128
+FontColor=#ColorCode#,128
 AntiAlias=1
 DynamicVariables=1
 
 [WeatherCurrentTempMaxMinStyle]
 StringAlign=LeftCenter
-FontFace=Roboto
-FontSize=(15*#CurrentScale#)
+FontFace=#TypeFace#
+FontSize=(15*#WeatherScale#)
 FontWeight=300
-FontColor=255,255,255
+FontColor=#ColorCode#
 AntiAlias=1
 DynamicVariables=1
 
 [WeatherCurrentSunStyle]
 StringAlign=LeftCenter
-FontFace=Roboto
-FontSize=(15*#CurrentScale#)
+FontFace=#TypeFace#
+FontSize=(15*#WeatherScale#)
 FontWeight=300
-FontColor=255,255,255
+FontColor=#ColorCode#
 AntiAlias=1
 DynamicVariables=1
 
 [WeatherCurrentWindStyle]
 StringAlign=LeftCenter
-FontFace=Roboto
-FontSize=(15*#CurrentScale#)
+FontFace=#TypeFace#
+FontSize=(15*#WeatherScale#)
 FontWeight=300
-FontColor=255,255,255
+FontColor=#ColorCode#
 AntiAlias=1
 DynamicVariables=1
 
 [WeatherCurrentHumidStyle]
 StringAlign=LeftCenter
-FontFace=Roboto
-FontSize=(15*#CurrentScale#)
+FontFace=#TypeFace#
+FontSize=(15*#WeatherScale#)
 FontWeight=300
-FontColor=255,255,255
+FontColor=#ColorCode#
 AntiAlias=1
 DynamicVariables=1
 
 [WeatherCurrentDPStyle]
 StringAlign=LeftCenter
-FontFace=Roboto
-FontSize=(15*#CurrentScale#)
+FontFace=#TypeFace#
+FontSize=(15*#WeatherScale#)
 FontWeight=300
-FontColor=255,255,255
+FontColor=#ColorCode#
 AntiAlias=1
 DynamicVariables=1
 
 [WeatherCurrentPressStyle]
 StringAlign=LeftCenter
-FontFace=Roboto
-FontSize=(15*#CurrentScale#)
+FontFace=#TypeFace#
+FontSize=(15*#WeatherScale#)
 FontWeight=300
-FontColor=255,255,255
+FontColor=#ColorCode#
 AntiAlias=1
 DynamicVariables=1
 
 [WeatherCurrentUVStyle]
 StringAlign=LeftCenter
-FontFace=Roboto
-FontSize=(15*#CurrentScale#)
+FontFace=#TypeFace#
+FontSize=(15*#WeatherScale#)
 FontWeight=300
-FontColor=255,255,255
+FontColor=#ColorCode#
 AntiAlias=1
 DynamicVariables=1
 
 [WeatherCurrentVisStyle]
 StringAlign=LeftCenter
-FontFace=Roboto
-FontSize=(15*#CurrentScale#)
+FontFace=#TypeFace#
+FontSize=(15*#WeatherScale#)
 FontWeight=300
-FontColor=255,255,255
+FontColor=#ColorCode#
 AntiAlias=1
 DynamicVariables=1
 
 [WeatherCurrentMPStyle]
 StringAlign=LeftCenter
-FontFace=Roboto
-FontSize=(15*#CurrentScale#)
+FontFace=#TypeFace#
+FontSize=(15*#WeatherScale#)
 FontWeight=300
-FontColor=255,255,255
+FontColor=#ColorCode#
 AntiAlias=1
 DynamicVariables=1
 
@@ -144,70 +152,70 @@ DynamicVariables=1
 
 [WeatherCurrentSlimImageStyle]
 ImagePath=#@#Images\Weather
-ImageTint=255,255,255
+ImageTint=#ColorCode#
 AntiAlias=1
 DynamicVariables=1
 
 [WeatherCurrentSlimTempStyle]
 StringAlign=LeftCenter
-FontFace=Roboto
-FontSize=(62*#CurrentSlimScale#)
+FontFace=#TypeFace#
+FontSize=(62*#WeatherScale#)
 FontWeight=300
-FontColor=255,255,255
+FontColor=#ColorCode#
 AntiAlias=1
 DynamicVariables=1
 
 [WeatherCurrentSlimCondStyle]
 StringAlign=LeftCenter
-FontFace=Roboto
-FontSize=(25*#CurrentSlimScale#)
+FontFace=#TypeFace#
+FontSize=(25*#WeatherScale#)
 FontWeight=300
-FontColor=255,255,255
+FontColor=#ColorCode#
 AntiAlias=1
 DynamicVariables=1
 
 [WeatherCurrentSlimFeelsStyle]
 StringAlign=LeftCenter
-FontFace=Roboto
-FontSize=(15*#CurrentSlimScale#)
+FontFace=#TypeFace#
+FontSize=(15*#WeatherScale#)
 FontWeight=300
-FontColor=255,255,255,128
+FontColor=#ColorCode#,128
 AntiAlias=1
 DynamicVariables=1
 
 [WeatherCurrentSlimFeelsStyle]
 StringAlign=LeftCenter
-FontFace=Roboto
-FontSize=(15*#CurrentSlimScale#)
+FontFace=#TypeFace#
+FontSize=(15*#WeatherScale#)
 FontWeight=300
-FontColor=255,255,255,128
+FontColor=#ColorCode#,128
 AntiAlias=1
 DynamicVariables=1
 
 [WeatherCurrentSlimWindStyle]
 StringAlign=LeftCenter
-FontFace=Roboto
-FontSize=(15*#CurrentSlimScale#)
+FontFace=#TypeFace#
+FontSize=(15*#WeatherScale#)
 FontWeight=300
-FontColor=255,255,255
+FontColor=#ColorCode#
 AntiAlias=1
 DynamicVariables=1
 
 [WeatherCurrentSlimHumidStyle]
 StringAlign=LeftCenter
-FontFace=Roboto
-FontSize=(15*#CurrentSlimScale#)
+FontFace=#TypeFace#
+FontSize=(15*#WeatherScale#)
 FontWeight=300
-FontColor=255,255,255
+FontColor=#ColorCode#
 AntiAlias=1
 DynamicVariables=1
 
 [WeatherCurrentSlimVisStyle]
 StringAlign=LeftCenter
-FontFace=Roboto
-FontSize=(15*#CurrentSlimScale#)
+FontFace=#TypeFace#
+FontSize=(15*#WeatherScale#)
 FontWeight=300
-FontColor=255,255,255
+FontColor=#ColorCode#
 AntiAlias=1
 DynamicVariables=1
 
@@ -217,25 +225,25 @@ DynamicVariables=1
 
 [WeatherCurrentExtraSlimImageStyle]
 ImagePath=#@#Images\Weather
-ImageTint=255,255,255
+ImageTint=#ColorCode#
 AntiAlias=1
 DynamicVariables=1
 
 [WeatherCurrentExtraSlimTempStyle]
 StringAlign=LeftCenter
-FontFace=Roboto
-FontSize=(62*#CurrentExtraSlimScale#)
+FontFace=#TypeFace#
+FontSize=(62*#WeatherScale#)
 FontWeight=300
-FontColor=255,255,255
+FontColor=#ColorCode#
 AntiAlias=1
 DynamicVariables=1
 
 [WeatherCurrentExtraSlimCondStyle]
 StringAlign=LeftCenter
-FontFace=Roboto
-FontSize=(25*#CurrentExtraSlimScale#)
+FontFace=#TypeFace#
+FontSize=(25*#WeatherScale#)
 FontWeight=300
-FontColor=255,255,255
+FontColor=#ColorCode#
 AntiAlias=1
 DynamicVariables=1
 
@@ -245,106 +253,106 @@ DynamicVariables=1
 
 [WeatherOneHourImageStyle]
 ImagePath=#@#Images\Weather
-ImageTint=255,255,255
+ImageTint=#ColorCode#
 AntiAlias=1
 DynamicVariables=1
 
 [WeatherOneHourValidStyle]
 StringAlign=LeftCenter
-FontFace=Roboto
-FontSize=(15*#OneHourScale#)
+FontFace=#TypeFace#
+FontSize=(15*#WeatherScale#)
 FontWeight=300
-FontColor=255,255,255
+FontColor=#ColorCode#
 AntiAlias=1
 DynamicVariables=1
 
 [WeatherOneHourTempStyle]
 StringAlign=LeftCenter
-FontFace=Roboto
-FontSize=(47*#OneHourScale#)
+FontFace=#TypeFace#
+FontSize=(47*#WeatherScale#)
 FontWeight=300
-FontColor=255,255,255
+FontColor=#ColorCode#
 AntiAlias=1
 DynamicVariables=1
 
 [WeatherOneHourCondStyle]
 StringAlign=LeftCenter
-FontFace=Roboto
-FontSize=(25*#OneHourScale#)
+FontFace=#TypeFace#
+FontSize=(25*#WeatherScale#)
 FontWeight=300
-FontColor=255,255,255
+FontColor=#ColorCode#
 AntiAlias=1
 DynamicVariables=1
 
 [WeatherOneHourFeelsTextStyle]
 StringAlign=LeftCenter
-FontFace=Roboto
-FontSize=(10*#OneHourScale#)
+FontFace=#TypeFace#
+FontSize=(10*#WeatherScale#)
 FontWeight=300
-FontColor=255,255,255
+FontColor=#ColorCode#
 AntiAlias=1
 DynamicVariables=1
 
 [WeatherOneHourFeelsStyle]
 StringAlign=LeftCenter
-FontFace=Roboto
-FontSize=(20*#OneHourScale#)
+FontFace=#TypeFace#
+FontSize=(20*#WeatherScale#)
 FontWeight=300
-FontColor=255,255,255
+FontColor=#ColorCode#
 AntiAlias=1
 DynamicVariables=1
 
 [WeatherOneHourWindTextStyle]
 StringAlign=LeftCenter
-FontFace=Roboto
-FontSize=(10*#OneHourScale#)
+FontFace=#TypeFace#
+FontSize=(10*#WeatherScale#)
 FontWeight=300
-FontColor=255,255,255
+FontColor=#ColorCode#
 AntiAlias=1
 DynamicVariables=1
 
 [WeatherOneHourWindStyle]
 StringAlign=LeftCenter
-FontFace=Roboto
-FontSize=(20*#OneHourScale#)
+FontFace=#TypeFace#
+FontSize=(20*#WeatherScale#)
 FontWeight=300
-FontColor=255,255,255
+FontColor=#ColorCode#
 AntiAlias=1
 DynamicVariables=1
 
 [WeatherOneHourHumidTextStyle]
 StringAlign=LeftCenter
-FontFace=Roboto
-FontSize=(10*#OneHourScale#)
+FontFace=#TypeFace#
+FontSize=(10*#WeatherScale#)
 FontWeight=300
-FontColor=255,255,255
+FontColor=#ColorCode#
 AntiAlias=1
 DynamicVariables=1
 
 [WeatherOneHourHumidStyle]
 StringAlign=LeftCenter
-FontFace=Roboto
-FontSize=(20*#OneHourScale#)
+FontFace=#TypeFace#
+FontSize=(20*#WeatherScale#)
 FontWeight=300
-FontColor=255,255,255
+FontColor=#ColorCode#
 AntiAlias=1
 DynamicVariables=1
 
 [WeatherOneHourUVTextStyle]
 StringAlign=LeftCenter
-FontFace=Roboto
-FontSize=(10*#OneHourScale#)
+FontFace=#TypeFace#
+FontSize=(10*#WeatherScale#)
 FontWeight=300
-FontColor=255,255,255
+FontColor=#ColorCode#
 AntiAlias=1
 DynamicVariables=1
 
 [WeatherOneHourUVStyle]
 StringAlign=LeftCenter
-FontFace=Roboto
-FontSize=(20*#OneHourScale#)
+FontFace=#TypeFace#
+FontSize=(20*#WeatherScale#)
 FontWeight=300
-FontColor=255,255,255
+FontColor=#ColorCode#
 AntiAlias=1
 DynamicVariables=1
 
@@ -354,43 +362,43 @@ DynamicVariables=1
 
 [WeatherSixHourImageStyle]
 ImagePath=#@#Images\Weather
-ImageTint=255,255,255
+ImageTint=#ColorCode#
 AntiAlias=1
 DynamicVariables=1
 
 [WeatherSixHourTempStyle]
 StringAlign=LeftCenter
-FontFace=Roboto
-FontSize=(20*#SixHourScale#)
+FontFace=#TypeFace#
+FontSize=(20*#WeatherScale#)
 FontWeight=300
-FontColor=255,255,255
+FontColor=#ColorCode#
 AntiAlias=1
 DynamicVariables=1
 
 [WeatherSixHourValidStyle]
 StringAlign=LeftCenter
-FontFace=Roboto
-FontSize=(10*#SixHourScale#)
+FontFace=#TypeFace#
+FontSize=(10*#WeatherScale#)
 FontWeight=300
-FontColor=255,255,255
+FontColor=#ColorCode#
 AntiAlias=1
 DynamicVariables=1
 
 [WeatherSixHourPrecipStyle]
 StringAlign=LeftCenter
-FontFace=Roboto
-FontSize=(15*#SixHourScale#)
+FontFace=#TypeFace#
+FontSize=(15*#WeatherScale#)
 FontWeight=300
-FontColor=255,255,255
+FontColor=#ColorCode#
 AntiAlias=1
 DynamicVariables=1
 
 [WeatherSixHourWindStyle]
 StringAlign=LeftCenter
-FontFace=Roboto
-FontSize=(15*#SixHourScale#)
+FontFace=#TypeFace#
+FontSize=(15*#WeatherScale#)
 FontWeight=300
-FontColor=255,255,255
+FontColor=#ColorCode#
 AntiAlias=1
 DynamicVariables=1
 
@@ -400,97 +408,97 @@ DynamicVariables=1
 
 [WeatherOneDayImageStyle]
 ImagePath=#@#Images\Weather
-ImageTint=255,255,255
+ImageTint=#ColorCode#
 AntiAlias=1
 DynamicVariables=1
 
 [WeatherOneDayTextStyle]
 StringAlign=LeftCenter
-FontFace=Roboto
-FontSize=(15*#OneDayScale#)
+FontFace=#TypeFace#
+FontSize=(15*#WeatherScale#)
 FontWeight=300
-FontColor=255,255,255
+FontColor=#ColorCode#
 AntiAlias=1
 DynamicVariables=1
 
 [WeatherOneDayTempStyle]
 StringAlign=LeftCenter
-FontFace=Roboto
-FontSize=(47*#OneDayScale#)
+FontFace=#TypeFace#
+FontSize=(47*#WeatherScale#)
 FontWeight=300
-FontColor=255,255,255
+FontColor=#ColorCode#
 AntiAlias=1
 DynamicVariables=1
 
 [WeatherOneDayPrecipStyle]
 StringAlign=LeftCenter
-FontFace=Roboto
-FontSize=(20*#OneDayScale#)
+FontFace=#TypeFace#
+FontSize=(20*#WeatherScale#)
 FontWeight=300
-FontColor=255,255,255
+FontColor=#ColorCode#
 AntiAlias=1
 DynamicVariables=1
 
 [WeatherOneDayWindStyle]
 StringAlign=LeftCenter
-FontFace=Roboto
-FontSize=(20*#OneDayScale#)
+FontFace=#TypeFace#
+FontSize=(20*#WeatherScale#)
 FontWeight=300
-FontColor=255,255,255
+FontColor=#ColorCode#
 AntiAlias=1
 DynamicVariables=1
 
 [WeatherOneDayHumidTextStyle]
 StringAlign=LeftCenter
-FontFace=Roboto
-FontSize=(10*#OneDayScale#)
+FontFace=#TypeFace#
+FontSize=(10*#WeatherScale#)
 FontWeight=300
-FontColor=255,255,255
+FontColor=#ColorCode#
 AntiAlias=1
 DynamicVariables=1
 
 [WeatherOneDayHumidStyle]
 StringAlign=LeftCenter
-FontFace=Roboto
-FontSize=(20*#OneDayScale#)
+FontFace=#TypeFace#
+FontSize=(20*#WeatherScale#)
 FontWeight=300
-FontColor=255,255,255
+FontColor=#ColorCode#
 AntiAlias=1
 DynamicVariables=1
 
 [WeatherOneDayUVTextStyle]
 StringAlign=LeftCenter
-FontFace=Roboto
-FontSize=(10*#OneDayScale#)
+FontFace=#TypeFace#
+FontSize=(10*#WeatherScale#)
 FontWeight=300
-FontColor=255,255,255
+FontColor=#ColorCode#
 AntiAlias=1
 DynamicVariables=1
 
 [WeatherOneDayUVStyle]
 StringAlign=LeftCenter
-FontFace=Roboto
-FontSize=(20*#OneDayScale#)
+FontFace=#TypeFace#
+FontSize=(20*#WeatherScale#)
 FontWeight=300
-FontColor=255,255,255
+FontColor=#ColorCode#
 AntiAlias=1
 DynamicVariables=1
 
 [WeatherOneDaySunMoonTextStyle]
 StringAlign=LeftCenter
-FontFace=Roboto
-FontSize=(10*#OneDayScale#)
+FontFace=#TypeFace#
+FontSize=(10*#WeatherScale#)
 FontWeight=300
-FontColor=255,255,255
+FontColor=#ColorCode#
 AntiAlias=1
 DynamicVariables=1
 
 [WeatherOneDaySunMoonStyle]
 StringAlign=LeftCenter
-FontFace=Roboto
-FontSize=(20*#OneDayScale#)
+FontFace=#TypeFace#
+FontSize=(20*#WeatherScale#)
 FontWeight=300
-FontColor=255,255,255
+FontColor=#ColorCode#
 AntiAlias=1
 DynamicVariables=1
 
@@ -500,97 +508,97 @@ DynamicVariables=1
 
 [WeatherOneDaySlimImageStyle]
 ImagePath=#@#Images\Weather
-ImageTint=255,255,255
+ImageTint=#ColorCode#
 AntiAlias=1
 DynamicVariables=1
 
 [WeatherOneDaySlimTextStyle]
 StringAlign=LeftCenter
-FontFace=Roboto
-FontSize=(15*#OneDaySlimScale#)
+FontFace=#TypeFace#
+FontSize=(15*#WeatherScale#)
 FontWeight=300
-FontColor=255,255,255
+FontColor=#ColorCode#
 AntiAlias=1
 DynamicVariables=1
 
 [WeatherOneDaySlimTempStyle]
 StringAlign=LeftCenter
-FontFace=Roboto
-FontSize=(47*#OneDaySlimScale#)
+FontFace=#TypeFace#
+FontSize=(47*#WeatherScale#)
 FontWeight=300
-FontColor=255,255,255
+FontColor=#ColorCode#
 AntiAlias=1
 DynamicVariables=1
 
 [WeatherOneDaySlimPrecipStyle]
 StringAlign=LeftCenter
-FontFace=Roboto
-FontSize=(20*#OneDaySlimScale#)
+FontFace=#TypeFace#
+FontSize=(20*#WeatherScale#)
 FontWeight=300
-FontColor=255,255,255
+FontColor=#ColorCode#
 AntiAlias=1
 DynamicVariables=1
 
 [WeatherOneDaySlimWindStyle]
 StringAlign=LeftCenter
-FontFace=Roboto
-FontSize=(20*#OneDaySlimScale#)
+FontFace=#TypeFace#
+FontSize=(20*#WeatherScale#)
 FontWeight=300
-FontColor=255,255,255
+FontColor=#ColorCode#
 AntiAlias=1
 DynamicVariables=1
 
 [WeatherOneDaySlimHumidTextStyle]
 StringAlign=LeftCenter
-FontFace=Roboto
-FontSize=(10*#OneDaySlimScale#)
+FontFace=#TypeFace#
+FontSize=(10*#WeatherScale#)
 FontWeight=300
-FontColor=255,255,255
+FontColor=#ColorCode#
 AntiAlias=1
 DynamicVariables=1
 
 [WeatherOneDaySlimHumidStyle]
 StringAlign=LeftCenter
-FontFace=Roboto
-FontSize=(20*#OneDaySlimScale#)
+FontFace=#TypeFace#
+FontSize=(20*#WeatherScale#)
 FontWeight=300
-FontColor=255,255,255
+FontColor=#ColorCode#
 AntiAlias=1
 DynamicVariables=1
 
 [WeatherOneDaySlimUVTextStyle]
 StringAlign=LeftCenter
-FontFace=Roboto
-FontSize=(10*#OneDaySlimScale#)
+FontFace=#TypeFace#
+FontSize=(10*#WeatherScale#)
 FontWeight=300
-FontColor=255,255,255
+FontColor=#ColorCode#
 AntiAlias=1
 DynamicVariables=1
 
 [WeatherOneDaySlimUVStyle]
 StringAlign=LeftCenter
-FontFace=Roboto
-FontSize=(20*#OneDaySlimScale#)
+FontFace=#TypeFace#
+FontSize=(20*#WeatherScale#)
 FontWeight=300
-FontColor=255,255,255
+FontColor=#ColorCode#
 AntiAlias=1
 DynamicVariables=1
 
 [WeatherOneDaySlimSunMoonTextStyle]
 StringAlign=LeftCenter
-FontFace=Roboto
-FontSize=(10*#OneDaySlimScale#)
+FontFace=#TypeFace#
+FontSize=(10*#WeatherScale#)
 FontWeight=300
-FontColor=255,255,255
+FontColor=#ColorCode#
 AntiAlias=1
 DynamicVariables=1
 
 [WeatherOneDaySlimSunMoonStyle]
 StringAlign=LeftCenter
-FontFace=Roboto
-FontSize=(20*#OneDaySlimScale#)
+FontFace=#TypeFace#
+FontSize=(20*#WeatherScale#)
 FontWeight=300
-FontColor=255,255,255
+FontColor=#ColorCode#
 AntiAlias=1
 DynamicVariables=1
 
@@ -600,42 +608,42 @@ DynamicVariables=1
 
 [WeatherSevenDayImageStyle]
 ImagePath=#@#Images\Weather
-ImageTint=255,255,255
+ImageTint=#ColorCode#
 AntiAlias=1
 DynamicVariables=1
 
 [WeatherSevenDayTempStyle]
 StringAlign=LeftCenter
-FontFace=Roboto
-FontSize=(20*#SevenDayScale#)
+FontFace=#TypeFace#
+FontSize=(20*#WeatherScale#)
 FontWeight=300
-FontColor=255,255,255
+FontColor=#ColorCode#
 AntiAlias=1
 DynamicVariables=1
 
 [WeatherSevenDayTextStyle]
 StringAlign=LeftCenter
-FontFace=Roboto
-FontSize=(10*#SevenDayScale#)
+FontFace=#TypeFace#
+FontSize=(10*#WeatherScale#)
 FontWeight=300
-FontColor=255,255,255
+FontColor=#ColorCode#
 AntiAlias=1
 DynamicVariables=1
 
 [WeatherSevenDayPrecipStyle]
 StringAlign=LeftCenter
-FontFace=Roboto
-FontSize=(15*#SevenDayScale#)
+FontFace=#TypeFace#
+FontSize=(15*#WeatherScale#)
 FontWeight=300
-FontColor=255,255,255
+FontColor=#ColorCode#
 AntiAlias=1
 DynamicVariables=1
 
 [WeatherSevenDayWindStyle]
 StringAlign=LeftCenter
-FontFace=Roboto
-FontSize=(15*#SevenDayScale#)
+FontFace=#TypeFace#
+FontSize=(15*#WeatherScale#)
 FontWeight=300
-FontColor=255,255,255
+FontColor=#ColorCode#
 AntiAlias=1
 DynamicVariables=1

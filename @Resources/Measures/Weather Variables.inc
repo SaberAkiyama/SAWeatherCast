@@ -28,9 +28,9 @@ LocationCode=ccb09a4a3cb9ff4c8c5324b73d8cc6c986ab1e58789e0d37c0a1154b46ec30e9
 ; ===========================================================================
 ; USER AGENT
 
-URLAgent=https://www.whatismybrowser.com/guides/the-latest-user-agent/chrome
+URLAgent=https://www.whatismybrowser.com/guides/the-latest-user-agent/firefox
 
-UAReg=(?siU)<h2>Latest Chrome on Android User Agents</h2>.*<span class="code">(.*)</span>.*
+UAReg=(?siU)<h2>Latest Firefox on Desktop User Agents</h2>.*<span class="code">(.*)</span>.*
 
 ; ===========================================================================
 ; WEATHER URL
