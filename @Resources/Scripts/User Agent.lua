@@ -3,7 +3,7 @@
 --; ==================================================
 
 function finishUserAgent()
-	SKIN:Bang('!Log "Retrieving Current..."')
+	SKIN:Bang('!Log "#RetrievingCurrentText#"')
 
 	SKIN:Bang('!UnpauseMeasureGroup WeatherCurrentMeasure')
 	SKIN:Bang('!UnpauseMeasureGroup WeatherCurrentSlimMeasure')
@@ -16,7 +16,7 @@ function finishUserAgent()
 end
 
 function finishTendayUserAgent()
-	SKIN:Bang('!Log "Retrieving Tenday..."')
+	SKIN:Bang('!Log "#RetrievingTendayText#"')
 
 	SKIN:Bang('!UnpauseMeasureGroup WeatherOneDayMeasure')
 	SKIN:Bang('!UnpauseMeasureGroup WeatherOneDaySlimMeasure')

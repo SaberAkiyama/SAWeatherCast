@@ -15,12 +15,12 @@ X=555
 Y=280
 Text=Typeface
 
-[MeterTypeColor]
+[MeterColorPreset]
 Meter=String
 MeterStyle=SkinInfo
 X=0r
 Y=50r
-Text=Color Presets
+Text=Color Preset
 
 ; ============================================================
 ; ============================================================
@@ -62,6 +62,16 @@ Text=#ColorText#
 LeftMouseUpAction=!CommandMeasure LuaPage "setColor('Color Code')"
 MouseOverAction=[!CommandMeasure LuaPage "setSkinColorText('Over')"]
 MouseLeaveAction=[!CommandMeasure LuaPage "setSkinColorText('Leave')"]
+
+; ============================================================
+; ============================================================
+
+[MeterSkinNote]
+Meter=String
+MeterStyle=SkinNote
+X=770
+Y=50r
+Text="This Color Preset is only for Black and White color codes"
 
 ; ============================================================
 ; ============================================================

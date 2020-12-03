@@ -3,18 +3,19 @@
 Page=Info
 PageLine=80
 
-TypeFace=Roboto
+TypeFace=Merienda
 ColorText=White
 ColorCode=255,255,255
 
-LangCurrent=English (US)
-TempUnit=Fahrenheit
-WindUnit=Mph
-WindUnitShort=Mph
-VisibilityUnit=Mile
-VisibilityUnitShort=Mi
-PressureUnit=Inches
-PressureUnitShort=In
+LangName=English
+LangCurrent=English (World)
+TempUnit=Celcius
+WindUnit=Km/h
+WindUnitShort=Kmh
+VisibilityUnit=Kilometre
+VisibilityUnitShort=Km
+PressureUnit=Milibar
+PressureUnitShort=Mb
 
 ; ====================================================================================================
 

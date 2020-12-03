@@ -39,7 +39,7 @@ Meter=String
 MeterStyle=WeatherNote
 X=770
 Y=115r
-Text="Copy and enter that as the value for LocationCode#CRLF#The Country/Region codes (e.g.: USNY0996)#CRLF#will also work as the LocationCode#CRLF#Or use the long number at the end of the resulting URL"
+Text="Copy and enter that as the value for Location Code#CRLF#The Country/Region codes (e.g.: USNY0996)#CRLF#will also work as the Location Code#CRLF#Or use the long number at the end of the resulting URL"
 
 ; ============================================================
 ; ============================================================

@@ -3,7 +3,7 @@
 ; ===========================================================================
 
 [WeatherStyleRetreieve]
-StringAlign=CenterCenter
+StringAlign=LeftCenter
 FontFace=#TypeFace#
 FontColor=#ColorCode#
 FontSize=(30*#WeatherScale#)

@@ -29,7 +29,7 @@ end
 --; ====================================================================================================
 
 function finishCurrent()
-	SKIN:Bang('!Log "Weather Daily Retrieved"')
+	SKIN:Bang('!Log "#RetrievedCurrentText#"')
 
 	SKIN:Bang('!HideMeter MeterWeatherRetrieve')
 	SKIN:Bang('!ShowMeterGroup WeatherCurrentMeter')

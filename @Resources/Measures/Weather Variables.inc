@@ -10,16 +10,16 @@
 ; Search for your city by name.
 
 ; Use the long number at the end of the resulting URL, for example:
-; "https://weather.com/weather/today/l/ccb09a4a3cb9ff4c8c5324b73d8cc6c986ab1e58789e0d37c0a1154b46ec30e9"
+; "https://weather.com/en-US/weather/today/l/ccb09a4a3cb9ff4c8c5324b73d8cc6c986ab1e58789e0d37c0a1154b46ec30e9"
 
 ; The LocationCode would be "ccb09a4a3cb9ff4c8c5324b73d8cc6c986ab1e58789e0d37c0a1154b46ec30e9"
 ; Copy and enter that as the value for "LocationCode" below.
 
 [Variables]
 
-LangLoc=en-US
+LangLoc=en-CA
 
-LocationCode=ccb09a4a3cb9ff4c8c5324b73d8cc6c986ab1e58789e0d37c0a1154b46ec30e9
+LocationCode=MYXX0004
 
 ; ===========================================================================
 ; DO NOT CHANGE THIS FILE UNLESS YOU ARE SURE YOU KNOW WHAT YOU ARE DOING !!!
@@ -40,7 +40,7 @@ URLCurrentCore=https://weather.com/#LangLoc#/weather/today/l/#LocationCode#
 URLTendayCore=https://weather.com/#LangLoc#/weather/tenday/l/#LocationCode#
 
 ; ===========================================================================
-; WEATHER CURRENT CORE REGEXP
+; WEATHER DAILY CORE REGEXP
 
 CurrentLocation=(?siU)\\"getSunV3LocationPointUrlConfig\\":{.*\\"country\\":\\"(.*)\\",.*\\"displayName\\":\\"(.*)\\",.*}.*\\"getSunV3CurrentObservationsUrlConfig\\":{.*\\"iconCode\\":(.*),.*\\"pressureAltimeter\\":(.*),.*\\"relativeHumidity\\":(.*),.*\\"sunriseTimeLocal\\":\\"(.*)\\",.*\\"sunsetTimeLocal\\":\\"(.*)\\",.*\\"temperature\\":(.*),.*\\"temperatureDewPoint\\":(.*),\\"temperatureFeelsLike\\":(.*),.*\\"uvIndex\\":(.*),\\"validTimeLocal\\":\\"(.*)\\",.*\\"visibility\\":(.*),\\"windDirection\\":(.*),\\"windDirectionCardinal\\":\\"(.*)\\",.*\\"windSpeed\\":(.*),\\"wxPhraseLong\\":\\"(.*)\\",.*}.*\\"getSunV3DailyForecastWithHeadersUrlConfig\\":{.*\\"moonPhase\\":.\\"(.*)\\",.*\\"temperatureMax\\":\D(.*),.*\\"temperatureMin\\":\D(.*),.*}
 
@@ -62,4 +62,4 @@ CurrentUnits=(?siU)\\"wxu-today-details\\":{.*\\"feelsLike\\":\\"(.*)\\",.*\\"wi
 
 TendayUnits=(?siU)\\"wxu-weather-data\\":{.*\\"humidity\\":\\"(.*)\\",.*\\"uvIndex\\":\\"(.*)\\",.*\\"sunrise\\":\\"(.*)\\",\\"sunset\\":\\"(.*)\\",\\"moonrise\\":\\"(.*)\\",\\"moonset\\":\\"(.*)\\",.*}
 
-WeatherUnits=(?siU)\\"wxu-general\\":{.*\\"mph\\":\\"(.*)\\",\\"km.*h\\":\\"(.*)\\",\\"in\\":\\"(.*)\\",\\"mb\\":\\"(.*)\\",\\"mi\\":\\"(.*)\\",\\"km\\":\\"(.*)\\",.*\\"uvIndexVal\\":\\".*\s(.*)\s.*",\\"uvIndexExtreme\\":\\"(.*)\\",.*}
+WeatherUnits=(?siU)\\"wxu-general\\":{.*\\"mph\\":\\"(.*)\\",\\"km.*h\\":\\"(.*)\\",\\"in\\":\\"(.*)\\",\\"mb\\":\\"(.*)\\",\\"mi\\":\\"(.*)\\",\\"km\\":\\"(.*)\\",.*\\"uvIndexVal\\":\\"(.*)\\",\\"uvIndexExtreme\\":\\"(.*)\\",.*}

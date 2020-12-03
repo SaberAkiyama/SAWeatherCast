@@ -2,28 +2,28 @@
 Meter=String
 MeterStyle=InfoTitle
 Text=SA Weather Cast
-X=300
+X=770
 Y=100
 
 [Version]
 Meter=String
 MeterStyle=InfoVersion
-Text=v#Version#
-X=5R
-Y=-10r
+Text=">>> v#Version# <<<"
+X=0r
+Y=0R
 
 [Author]
 Meter=String
 MeterStyle=InfoAuthor
 Text="Author by: Saber Akiyama"
-X=300
-Y=60r
+X=0r
+Y=10R
 
 [AuthorLinkActive]
 Meter=String
 MeterStyle=InfoActive
-X=92r
-Y=20r
+X=0r
+Y=0R
 Text="deviantart.com/akiyama4809"
 LeftMouseUpAction=[!CommandMeasure LuaPage "setInfo('Author')"]
 MouseOverAction=[!CommandMeasure LuaPage "setInfoAuthor('Over')"]
@@ -36,14 +36,13 @@ MouseLeaveAction=[!CommandMeasure LuaPage "setInfoAuthor('Leave')"]
 Meter=String
 MeterStyle=InfoHeader
 Text=License
-X=300
+X=0r
 Y=50r
 
 [LicenseImageActive]
 Meter=Image
 ImageName=#@#Images\Settings\Creative Commons.png
-ImageTint=255,255,255
-X=r
+X=680
 Y=20r
 W=180
 AntiAlias=1
@@ -55,7 +54,7 @@ MouseLeaveAction=[!CommandMeasure LuaPage "setInfoLicense('Leave')"]
 Meter=String
 MeterStyle=InfoLicense
 Text="BY-NC-SA (Attribution-NonCommercial-ShareAlike)#CRLF#4.0 International Public License"
-X=r
+X=770
 Y=70r
 
 ;-------------------------------------------------------------
