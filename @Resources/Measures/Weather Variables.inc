@@ -17,9 +17,9 @@
 
 [Variables]
 
-LangLoc=en-CA
+LangLoc=en-US
 
-LocationCode=MYXX0004
+LocationCode=USNY0996
 
 ; ===========================================================================
 ; DO NOT CHANGE THIS FILE UNLESS YOU ARE SURE YOU KNOW WHAT YOU ARE DOING !!!
@@ -48,12 +48,15 @@ OneHourForecast=(?siU)\\"getSunV3HourlyForecastUrlConfig\\":{.*\\"iconCode\\":\D
 
 SixHourForecast=(?siU)\\"getSunV3HourlyForecastUrlConfig\\":{.*\\"iconCode\\":\D(.*),(.*),(.*),(.*),(.*),(.*),.*\\"precipChance\\":\D(.*),(.*),(.*),(.*),(.*),(.*),.*\\"temperature\\":\D(.*),(.*),(.*),(.*),(.*),(.*),.*\\"validTimeLocal\\":.\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",.*\\"windDirectionCardinal\\":.\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",.*\\"windSpeed\\":\D(.*),(.*),(.*),(.*),(.*),(.*),.*\\"wxPhraseLong\\":.\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",.*"}
 
+
 ; ===========================================================================
 ; WEATHER TENDAY CORE REGEXP
 
-OneDayForecast=(?siU)\\"getSunV3DailyForecastWithHeadersUrlConfig\\":{.*\\"moonriseTimeLocal\\":(.*),\\"(.*)\\",.*\\"moonsetTimeLocal\\":(.*),\\"(.*)\\",.*\\"sunriseTimeLocal\\":(.*),\\"(.*)\\",.*\\"sunsetTimeLocal\\":(.*),\\"(.*)\\",.*\\"daypartName\\":(.*),\\"(.*)\\",\\"(.*)\\",.*\\"iconCode\\":(.*),(.*),(.*),.*\\"precipChance\\":(.*),(.*),(.*),.*\\"relativeHumidity\\":(.*),(.*),(.*),.*\\"temperature\\":(.*),(.*),(.*),.*\\"uvIndex\\":(.*),(.*),(.*),.*\\"windDirectionCardinal\\":(.*),\\"(.*)\\",\\"(.*)\\",.*\\"windSpeed\\":(.*),(.*),(.*),.*\\"wxPhraseLong\\":(.*),\\"(.*)\\",\\"(.*)\\",.*}
+OneDayForecast=(?siU)\\"getSunV3DailyForecastWithHeadersUrlConfig\\":{.*\\"moonriseTimeLocal\\":.*\\"(.*)\\",\\"(.*)\\",.*\\"moonsetTimeLocal\\":.*\\"(.*)\\",\\"(.*)\\",.*\\"sunriseTimeLocal\\":.*\\"(.*)\\",\\"(.*)\\",.*\\"sunsetTimeLocal\\":.*\\"(.*)\\",\\"(.*)\\",.*\\"daypartName\\":(.*),\\"(.*)\\",\\"(.*)\\",.*\\"iconCode\\":(.*),(.*),(.*),.*\\"precipChance\\":(.*),(.*),(.*),.*\\"relativeHumidity\\":(.*),(.*),(.*),.*\\"temperature\\":(.*),(.*),(.*),.*\\"uvIndex\\":(.*),(.*),(.*),.*\\"windDirectionCardinal\\":(.*),\\"(.*)\\",\\"(.*)\\",.*\\"windSpeed\\":(.*),(.*),(.*),.*\\"wxPhraseLong\\":(.*),\\"(.*)\\",\\"(.*)\\",.*}
 
 SevenDayForecast=(?siU)\\"getSunV3DailyForecastWithHeadersUrlConfig\\":{.*\\"dayOfWeek\\":(.*),\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",.*\\"temperatureMax\\":(.*),(.*),(.*),(.*),(.*),(.*),(.*),.*\\"temperatureMin\\":(.*),(.*),(.*),(.*),(.*),(.*),(.*),.*\\"iconCode\\":(.*),(.*),(.*),.*,(.*),.*,(.*),.*,(.*),.*,(.*),.*,(.*),.*\\"precipChance\\":(.*),(.*),(.*),.*,(.*),.*,(.*),.*,(.*),.*,(.*),.*,(.*),.*\\"windDirectionCardinal\\":(.*),\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",.*\\"windSpeed\\":(.*),(.*),(.*),.*,(.*),.*,(.*),.*,(.*),.*,(.*),.*,(.*),.*\\"wxPhraseLong\\":(.*),\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",.*}
+
+WeatherTendayDetails=(?siU)\\"getSunV3DailyForecastWithHeadersUrlConfig\\":{.*\\"iconCode\\":.*\\"narrative\\":(.*),\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",.*}
 
 ; ===========================================================================
 ; WEATHER UNITS REGEXP
