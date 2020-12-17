@@ -2,7 +2,7 @@
 --; Lua Weather Core
 --; ==================================================
 
-function updateCurrent()
+function updateDaily()
 	SKIN:Bang('!UpdateMeasure MeasureWeatherCore')
 	SKIN:Bang('!ShowMeter MeterWeatherRetrieve')
 	SKIN:Bang('!HideMeterGroup WeatherCurrentMeter')
@@ -11,6 +11,11 @@ function updateCurrent()
 	SKIN:Bang('!DisableMeasureGroup WeatherCurrentMeasure')
 	SKIN:Bang('!DisableMeasureGroup WeatherCurrentSlimMeasure')
 	SKIN:Bang('!DisableMeasureGroup WeatherCurrentExtraSlimMeasure')
+	
+	SKIN:Bang('!HideMeterGroup WeatherOneHourMeter')
+	SKIN:Bang('!HideMeterGroup WeatherSixHourMeter')
+	SKIN:Bang('!DisableMeasureGroup WeatherOneHourMeasure')
+	SKIN:Bang('!DisableMeasureGroup WeatherSixHourMeasure')
 
 end
 
@@ -18,6 +23,7 @@ end
 
 function updateHourly()
 	SKIN:Bang('!UpdateMeasure MeasureWeatherCore')
+	
 	SKIN:Bang('!ShowMeter MeterWeatherRetrieve')
 	SKIN:Bang('!HideMeterGroup WeatherOneHourMeter')
 	SKIN:Bang('!HideMeterGroup WeatherSixHourMeter')
@@ -50,6 +56,7 @@ function finishHourly()
 	SKIN:Bang('!ShowMeterGroup WeatherSixHourMeter')
 	SKIN:Bang('!EnableMeasureGroup WeatherOneHourMeasure')
 	SKIN:Bang('!EnableMeasureGroup WeatherSixHourMeasure')
+
 	SKIN:Bang('!UpdateMeter *')
 
 end
