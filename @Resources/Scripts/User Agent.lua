@@ -9,7 +9,15 @@ function finishUserAgent()
 	SKIN:Bang('!UnpauseMeasureGroup WeatherCurrentSlimMeasure')
 	SKIN:Bang('!UnpauseMeasureGroup WeatherCurrentExtraSlimMeasure')
 	SKIN:Bang('!UnpauseMeasureGroup WeatherOneHourMeasure')
-	SKIN:Bang('!UnpauseMeasureGroup WeatherSixHourMeasure')
+	SKIN:Bang('!UnpauseMeasure MeasureWeatherCore')
+	SKIN:Bang('!UpdateMeasure MeasureWeatherCore')
+
+end
+
+function finishFHUserAgent()
+	SKIN:Bang('!Log "#RetrievingCurrentText#"')
+
+	SKIN:Bang('!UnpauseMeasureGroup WeatherFullHourMeasure')
 	SKIN:Bang('!UnpauseMeasure MeasureWeatherCore')
 	SKIN:Bang('!UpdateMeasure MeasureWeatherCore')
 
@@ -20,7 +28,7 @@ function finishTendayUserAgent()
 
 	SKIN:Bang('!UnpauseMeasureGroup WeatherOneDayMeasure')
 	SKIN:Bang('!UnpauseMeasureGroup WeatherOneDaySlimMeasure')
-	SKIN:Bang('!UnpauseMeasureGroup WeatherSevenDayMeasure')
+	SKIN:Bang('!UnpauseMeasureGroup WeatherForteenDayMeasure')
 	SKIN:Bang('!UnpauseMeasure MeasureWeatherTendayCore')
 	SKIN:Bang('!UpdateMeasure MeasureWeatherTendayCore')
 

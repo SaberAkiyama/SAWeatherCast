@@ -3,8 +3,11 @@
 --; ============================================================
 
 infoSelect = {
-	["Author"] = {
+	["Author DA"] = {
 		infoLink = "https://deviantart.com/akiyama4809"
+	},
+	["Author GH"] = {
+		infoLink = "https://github.com/SaberAkiyama"
 	},
 	["Creative Commons"] = {
 		infoLink = "https://creativecommons.org/licenses/by-nc-sa/4.0"
@@ -59,8 +62,14 @@ hoverSelect = {
 	}
 }
 
-function setInfoAuthor(selectedHover)
-	SKIN:Bang('!SetOption AuthorLinkActive FontColor "' .. hoverSelect[selectedHover]['colorAuthor'] .. '"')
+function setInfoAuthorDA(selectedHover)
+	SKIN:Bang('!SetOption AuthorDALinkActive FontColor "' .. hoverSelect[selectedHover]['colorAuthor'] .. '"')
+	SKIN:Bang('!Update')
+
+end
+
+function setInfoAuthorGH(selectedHover)
+	SKIN:Bang('!SetOption AuthorGHLinkActive FontColor "' .. hoverSelect[selectedHover]['colorAuthor'] .. '"')
 	SKIN:Bang('!Update')
 
 end

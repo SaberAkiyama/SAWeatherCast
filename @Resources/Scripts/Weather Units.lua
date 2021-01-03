@@ -36,14 +36,14 @@ timeOneHourSelect = {
 	}
 }
 
-timeSixHourSelect = {
-	["Six Hour 12 Hours"] = {
-		sixHourTimeVar = "1",
-		sixHourTime = "12H"
+timeFullHourSelect = {
+	["Full 12 Hours"] = {
+		fullHourTimeVar = "1",
+		fullHourTime = "12H"
 	},
-	["Six Hour 24 Hours"] = {
-		sixHourTimeVar = "0",
-		sixHourTime = "24H"
+	["Full 24 Hours"] = {
+		fullHourTimeVar = "0",
+		fullHourTime = "24H"
 	}
 }
 
@@ -57,13 +57,13 @@ function setOneHourTime(selectedOHTime)
 
 end
 
-function setSixHourTime(selectedSHTime)
-	SKIN:Bang('!SetVariable SixHourTime "' .. timeSixHourSelect[selectedSHTime]['sixHourTime'] .. '"')
-	SKIN:Bang('!WriteKeyValue Variables SixHourTimeToggle "' .. timeSixHourSelect[selectedSHTime]['sixHourTimeVar'] .. '" "#@#Variables.inc"')
-	SKIN:Bang('!WriteKeyValue Variables SixHourTime "' .. timeSixHourSelect[selectedSHTime]['sixHourTime'] .. '" "#CoreUnitFilePath#"')
-	SKIN:Bang('!WriteKeyValue Variables SixHourTime "' .. timeSixHourSelect[selectedSHTime]['sixHourTime'] .. '" "#@#Variables.inc"')
+function setFullHourTime(selectedFHTime)
+	SKIN:Bang('!SetVariable FullHourTime "' .. timeFullHourSelect[selectedFHTime]['fullHourTime'] .. '"')
+	SKIN:Bang('!WriteKeyValue Variables FullHourTimeToggle "' .. timeFullHourSelect[selectedFHTime]['fullHourTimeVar'] .. '" "#@#Variables.inc"')
+	SKIN:Bang('!WriteKeyValue Variables FullHourTime "' .. timeFullHourSelect[selectedFHTime]['fullHourTime'] .. '" "#CoreUnitFilePath#"')
+	SKIN:Bang('!WriteKeyValue Variables FullHourTime "' .. timeFullHourSelect[selectedFHTime]['fullHourTime'] .. '" "#@#Variables.inc"')
 
-	SKIN:Bang('!UpdateMeterGroup WeatherSixHourMeter')
+	SKIN:Bang('!UpdateMeterGroup WeatherFullHourMeter')
 
 end
 
