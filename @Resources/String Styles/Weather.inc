@@ -357,16 +357,16 @@ AntiAlias=1
 DynamicVariables=1
 
 ; ===========================================================================
-; 							SIX HOUR STYLES
+; 							FULL HOUR STYLES
 ; ===========================================================================
 
-[WeatherSixHourImageStyle]
+[WeatherFullHourImageStyle]
 ImagePath=#@#Images\Weather
 ImageTint=#ColorCode#
 AntiAlias=1
 DynamicVariables=1
 
-[WeatherSixHourTempStyle]
+[WeatherFullHourTempStyle]
 StringAlign=LeftCenter
 FontFace=#TypeFace#
 FontSize=(20*#WeatherScale#)
@@ -375,7 +375,7 @@ FontColor=#ColorCode#
 AntiAlias=1
 DynamicVariables=1
 
-[WeatherSixHourValidStyle]
+[WeatherFullHourValidStyle]
 StringAlign=LeftCenter
 FontFace=#TypeFace#
 FontSize=(10*#WeatherScale#)
@@ -384,7 +384,7 @@ FontColor=#ColorCode#
 AntiAlias=1
 DynamicVariables=1
 
-[WeatherSixHourPrecipStyle]
+[WeatherFullHourPrecipStyle]
 StringAlign=LeftCenter
 FontFace=#TypeFace#
 FontSize=(15*#WeatherScale#)
@@ -393,7 +393,7 @@ FontColor=#ColorCode#
 AntiAlias=1
 DynamicVariables=1
 
-[WeatherSixHourWindStyle]
+[WeatherFullHourWindStyle]
 StringAlign=LeftCenter
 FontFace=#TypeFace#
 FontSize=(15*#WeatherScale#)
@@ -603,16 +603,16 @@ AntiAlias=1
 DynamicVariables=1
 
 ; ===========================================================================
-; 							SEVEN DAY STYLES
+; 							FORTEEN DAY STYLES
 ; ===========================================================================
 
-[WeatherSevenDayImageStyle]
+[WeatherForteenDayImageStyle]
 ImagePath=#@#Images\Weather
 ImageTint=#ColorCode#
 AntiAlias=1
 DynamicVariables=1
 
-[WeatherSevenDayTempStyle]
+[WeatherForteenDayTempStyle]
 StringAlign=LeftCenter
 FontFace=#TypeFace#
 FontSize=(20*#WeatherScale#)
@@ -621,7 +621,7 @@ FontColor=#ColorCode#
 AntiAlias=1
 DynamicVariables=1
 
-[WeatherSevenDayTextStyle]
+[WeatherForteenDayTextStyle]
 StringAlign=LeftCenter
 FontFace=#TypeFace#
 FontSize=(10*#WeatherScale#)
@@ -630,7 +630,7 @@ FontColor=#ColorCode#
 AntiAlias=1
 DynamicVariables=1
 
-[WeatherSevenDayPrecipStyle]
+[WeatherForteenDayPrecipStyle]
 StringAlign=LeftCenter
 FontFace=#TypeFace#
 FontSize=(15*#WeatherScale#)
@@ -639,7 +639,7 @@ FontColor=#ColorCode#
 AntiAlias=1
 DynamicVariables=1
 
-[WeatherSevenDayWindStyle]
+[WeatherForteenDayWindStyle]
 StringAlign=LeftCenter
 FontFace=#TypeFace#
 FontSize=(15*#WeatherScale#)
