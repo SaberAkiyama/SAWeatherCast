@@ -3,31 +3,31 @@
 Page=Info
 PageLine=80
 
-TypeFace=Merienda
+TypeFace=Roboto
 ColorText=White
 ColorCode=255,255,255
 
 LangName=English
-LangCurrent=English (World)
-TempUnit=Celcius
-WindUnit=Km/h
-WindUnitShort=Kmh
-VisibilityUnit=Kilometre
-VisibilityUnitShort=Km
-PressureUnit=Milibar
-PressureUnitShort=Mb
+LangCurrent=English (US)
+TempUnit=Fahrenheit
+WindUnit=Mph
+WindUnitShort=Mph
+VisibilityUnit=Mile
+VisibilityUnitShort=Mi
+PressureUnit=Inches
+PressureUnitShort=In
 
 ; ====================================================================================================
 
 CurrentTimeToggle=1
-OneHourTimeToggle=1
-SixHourTimeToggle=0
+OneHourTimeToggle=0
+FullHourTimeToggle=1
 OneDayTimeToggle=1
 OneDaySlimTimeToggle=1
 
 CurrentTime=12H
-OneHourTime=12H
-SixHourTime=24H
+OneHourTime=24H
+FullHourTime=12H
 OneDayTime=12H
 OneDaySlimTime=12H
 
