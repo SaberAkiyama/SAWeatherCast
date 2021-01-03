@@ -19,15 +19,25 @@ Text="Author by: Saber Akiyama"
 X=0r
 Y=10R
 
-[AuthorLinkActive]
+[AuthorDALinkActive]
 Meter=String
 MeterStyle=InfoActive
-X=0r
+X=-37r
 Y=0R
-Text="deviantart.com/akiyama4809"
-LeftMouseUpAction=[!CommandMeasure LuaPage "setInfo('Author')"]
-MouseOverAction=[!CommandMeasure LuaPage "setInfoAuthor('Over')"]
-MouseLeaveAction=[!CommandMeasure LuaPage "setInfoAuthor('Leave')"]
+Text="DeviantArt"
+LeftMouseUpAction=[!CommandMeasure LuaPage "setInfo('Author DA')"]
+MouseOverAction=[!CommandMeasure LuaPage "setInfoAuthorDA('Over')"]
+MouseLeaveAction=[!CommandMeasure LuaPage "setInfoAuthorDA('Leave')"]
+
+[AuthorGHLinkActive]
+Meter=String
+MeterStyle=InfoActive
+X=10R
+Y=0r
+Text="GitHub"
+LeftMouseUpAction=[!CommandMeasure LuaPage "setInfo('Author GH')"]
+MouseOverAction=[!CommandMeasure LuaPage "setInfoAuthorGH('Over')"]
+MouseLeaveAction=[!CommandMeasure LuaPage "setInfoAuthorGH('Leave')"]
 
 ;-------------------------------------------------------------
 ;-------------------------------------------------------------
@@ -36,7 +46,7 @@ MouseLeaveAction=[!CommandMeasure LuaPage "setInfoAuthor('Leave')"]
 Meter=String
 MeterStyle=InfoHeader
 Text=License
-X=0r
+X=770
 Y=50r
 
 [LicenseImageActive]
