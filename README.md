@@ -12,11 +12,11 @@ Current, Current Slim, Current Extra Slim
 
 ![Current Skin](https://github.com/SaberAkiyama/SAWeatherCast/blob/master/GitHub_Resources/Screenshot%20(10).png)
 
-One Hour, Six Hour, One Day
+One Hour and Six Hour
 
 ![Hourly Skin](https://github.com/SaberAkiyama/SAWeatherCast/blob/master/GitHub_Resources/Screenshot%20(11).png)
 
-One Day Slim & Seven Day.
+One Day, One Day Slim & Seven Day.
 
 ![Daily Skin](https://github.com/SaberAkiyama/SAWeatherCast/blob/master/GitHub_Resources/Screenshot%20(12).png)
 
