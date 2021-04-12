@@ -1,6 +1,6 @@
 ![SA Weather Cast](https://github.com/SaberAkiyama/SAWeatherCast/blob/master/GitHub_Resources/Weather%20Cast%202(UpResNet10)(scale)(x1.000000).png)
 
-![Version](https://img.shields.io/static/v1?label=Version&message=1.0.4&color=4169e1&style=for-the-badge&link=https://github.com/SaberAkiyama/SAWeatherCast/releases/latest) ![Build](https://img.shields.io/static/v1?label=Build&message=Release&color=e14169&style=for-the-badge&link=https://github.com/SaberAkiyama/SAWeatherCast/blob/concept/README.md) ![Git License](https://img.shields.io/static/v1?label=GITLICENSE&message=CC0-1.0&color=ffd700&style=for-the-badge&link=https://github.com/SaberAkiyama/SAWeatherCast/raw/master/LICENSE) ![Skin License](https://img.shields.io/static/v1?label=SKINLICENSE&message=CC-BY-NC-SA-4.0&color=69e141&style=for-the-badge&link=https://creativecommons.org/licenses/by-nc-sa/4.0)
+![Version](https://img.shields.io/static/v1?label=Version&message=1.1.0&color=4169e1&style=for-the-badge&link=https://github.com/SaberAkiyama/SAWeatherCast/releases/latest) ![Build](https://img.shields.io/static/v1?label=Build&message=Release&color=e14169&style=for-the-badge&link=https://github.com/SaberAkiyama/SAWeatherCast/blob/concept/README.md) ![Git License](https://img.shields.io/static/v1?label=GITLICENSE&message=CC0-1.0&color=ffd700&style=for-the-badge&link=https://github.com/SaberAkiyama/SAWeatherCast/raw/master/LICENSE) ![Skin License](https://img.shields.io/static/v1?label=SKINLICENSE&message=CC-BY-NC-SA-4.0&color=69e141&style=for-the-badge&link=https://creativecommons.org/licenses/by-nc-sa/4.0)
 
 A weather skin with a full transparent background
 
@@ -8,9 +8,9 @@ If you want a <b>Beta</b> version, link here on <a href="https://github.com/Sabe
 
 <b>List of weather skins:</b>
 
-Current, Current Slim, Current Extra Slim
+Current, Current Slim, Current Extra Slim and Current Super Slim
 
-![Current Skin](https://github.com/SaberAkiyama/SAWeatherCast/blob/master/GitHub_Resources/Screenshot%20(10).png)
+![Current Skin](https://github.com/SaberAkiyama/SAWeatherCast/blob/master/GitHub_Resources/Screenshot%20(93).png)
 
 One Hour and Six Hour
 
@@ -19,6 +19,10 @@ One Hour and Six Hour
 One Day, One Day Slim & Seven Day.
 
 ![Daily Skin](https://github.com/SaberAkiyama/SAWeatherCast/blob/master/GitHub_Resources/Screenshot%20(12).png)
+
+Severity Alert [Only inside USA]
+
+![Severity Alert](https://github.com/SaberAkiyama/SAWeatherCast/blob/master/GitHub_Resources/Screenshot%20(94).png)
 
 &nbsp;
 
