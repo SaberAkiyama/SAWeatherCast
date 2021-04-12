@@ -11,6 +11,36 @@ AntiAlias=1
 DynamicVariables=1
 
 ; ===========================================================================
+; 							SEVERITY ALERT STYLES
+; ===========================================================================
+
+[WeatherSeverityImageStyle]
+ImagePath=#@#Images\Severity
+ImageTint=#ColorCode#
+AntiAlias=1
+DynamicVariables=1
+
+[WeatherInfoStyle]
+StringAlign=LeftCenter
+FontFace=#TypeFace#
+FontSize=(25*#WeatherScale#)
+FontWeight=300
+FontColor=#ColorCode#
+AntiAlias=1
+DynamicVariables=1
+
+[WeatherInformationStyle]
+StringAlign=LeftCenter
+FontFace=#TypeFace#
+FontSize=(10*#WeatherScale#)
+FontWeight=300
+FontColor=#ColorCode#
+ClipString=2
+ClipStringW=450
+AntiAlias=1
+DynamicVariables=1
+
+; ===========================================================================
 ; 							CURRENT STYLES
 ; ===========================================================================
 
@@ -248,6 +278,25 @@ AntiAlias=1
 DynamicVariables=1
 
 ; ===========================================================================
+; 							CURRENT SUPER SLIM STYLES
+; ===========================================================================
+
+[WeatherCurrentSuperSlimImageStyle]
+ImagePath=#@#Images\Weather
+ImageTint=#ColorCode#
+AntiAlias=1
+DynamicVariables=1
+
+[WeatherCurrentSuperSlimTempStyle]
+StringAlign=LeftCenter
+FontFace=#TypeFace#
+FontSize=(62*#WeatherScale#)
+FontWeight=300
+FontColor=#ColorCode#
+AntiAlias=1
+DynamicVariables=1
+
+; ===========================================================================
 ; 							ONE HOUR STYLES
 ; ===========================================================================
 
@@ -357,16 +406,16 @@ AntiAlias=1
 DynamicVariables=1
 
 ; ===========================================================================
-; 							FULL HOUR STYLES
+; 							SIX HOUR STYLES
 ; ===========================================================================
 
-[WeatherFullHourImageStyle]
+[WeatherSixHourImageStyle]
 ImagePath=#@#Images\Weather
 ImageTint=#ColorCode#
 AntiAlias=1
 DynamicVariables=1
 
-[WeatherFullHourTempStyle]
+[WeatherSixHourTempStyle]
 StringAlign=LeftCenter
 FontFace=#TypeFace#
 FontSize=(20*#WeatherScale#)
@@ -375,7 +424,7 @@ FontColor=#ColorCode#
 AntiAlias=1
 DynamicVariables=1
 
-[WeatherFullHourValidStyle]
+[WeatherSixHourValidStyle]
 StringAlign=LeftCenter
 FontFace=#TypeFace#
 FontSize=(10*#WeatherScale#)
@@ -384,7 +433,7 @@ FontColor=#ColorCode#
 AntiAlias=1
 DynamicVariables=1
 
-[WeatherFullHourPrecipStyle]
+[WeatherSixHourPrecipStyle]
 StringAlign=LeftCenter
 FontFace=#TypeFace#
 FontSize=(15*#WeatherScale#)
@@ -393,7 +442,7 @@ FontColor=#ColorCode#
 AntiAlias=1
 DynamicVariables=1
 
-[WeatherFullHourWindStyle]
+[WeatherSixHourWindStyle]
 StringAlign=LeftCenter
 FontFace=#TypeFace#
 FontSize=(15*#WeatherScale#)
@@ -603,25 +652,27 @@ AntiAlias=1
 DynamicVariables=1
 
 ; ===========================================================================
-; 							FORTEEN DAY STYLES
+; 							SEVEN DAY STYLES
 ; ===========================================================================
 
-[WeatherForteenDayImageStyle]
+[WeatherSevenDayImageStyle]
 ImagePath=#@#Images\Weather
 ImageTint=#ColorCode#
 AntiAlias=1
 DynamicVariables=1
 
-[WeatherForteenDayTempStyle]
+[WeatherSevenDayTempStyle]
 StringAlign=LeftCenter
 FontFace=#TypeFace#
 FontSize=(20*#WeatherScale#)
 FontWeight=300
 FontColor=#ColorCode#
+InlineSetting=Color | 255,255,255,128
+InlinePattern=.*/(.*)
 AntiAlias=1
 DynamicVariables=1
 
-[WeatherForteenDayTextStyle]
+[WeatherSevenDayTextStyle]
 StringAlign=LeftCenter
 FontFace=#TypeFace#
 FontSize=(10*#WeatherScale#)
@@ -630,7 +681,7 @@ FontColor=#ColorCode#
 AntiAlias=1
 DynamicVariables=1
 
-[WeatherForteenDayPrecipStyle]
+[WeatherSevenDayPrecipStyle]
 StringAlign=LeftCenter
 FontFace=#TypeFace#
 FontSize=(15*#WeatherScale#)
@@ -639,7 +690,7 @@ FontColor=#ColorCode#
 AntiAlias=1
 DynamicVariables=1
 
-[WeatherForteenDayWindStyle]
+[WeatherSevenDayWindStyle]
 StringAlign=LeftCenter
 FontFace=#TypeFace#
 FontSize=(15*#WeatherScale#)
