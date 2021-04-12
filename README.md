@@ -18,7 +18,7 @@ One Hour and Six Hour
 
 One Day, One Day Slim & Seven Day.
 
-![Daily Skin](https://github.com/SaberAkiyama/SAWeatherCast/blob/master/GitHub_Resources/Screenshot%20(12).png)
+![Daily Skin](https://github.com/SaberAkiyama/SAWeatherCast/blob/master/GitHub_Resources/Screenshot%20(95).png)
 
 Severity Alert [Only inside USA]
 
