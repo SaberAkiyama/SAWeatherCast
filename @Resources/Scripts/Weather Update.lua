@@ -4,6 +4,15 @@
 
 function netErrorDaily()
 	SKIN:Bang('!Log "#RetryText#" Warning')
+	SKIN:Bang('!ShowMeter MeterWeatherRetrieve')
+	SKIN:Bang('!HideMeterGroup WeatherCurrentMeter')
+	SKIN:Bang('!HideMeterGroup WeatherCurrentSlimMeter')
+	SKIN:Bang('!HideMeterGroup WeatherCurrentExtraSlimMeter')
+	SKIN:Bang('!HideMeterGroup WeatherCurrentSuperSlimMeter')
+	SKIN:Bang('!HideMeterGroup WeatherSeverityAlertMeter')
+	SKIN:Bang('!HideMeterGroup WeatherOneHourMeter')
+	SKIN:Bang('!HideMeterGroup WeatherSixHourMeter')
+
 	SKIN:Bang('!PauseMeasure MeasureWeatherCore')
 	SKIN:Bang('!DisableMeasure MeasureWeatherCore')
 
@@ -11,6 +20,11 @@ end
 
 function netErrorTenDay()
 	SKIN:Bang('!Log "#RetryText#" Warning')
+	SKIN:Bang('!ShowMeter MeterWeatherRetrieveDaily')
+	SKIN:Bang('!HideMeterGroup WeatherOneDayMeter')
+	SKIN:Bang('!HideMeterGroup WeatherOneDaySlimMeter')
+	SKIN:Bang('!HideMeterGroup WeatherSevenDayMeter')
+
 	SKIN:Bang('!PauseMeasure MeasureWeatherTendayCore')
 	SKIN:Bang('!DisableMeasure MeasureWeatherTendayCore')
 
@@ -19,6 +33,7 @@ end
 function netConnectDaily()
 	SKIN:Bang('!Log "#NoticeText#" Notice')
 	SKIN:Bang('!Log "#RetrievingCurrentText#"')
+	SKIN:Bang('!EnableMeasure MeasureWeatherCore')
 
 	SKIN:Bang('!UnpauseMeasureGroup WeatherCurrentMeasure')
 	SKIN:Bang('!UnpauseMeasureGroup WeatherCurrentSlimMeasure')
@@ -35,6 +50,7 @@ end
 function netConnectTenDay()
 	SKIN:Bang('!Log "#NoticeText#" Notice')
 	SKIN:Bang('!Log "#RetrievingTendayText#"')
+	SKIN:Bang('!EnableMeasure MeasureWeatherTendayCore')
 
 	SKIN:Bang('!UnpauseMeasureGroup WeatherOneDayMeasure')
 	SKIN:Bang('!UnpauseMeasureGroup WeatherOneDaySlimMeasure')
