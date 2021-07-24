@@ -4,7 +4,6 @@ Page=Info
 PageLine=80
 
 TypeFace=Roboto
-ColorText=White
 ColorCode=255,255,255
 
 LangName=English
@@ -20,14 +19,14 @@ PressureUnitShort=In
 ; ====================================================================================================
 
 CurrentTimeToggle=1
-OneHourTimeToggle=0
-FullHourTimeToggle=1
+OneHourTimeToggle=1
+SixHourTimeToggle=0
 OneDayTimeToggle=1
 OneDaySlimTimeToggle=1
 
 CurrentTime=12H
-OneHourTime=24H
-FullHourTime=12H
+OneHourTime=12H
+SixHourTime=24H
 OneDayTime=12H
 OneDaySlimTime=12H
 
