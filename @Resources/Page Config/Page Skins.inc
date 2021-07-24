@@ -49,7 +49,7 @@ FontFace=#TypeFace#
 X=935
 Y=280
 Text=#TypeFace#
-LeftMouseUpAction=!CommandMeasure LuaPage "setTypeface('Typeface')"
+LeftMouseUpAction=[!CommandMeasure LuaPage "setTypeface('Typeface')"]
 MouseOverAction=[!CommandMeasure LuaPage "setSkinTypeFace('Over')"]
 MouseLeaveAction=[!CommandMeasure LuaPage "setSkinTypeFace('Leave')"]
 
@@ -58,20 +58,10 @@ Meter=String
 MeterStyle=SkinActive
 X=0r
 Y=50r
-Text=#ColorText#
-LeftMouseUpAction=!CommandMeasure LuaPage "setColor('Color Code')"
+Text=#ColorCode#
+LeftMouseUpAction=[!CommandMeasure LuaPage "setColorCode('Color Code')"]
 MouseOverAction=[!CommandMeasure LuaPage "setSkinColorText('Over')"]
 MouseLeaveAction=[!CommandMeasure LuaPage "setSkinColorText('Leave')"]
-
-; ============================================================
-; ============================================================
-
-[MeterSkinNote]
-Meter=String
-MeterStyle=SkinNote
-X=770
-Y=50r
-Text="This Color Preset is only for Black and White color codes"
 
 ; ============================================================
 ; ============================================================
@@ -89,7 +79,7 @@ MouseLeaveAction=[!CommandMeasure LuaPage "setSkinApply('Leave')"]
 ; ============================================================
 ; ============================================================
 
-[MeterSkinInputTypeface]
+[MeterSkinInput]
 Measure=Plugin
 Plugin=InputText.dll
 StringAlign=Center
@@ -100,4 +90,5 @@ H=35
 AntiAlias=1
 FocusDismiss=1
 X=815
-Command1=[!WriteKeyValue Variables TypeFace "$UserInput$""#@#Variables.inc"][!RefreshGroup WeatherSetting] DefaultValue="#TypeFace#" Y=262
+Command1=[!WriteKeyValue Variables TypeFace "$UserInput$""#@#Variables.inc"] DefaultValue="#TypeFace#" Y=262 [!RefreshGroup WeatherSetting]
+Command2=[!WriteKeyValue Variables ColorCode "$UserInput$""#@#Variables.inc"] DefaultValue="#ColorCode#" Y=312 [!RefreshGroup WeatherSetting]
