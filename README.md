@@ -2,13 +2,13 @@
 
 ![Version](https://img.shields.io/static/v1?label=Version&message=1.1.2&color=4169e1&style=for-the-badge&link=https://github.com/SaberAkiyama/SAWeatherCast/releases/latest) ![Build](https://img.shields.io/static/v1?label=Build&message=Release&color=e14169&style=for-the-badge&link=https://github.com/SaberAkiyama/SAWeatherCast/blob/concept/README.md) ![Git License](https://img.shields.io/static/v1?label=GITLICENSE&message=CC0-1.0&color=ffd700&style=for-the-badge&link=https://github.com/SaberAkiyama/SAWeatherCast/raw/master/LICENSE) ![Skin License](https://img.shields.io/static/v1?label=SKINLICENSE&message=CC-BY-NC-SA-4.0&color=69e141&style=for-the-badge&link=https://creativecommons.org/licenses/by-nc-sa/4.0)
 
-A weather skin with a full transparent background
+A weather skin with a fully transparent background
 
 If you want a <b>Beta</b> version, link here on <a href="https://github.com/SaberAkiyama/SAWeatherCast/releases">releases</a>
 
 <b>List of weather skins:</b>
 
-Current, Current Slim, Current Extra Slim and Current Super Slim
+Current, Current Slim, Current Extra Slim, and Current Super Slim
 
 ![Current Skin](https://github.com/SaberAkiyama/SAWeatherCast/blob/master/GitHub_Resources/Screenshot%20(93).png)
 
@@ -20,7 +20,7 @@ One Day, One Day Slim & Seven Day.
 
 ![Daily Skin](https://github.com/SaberAkiyama/SAWeatherCast/blob/master/GitHub_Resources/Screenshot%20(95).png)
 
-Severity Alert [Only inside USA]
+Severity Alert [Only inside the USA]
 
 ![Severity Alert](https://github.com/SaberAkiyama/SAWeatherCast/blob/master/GitHub_Resources/Screenshot%20(94).png)
 
@@ -29,13 +29,12 @@ Severity Alert [Only inside USA]
 ### HOW TO NO.1
 
 Change weather in Location Code.
-Some users aren't known how to change weather location. Here is how to work.
+Some users accomplish how to change weather locations. Here is how to work.
 
-First, right click on the current weather skin, hover "Custom skin menu", and click "Open Settings panel".
+First, right-click on the current weather skin, hover "Custom skin menu," and click "Open Settings panel."
 
-Second, On Settings skin, click "Weather" page on the left of a page tab,
-if you don't remember your location code, click "Open Weather Codes" directly to a browser.
-If you remember your location code, "Click here for Location Code".
+Second, On Settings skin, click the "Weather" page on the left of a page tab if you don't remember your location code, and left-click "Open Weather Codes" directly to a browser.
+If you remember your location code, "Click here for the Location Code."
 
 Finally, type or paste your location code and press enter.
 Once done, click "Apply Changes" to refresh a weather skin.
@@ -44,26 +43,25 @@ Once done, click "Apply Changes" to refresh a weather skin.
 
 ### HOW TO NO.2
 
-Change a time format.
-Some users aren't known how to change a time format. Here is how to work.
+Change the time format.
+Some users accomplish how to change the time format. Here is how to work.
 
-First, right click on the current weather skin, hover "Custom skin menu",
+First, right-click on the current weather skin, hover "Custom skin menu,"
 and click "Switch to 12 Hours" or "Switch to 24 Hours".
-It's easy to in depends what you like 12 or 24 hour format.
+It's easy to depend on what you want in a 12-hour or 24-hour format.
 
 &nbsp;
 
 ### HOW TO NO.3
 
-Change a different language.
-Some users are confused in different languages. Here is how to work.
+Change to a different language.
+Some users need clarification about different languages. Here is how to work.
 
-First, right click on the current weather skin, hover "Custom skin menu", and click "Open Settings panel".
+First, right-click on the current weather skin, hover "Custom skin menu," and click "Open Settings panel."
 
-Second, On Settings skin, click "Language" page on the left of a page tab.
-There are 30 different languages including 3 different English.
-By default, in English (US) is an Imperial format, English (GB) is a hybrid format
-and English (World) is a Metric format. Other languages are Metric format.
-In depends what is your language, if you want.
+Second, on the Settings skin, left-click the "Language" page on the left of a page tab.
+There are 30 different languages, including three different English.
+By default, English (US) is an Imperial format, English (GB) is a hybrid format, and English (World) is a Metric format. Other languages use the Metric format.
+It depends on what your language is if you want.
 
 Finally, after you pick a language, click "Apply Changes" to refresh a weather skin.
