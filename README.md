@@ -28,21 +28,6 @@ Severity Alert [Only inside the USA]
 
 ### HOW TO NO.1
 
-Change weather in Location Code.
-Some users accomplish how to change weather locations. Here is how to work.
-
-First, right-click on the current weather skin, hover "Custom skin menu," and click "Open Settings panel."
-
-Second, On Settings skin, click the "Weather" page on the left of a page tab if you don't remember your location code, and left-click "Open Weather Codes" directly to a browser.
-If you remember your location code, "Click here for the Location Code."
-
-Finally, type or paste your location code and press enter.
-Once done, click "Apply Changes" to refresh a weather skin.
-
-&nbsp;
-
-### HOW TO NO.2
-
 Change the time format.
 Some users accomplish how to change the time format. Here is how to work.
 
@@ -52,7 +37,7 @@ It's easy to depend on what you want in a 12-hour or 24-hour format.
 
 &nbsp;
 
-### HOW TO NO.3
+### HOW TO NO.2
 
 Change to a different language.
 Some users need clarification about different languages. Here is how to work.
