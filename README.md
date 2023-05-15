@@ -4,7 +4,9 @@
 
 A weather skin with a fully transparent background
 
-If you want a <b>Beta</b> version, link here on <a href="https://github.com/SaberAkiyama/SAWeatherCast/releases">releases</a>
+For how to mark your location with Google Maps, jump to the [Wiki](https://github.com/SaberAkiyama/SAWeatherCast/wiki/How-To:-Mark-your-location-with-Google-Maps) page
+
+&nbsp;
 
 <b>List of weather skins:</b>
 
