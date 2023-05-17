@@ -1,15 +1,28 @@
-[MeterLanguageText]
+; ============================================================
+; Scripts Info
+; ============================================================
+
+[LuaLanguage]
+Measure=Script
+ScriptFile=#@#Scripts\Settings\Lua Language.lua
+UpdateDivider=5
+
+; ============================================================
+; Language Page
+; ============================================================
+
+[MeterLanguageCurrentText]
 Meter=String
 MeterStyle=LanguageText
-X=515
-Y=150
+X=345
+Y=160
 Text="Current Language"
 
 [MeterLanguageCurrent]
 Meter=String
 MeterStyle=LanguageCurrent
 X=0r
-Y=20R
+Y=25R
 Text="#LangCurrent#"
 
 [MeterLanguageInfo]
@@ -17,7 +30,7 @@ Meter=String
 MeterStyle=LanguageInfo
 X=0r
 Y=75R
-Text="Temp Unit: #TempUnit##CRLF#Wind Unit: #WindUnit##CRLF#Visibilty Unit: #VisibilityUnit##CRLF#Pressure Unit: #PressureUnit#"
+Text="Unit Type: #TypeUnit##CRLF#Temp Unit: #TempUnit##CRLF#Wind Unit: #WindUnit##CRLF#Visibilty Unit: #VisibilityUnit##CRLF#Pressure Unit: #PressureUnit#"
 
 ; ============================================================
 ; ============================================================
@@ -26,11 +39,11 @@ Text="Temp Unit: #TempUnit##CRLF#Wind Unit: #WindUnit##CRLF#Visibilty Unit: #Vis
 Meter=String
 MeterStyle=LanguageActive
 X=0r
-Y=435
+Y=25R
 Text="Apply Changes"
-LeftMouseUpAction=[!CommandMeasure LuaPage "setApply()"]
-MouseOverAction=[!CommandMeasure LuaPage "setHoverApply('Over')"]
-MouseLeaveAction=[!CommandMeasure LuaPage "setHoverApply('Leave')"]
+LeftMouseUpAction=[!CommandMeasure LuaLanguage "setApply()"]
+MouseOverAction=[!CommandMeasure LuaLanguage "setHoverApply('Over')"]
+MouseLeaveAction=[!CommandMeasure LuaLanguage "setHoverApply('Leave')"]
 
 ; ============================================================
 ; ============================================================
@@ -38,12 +51,12 @@ MouseLeaveAction=[!CommandMeasure LuaPage "setHoverApply('Leave')"]
 [MeterLangEnglishUS]
 Meter=String
 MeterStyle=LanguageActive
-X=772
-Y=65
+X=785
+Y=60
 Text="English (US)"
-LeftMouseUpAction=[!CommandMeasure LuaPage "setLanguage('English (US)')"]
-MouseOverAction=[!CommandMeasure LuaPage "setEnglishUS('Over')"]
-MouseLeaveAction=[!CommandMeasure LuaPage "setEnglishUS('Leave')"]
+LeftMouseUpAction=[!CommandMeasure LuaLanguage "setLanguage('English (US)')"]
+MouseOverAction=[!CommandMeasure LuaLanguage "setEnglishUS('Over')"]
+MouseLeaveAction=[!CommandMeasure LuaLanguage "setEnglishUS('Leave')"]
 
 [MeterLangEnglishGB]
 Meter=String
@@ -51,9 +64,9 @@ MeterStyle=LanguageActive
 X=175r
 Y=0r
 Text="English (GB)"
-LeftMouseUpAction=[!CommandMeasure LuaPage "setLanguage('English (GB)')"]
-MouseOverAction=[!CommandMeasure LuaPage "setEnglishGB('Over')"]
-MouseLeaveAction=[!CommandMeasure LuaPage "setEnglishGB('Leave')"]
+LeftMouseUpAction=[!CommandMeasure LuaLanguage "setLanguage('English (GB)')"]
+MouseOverAction=[!CommandMeasure LuaLanguage "setEnglishGB('Over')"]
+MouseLeaveAction=[!CommandMeasure LuaLanguage "setEnglishGB('Leave')"]
 
 [MeterLangEnglishWorld]
 Meter=String
@@ -61,19 +74,19 @@ MeterStyle=LanguageActive
 X=175r
 Y=0r
 Text="English (World)"
-LeftMouseUpAction=[!CommandMeasure LuaPage "setLanguage('English (World)')"]
-MouseOverAction=[!CommandMeasure LuaPage "setEnglishWorld('Over')"]
-MouseLeaveAction=[!CommandMeasure LuaPage "setEnglishWorld('Leave')"]
+LeftMouseUpAction=[!CommandMeasure LuaLanguage "setLanguage('English (World)')"]
+MouseOverAction=[!CommandMeasure LuaLanguage "setEnglishWorld('Over')"]
+MouseLeaveAction=[!CommandMeasure LuaLanguage "setEnglishWorld('Leave')"]
 
 [MeterLangBulgarian]
 Meter=String
 MeterStyle=LanguageActive
-X=772
+X=785
 Y=25R
 Text=Bulgarian
-LeftMouseUpAction=[!CommandMeasure LuaPage "setLanguage('Bulgarian')"]
-MouseOverAction=[!CommandMeasure LuaPage "setBulgarian('Over')"]
-MouseLeaveAction=[!CommandMeasure LuaPage "setBulgarian('Leave')"]
+LeftMouseUpAction=[!CommandMeasure LuaLanguage "setLanguage('Bulgarian')"]
+MouseOverAction=[!CommandMeasure LuaLanguage "setBulgarian('Over')"]
+MouseLeaveAction=[!CommandMeasure LuaLanguage "setBulgarian('Leave')"]
 
 [MeterLangChinese]
 Meter=String
@@ -81,9 +94,9 @@ MeterStyle=LanguageActive
 X=175r
 Y=0r
 Text=Chinese
-LeftMouseUpAction=[!CommandMeasure LuaPage "setLanguage('Chinese')"]
-MouseOverAction=[!CommandMeasure LuaPage "setChinese('Over')"]
-MouseLeaveAction=[!CommandMeasure LuaPage "setChinese('Leave')"]
+LeftMouseUpAction=[!CommandMeasure LuaLanguage "setLanguage('Chinese')"]
+MouseOverAction=[!CommandMeasure LuaLanguage "setChinese('Over')"]
+MouseLeaveAction=[!CommandMeasure LuaLanguage "setChinese('Leave')"]
 
 [MeterLangCroatian]
 Meter=String
@@ -91,19 +104,19 @@ MeterStyle=LanguageActive
 X=175r
 Y=0r
 Text=Croatian
-LeftMouseUpAction=[!CommandMeasure LuaPage "setLanguage('Croatian')"]
-MouseOverAction=[!CommandMeasure LuaPage "setCroatian('Over')"]
-MouseLeaveAction=[!CommandMeasure LuaPage "setCroatian('Leave')"]
+LeftMouseUpAction=[!CommandMeasure LuaLanguage "setLanguage('Croatian')"]
+MouseOverAction=[!CommandMeasure LuaLanguage "setCroatian('Over')"]
+MouseLeaveAction=[!CommandMeasure LuaLanguage "setCroatian('Leave')"]
 
 [MeterLangCzech]
 Meter=String
 MeterStyle=LanguageActive
-X=772
+X=785
 Y=25R
 Text=Czech
-LeftMouseUpAction=[!CommandMeasure LuaPage "setLanguage('Czech')"]
-MouseOverAction=[!CommandMeasure LuaPage "setCzech('Over')"]
-MouseLeaveAction=[!CommandMeasure LuaPage "setCzech('Leave')"]
+LeftMouseUpAction=[!CommandMeasure LuaLanguage "setLanguage('Czech')"]
+MouseOverAction=[!CommandMeasure LuaLanguage "setCzech('Over')"]
+MouseLeaveAction=[!CommandMeasure LuaLanguage "setCzech('Leave')"]
 
 [MeterLangDanish]
 Meter=String
@@ -111,9 +124,9 @@ MeterStyle=LanguageActive
 X=175r
 Y=0r
 Text=Danish
-LeftMouseUpAction=[!CommandMeasure LuaPage "setLanguage('Danish')"]
-MouseOverAction=[!CommandMeasure LuaPage "setDanish('Over')"]
-MouseLeaveAction=[!CommandMeasure LuaPage "setDanish('Leave')"]
+LeftMouseUpAction=[!CommandMeasure LuaLanguage "setLanguage('Danish')"]
+MouseOverAction=[!CommandMeasure LuaLanguage "setDanish('Over')"]
+MouseLeaveAction=[!CommandMeasure LuaLanguage "setDanish('Leave')"]
 
 [MeterLangDutch]
 Meter=String
@@ -121,19 +134,19 @@ MeterStyle=LanguageActive
 X=175r
 Y=0r
 Text=Dutch
-LeftMouseUpAction=[!CommandMeasure LuaPage "setLanguage('Dutch')"]
-MouseOverAction=[!CommandMeasure LuaPage "setDutch('Over')"]
-MouseLeaveAction=[!CommandMeasure LuaPage "setDutch('Leave')"]
+LeftMouseUpAction=[!CommandMeasure LuaLanguage "setLanguage('Dutch')"]
+MouseOverAction=[!CommandMeasure LuaLanguage "setDutch('Over')"]
+MouseLeaveAction=[!CommandMeasure LuaLanguage "setDutch('Leave')"]
 
 [MeterLangFinnish]
 Meter=String
 MeterStyle=LanguageActive
-X=772
+X=785
 Y=25R
 Text=Finnish
-LeftMouseUpAction=[!CommandMeasure LuaPage "setLanguage('Finnish')"]
-MouseOverAction=[!CommandMeasure LuaPage "setFinnish('Over')"]
-MouseLeaveAction=[!CommandMeasure LuaPage "setFinnish('Leave')"]
+LeftMouseUpAction=[!CommandMeasure LuaLanguage "setLanguage('Finnish')"]
+MouseOverAction=[!CommandMeasure LuaLanguage "setFinnish('Over')"]
+MouseLeaveAction=[!CommandMeasure LuaLanguage "setFinnish('Leave')"]
 
 [MeterLangFrench]
 Meter=String
@@ -141,9 +154,9 @@ MeterStyle=LanguageActive
 X=175r
 Y=0r
 Text=French
-LeftMouseUpAction=[!CommandMeasure LuaPage "setLanguage('French')"]
-MouseOverAction=[!CommandMeasure LuaPage "setFrench('Over')"]
-MouseLeaveAction=[!CommandMeasure LuaPage "setFrench('Leave')"]
+LeftMouseUpAction=[!CommandMeasure LuaLanguage "setLanguage('French')"]
+MouseOverAction=[!CommandMeasure LuaLanguage "setFrench('Over')"]
+MouseLeaveAction=[!CommandMeasure LuaLanguage "setFrench('Leave')"]
 
 [MeterLangGerman]
 Meter=String
@@ -151,19 +164,19 @@ MeterStyle=LanguageActive
 X=175r
 Y=0r
 Text=German
-LeftMouseUpAction=[!CommandMeasure LuaPage "setLanguage('German')"]
-MouseOverAction=[!CommandMeasure LuaPage "setGerman('Over')"]
-MouseLeaveAction=[!CommandMeasure LuaPage "setGerman('Leave')"]
+LeftMouseUpAction=[!CommandMeasure LuaLanguage "setLanguage('German')"]
+MouseOverAction=[!CommandMeasure LuaLanguage "setGerman('Over')"]
+MouseLeaveAction=[!CommandMeasure LuaLanguage "setGerman('Leave')"]
 
 [MeterLangGreek]
 Meter=String
 MeterStyle=LanguageActive
-X=772
+X=785
 Y=25R
 Text=Greek
-LeftMouseUpAction=[!CommandMeasure LuaPage "setLanguage('Greek')"]
-MouseOverAction=[!CommandMeasure LuaPage "setGreek('Over')"]
-MouseLeaveAction=[!CommandMeasure LuaPage "setGreek('Leave')"]
+LeftMouseUpAction=[!CommandMeasure LuaLanguage "setLanguage('Greek')"]
+MouseOverAction=[!CommandMeasure LuaLanguage "setGreek('Over')"]
+MouseLeaveAction=[!CommandMeasure LuaLanguage "setGreek('Leave')"]
 
 [MeterLangHindi]
 Meter=String
@@ -171,9 +184,9 @@ MeterStyle=LanguageActive
 X=175r
 Y=0r
 Text=Hindi
-LeftMouseUpAction=[!CommandMeasure LuaPage "setLanguage('Hindi')"]
-MouseOverAction=[!CommandMeasure LuaPage "setHindi('Over')"]
-MouseLeaveAction=[!CommandMeasure LuaPage "setHindi('Leave')"]
+LeftMouseUpAction=[!CommandMeasure LuaLanguage "setLanguage('Hindi')"]
+MouseOverAction=[!CommandMeasure LuaLanguage "setHindi('Over')"]
+MouseLeaveAction=[!CommandMeasure LuaLanguage "setHindi('Leave')"]
 
 [MeterLangHungarian]
 Meter=String
@@ -181,19 +194,19 @@ MeterStyle=LanguageActive
 X=175r
 Y=0r
 Text=Hungarian
-LeftMouseUpAction=[!CommandMeasure LuaPage "setLanguage('Hungarian')"]
-MouseOverAction=[!CommandMeasure LuaPage "setHungarian('Over')"]
-MouseLeaveAction=[!CommandMeasure LuaPage "setHungarian('Leave')"]
+LeftMouseUpAction=[!CommandMeasure LuaLanguage "setLanguage('Hungarian')"]
+MouseOverAction=[!CommandMeasure LuaLanguage "setHungarian('Over')"]
+MouseLeaveAction=[!CommandMeasure LuaLanguage "setHungarian('Leave')"]
 
 [MeterLangIndonesian]
 Meter=String
 MeterStyle=LanguageActive
-X=772
+X=785
 Y=25R
 Text=Indonesian
-LeftMouseUpAction=[!CommandMeasure LuaPage "setLanguage('Indonesian')"]
-MouseOverAction=[!CommandMeasure LuaPage "setIndonesian('Over')"]
-MouseLeaveAction=[!CommandMeasure LuaPage "setIndonesian('Leave')"]
+LeftMouseUpAction=[!CommandMeasure LuaLanguage "setLanguage('Indonesian')"]
+MouseOverAction=[!CommandMeasure LuaLanguage "setIndonesian('Over')"]
+MouseLeaveAction=[!CommandMeasure LuaLanguage "setIndonesian('Leave')"]
 
 [MeterLangItalian]
 Meter=String
@@ -201,9 +214,9 @@ MeterStyle=LanguageActive
 X=175r
 Y=0r
 Text=Italian
-LeftMouseUpAction=[!CommandMeasure LuaPage "setLanguage('Italian')"]
-MouseOverAction=[!CommandMeasure LuaPage "setItalian('Over')"]
-MouseLeaveAction=[!CommandMeasure LuaPage "setItalian('Leave')"]
+LeftMouseUpAction=[!CommandMeasure LuaLanguage "setLanguage('Italian')"]
+MouseOverAction=[!CommandMeasure LuaLanguage "setItalian('Over')"]
+MouseLeaveAction=[!CommandMeasure LuaLanguage "setItalian('Leave')"]
 
 [MeterLangJapanese]
 Meter=String
@@ -211,19 +224,19 @@ MeterStyle=LanguageActive
 X=175r
 Y=0r
 Text=Japanese
-LeftMouseUpAction=[!CommandMeasure LuaPage "setLanguage('Japanese')"]
-MouseOverAction=[!CommandMeasure LuaPage "setJapanese('Over')"]
-MouseLeaveAction=[!CommandMeasure LuaPage "setJapanese('Leave')"]
+LeftMouseUpAction=[!CommandMeasure LuaLanguage "setLanguage('Japanese')"]
+MouseOverAction=[!CommandMeasure LuaLanguage "setJapanese('Over')"]
+MouseLeaveAction=[!CommandMeasure LuaLanguage "setJapanese('Leave')"]
 
 [MeterLangKorean]
 Meter=String
 MeterStyle=LanguageActive
-X=772
+X=785
 Y=25R
 Text=Korean
-LeftMouseUpAction=[!CommandMeasure LuaPage "setLanguage('Korean')"]
-MouseOverAction=[!CommandMeasure LuaPage "setKorean('Over')"]
-MouseLeaveAction=[!CommandMeasure LuaPage "setKorean('Leave')"]
+LeftMouseUpAction=[!CommandMeasure LuaLanguage "setLanguage('Korean')"]
+MouseOverAction=[!CommandMeasure LuaLanguage "setKorean('Over')"]
+MouseLeaveAction=[!CommandMeasure LuaLanguage "setKorean('Leave')"]
 
 [MeterLangMalay]
 Meter=String
@@ -231,9 +244,9 @@ MeterStyle=LanguageActive
 X=175r
 Y=0r
 Text=Malay
-LeftMouseUpAction=[!CommandMeasure LuaPage "setLanguage('Malay')"]
-MouseOverAction=[!CommandMeasure LuaPage "setMalay('Over')"]
-MouseLeaveAction=[!CommandMeasure LuaPage "setMalay('Leave')"]
+LeftMouseUpAction=[!CommandMeasure LuaLanguage "setLanguage('Malay')"]
+MouseOverAction=[!CommandMeasure LuaLanguage "setMalay('Over')"]
+MouseLeaveAction=[!CommandMeasure LuaLanguage "setMalay('Leave')"]
 
 [MeterLangNorwegian]
 Meter=String
@@ -241,19 +254,19 @@ MeterStyle=LanguageActive
 X=175r
 Y=0r
 Text=Norwegian
-LeftMouseUpAction=[!CommandMeasure LuaPage "setLanguage('Norwegian')"]
-MouseOverAction=[!CommandMeasure LuaPage "setNorwegian('Over')"]
-MouseLeaveAction=[!CommandMeasure LuaPage "setNorwegian('Leave')"]
+LeftMouseUpAction=[!CommandMeasure LuaLanguage "setLanguage('Norwegian')"]
+MouseOverAction=[!CommandMeasure LuaLanguage "setNorwegian('Over')"]
+MouseLeaveAction=[!CommandMeasure LuaLanguage "setNorwegian('Leave')"]
 
 [MeterLangPolish]
 Meter=String
 MeterStyle=LanguageActive
-X=772
+X=785
 Y=25R
 Text=Polish
-LeftMouseUpAction=[!CommandMeasure LuaPage "setLanguage('Polish')"]
-MouseOverAction=[!CommandMeasure LuaPage "setPolish('Over')"]
-MouseLeaveAction=[!CommandMeasure LuaPage "setPolish('Leave')"]
+LeftMouseUpAction=[!CommandMeasure LuaLanguage "setLanguage('Polish')"]
+MouseOverAction=[!CommandMeasure LuaLanguage "setPolish('Over')"]
+MouseLeaveAction=[!CommandMeasure LuaLanguage "setPolish('Leave')"]
 
 [MeterLangPortuguese]
 Meter=String
@@ -261,9 +274,9 @@ MeterStyle=LanguageActive
 X=175r
 Y=0r
 Text=Portuguese
-LeftMouseUpAction=[!CommandMeasure LuaPage "setLanguage('Portuguese')"]
-MouseOverAction=[!CommandMeasure LuaPage "setPortuguese('Over')"]
-MouseLeaveAction=[!CommandMeasure LuaPage "setPortuguese('Leave')"]
+LeftMouseUpAction=[!CommandMeasure LuaLanguage "setLanguage('Portuguese')"]
+MouseOverAction=[!CommandMeasure LuaLanguage "setPortuguese('Over')"]
+MouseLeaveAction=[!CommandMeasure LuaLanguage "setPortuguese('Leave')"]
 
 [MeterLangRomanian]
 Meter=String
@@ -271,19 +284,19 @@ MeterStyle=LanguageActive
 X=175r
 Y=0r
 Text=Romanian
-LeftMouseUpAction=[!CommandMeasure LuaPage "setLanguage('Romanian')"]
-MouseOverAction=[!CommandMeasure LuaPage "setRomanian('Over')"]
-MouseLeaveAction=[!CommandMeasure LuaPage "setRomanian('Leave')"]
+LeftMouseUpAction=[!CommandMeasure LuaLanguage "setLanguage('Romanian')"]
+MouseOverAction=[!CommandMeasure LuaLanguage "setRomanian('Over')"]
+MouseLeaveAction=[!CommandMeasure LuaLanguage "setRomanian('Leave')"]
 
 [MeterLangRussian]
 Meter=String
 MeterStyle=LanguageActive
-X=772
+X=785
 Y=25R
 Text=Russian
-LeftMouseUpAction=[!CommandMeasure LuaPage "setLanguage('Russian')"]
-MouseOverAction=[!CommandMeasure LuaPage "setRussian('Over')"]
-MouseLeaveAction=[!CommandMeasure LuaPage "setRussian('Leave')"]
+LeftMouseUpAction=[!CommandMeasure LuaLanguage "setLanguage('Russian')"]
+MouseOverAction=[!CommandMeasure LuaLanguage "setRussian('Over')"]
+MouseLeaveAction=[!CommandMeasure LuaLanguage "setRussian('Leave')"]
 
 [MeterLangSlovak]
 Meter=String
@@ -291,9 +304,9 @@ MeterStyle=LanguageActive
 X=175r
 Y=0r
 Text=Slovak
-LeftMouseUpAction=[!CommandMeasure LuaPage "setLanguage('Slovak')"]
-MouseOverAction=[!CommandMeasure LuaPage "setSlovak('Over')"]
-MouseLeaveAction=[!CommandMeasure LuaPage "setSlovak('Leave')"]
+LeftMouseUpAction=[!CommandMeasure LuaLanguage "setLanguage('Slovak')"]
+MouseOverAction=[!CommandMeasure LuaLanguage "setSlovak('Over')"]
+MouseLeaveAction=[!CommandMeasure LuaLanguage "setSlovak('Leave')"]
 
 [MeterLangSpanish]
 Meter=String
@@ -301,19 +314,19 @@ MeterStyle=LanguageActive
 X=175r
 Y=0r
 Text=Spanish
-LeftMouseUpAction=[!CommandMeasure LuaPage "setLanguage('Spanish')"]
-MouseOverAction=[!CommandMeasure LuaPage "setSpanish('Over')"]
-MouseLeaveAction=[!CommandMeasure LuaPage "setSpanish('Leave')"]
+LeftMouseUpAction=[!CommandMeasure LuaLanguage "setLanguage('Spanish')"]
+MouseOverAction=[!CommandMeasure LuaLanguage "setSpanish('Over')"]
+MouseLeaveAction=[!CommandMeasure LuaLanguage "setSpanish('Leave')"]
 
 [MeterLangSwedish]
 Meter=String
 MeterStyle=LanguageActive
-X=772
+X=785
 Y=25R
 Text=Swedish
-LeftMouseUpAction=[!CommandMeasure LuaPage "setLanguage('Swedish')"]
-MouseOverAction=[!CommandMeasure LuaPage "setSwedish('Over')"]
-MouseLeaveAction=[!CommandMeasure LuaPage "setSwedish('Leave')"]
+LeftMouseUpAction=[!CommandMeasure LuaLanguage "setLanguage('Swedish')"]
+MouseOverAction=[!CommandMeasure LuaLanguage "setSwedish('Over')"]
+MouseLeaveAction=[!CommandMeasure LuaLanguage "setSwedish('Leave')"]
 
 [MeterLangTagalog]
 Meter=String
@@ -321,9 +334,9 @@ MeterStyle=LanguageActive
 X=175r
 Y=0r
 Text=Tagalog
-LeftMouseUpAction=[!CommandMeasure LuaPage "setLanguage('Tagalog')"]
-MouseOverAction=[!CommandMeasure LuaPage "setTagalog('Over')"]
-MouseLeaveAction=[!CommandMeasure LuaPage "setTagalog('Leave')"]
+LeftMouseUpAction=[!CommandMeasure LuaLanguage "setLanguage('Tagalog')"]
+MouseOverAction=[!CommandMeasure LuaLanguage "setTagalog('Over')"]
+MouseLeaveAction=[!CommandMeasure LuaLanguage "setTagalog('Leave')"]
 
 [MeterLangThai]
 Meter=String
@@ -331,19 +344,19 @@ MeterStyle=LanguageActive
 X=175r
 Y=0r
 Text=Thai
-LeftMouseUpAction=[!CommandMeasure LuaPage "setLanguage('Thai')"]
-MouseOverAction=[!CommandMeasure LuaPage "setThai('Over')"]
-MouseLeaveAction=[!CommandMeasure LuaPage "setThai('Leave')"]
+LeftMouseUpAction=[!CommandMeasure LuaLanguage "setLanguage('Thai')"]
+MouseOverAction=[!CommandMeasure LuaLanguage "setThai('Over')"]
+MouseLeaveAction=[!CommandMeasure LuaLanguage "setThai('Leave')"]
 
 [MeterLangTurkish]
 Meter=String
 MeterStyle=LanguageActive
-X=772
+X=785
 Y=25R
 Text=Turkish
-LeftMouseUpAction=[!CommandMeasure LuaPage "setLanguage('Turkish')"]
-MouseOverAction=[!CommandMeasure LuaPage "setTurkish('Over')"]
-MouseLeaveAction=[!CommandMeasure LuaPage "setTurkish('Leave')"]
+LeftMouseUpAction=[!CommandMeasure LuaLanguage "setLanguage('Turkish')"]
+MouseOverAction=[!CommandMeasure LuaLanguage "setTurkish('Over')"]
+MouseLeaveAction=[!CommandMeasure LuaLanguage "setTurkish('Leave')"]
 
 [MeterLangUkrainian]
 Meter=String
@@ -351,9 +364,9 @@ MeterStyle=LanguageActive
 X=175r
 Y=0r
 Text=Ukrainian
-LeftMouseUpAction=[!CommandMeasure LuaPage "setLanguage('Ukrainian')"]
-MouseOverAction=[!CommandMeasure LuaPage "setUkrainian('Over')"]
-MouseLeaveAction=[!CommandMeasure LuaPage "setUkrainian('Leave')"]
+LeftMouseUpAction=[!CommandMeasure LuaLanguage "setLanguage('Ukrainian')"]
+MouseOverAction=[!CommandMeasure LuaLanguage "setUkrainian('Over')"]
+MouseLeaveAction=[!CommandMeasure LuaLanguage "setUkrainian('Leave')"]
 
 [MeterLangVietnamese]
 Meter=String
@@ -361,6 +374,6 @@ MeterStyle=LanguageActive
 X=175r
 Y=0r
 Text=Vietnamese
-LeftMouseUpAction=[!CommandMeasure LuaPage "setLanguage('Vietnamese')"]
-MouseOverAction=[!CommandMeasure LuaPage "setVietnamese('Over')"]
-MouseLeaveAction=[!CommandMeasure LuaPage "setVietnamese('Leave')"]
+LeftMouseUpAction=[!CommandMeasure LuaLanguage "setLanguage('Vietnamese')"]
+MouseOverAction=[!CommandMeasure LuaLanguage "setVietnamese('Over')"]
+MouseLeaveAction=[!CommandMeasure LuaLanguage "setVietnamese('Leave')"]

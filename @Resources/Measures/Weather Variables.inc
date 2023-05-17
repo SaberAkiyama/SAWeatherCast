@@ -1,84 +1,77 @@
-; © 2021 by Saber Akiyama
-
-; Combined variables to work as an @include file for TWC weather data retrieval
-
-; ################# ONE-TIME SETUP INSTRUCTIONS #############################
-
-; Getting and setting your LocationCode can be done one of a couple of ways.
-
-; Go to https://weather.com/
-; Search for your city by name.
-
-; Use the long number at the end of the resulting URL, for example:
-; "https://weather.com/en-US/weather/today/l/ccb09a4a3cb9ff4c8c5324b73d8cc6c986ab1e58789e0d37c0a1154b46ec30e9"
-
-; The LocationCode would be "ccb09a4a3cb9ff4c8c5324b73d8cc6c986ab1e58789e0d37c0a1154b46ec30e9"
-; Copy and enter that as the value for "LocationCode" below.
-
-[Variables]
-
-LangLoc=en-US
-
-LocationCode=ccb09a4a3cb9ff4c8c5324b73d8cc6c986ab1e58789e0d37c0a1154b46ec30e9
+; © 2023 by Saber Akiyama
 
 ; ===========================================================================
 ; DO NOT CHANGE THIS FILE UNLESS YOU ARE SURE YOU KNOW WHAT YOU ARE DOING !!!
 ; ===========================================================================
 
+[Variables]
+
+Latitude=40.74844637
+
+Longitude=-73.985663658
+
+TypeUnits=e
+
+LangLoc=en-US
+
 ; ===========================================================================
-; WEATHER URL
+; WEATHER CORE
 
-URLCurrentCore=https://weather.com/#LangLoc#/weather/today/l/#LocationCode#
+APIKey=21d8a80b3d6b444998a80b3d6b1449d3
 
-URLTendayCore=https://weather.com/#LangLoc#/weather/tenday/l/#LocationCode#
+URLWeatherCore=https://api.weather.com/v3/aggcommon/v3-wx-observations-current;v3-wx-forecast-daily-15day;v3alertsHeadlines;v3-location-point;v3-wx-forecast-hourly-12hour?format=json&geocode=#Latitude#,#Longitude#&units=#TypeUnits#&language=#LangLoc#&apiKey=#APIKey#
+
+URLAirQualityCore=https://api.weather.com/v3/wx/globalAirQuality?geocode=#Latitude#,#Longitude#&language=#LangLoc#&scale=EPA&format=json&apiKey=#APIKey#
 
 ; ===========================================================================
 ; WEATHER DAILY CORE REGEXP
 
-CurrentLocation=(?siU)\\"getSunV3LocationPointUrlConfig\\":{.*\\"country\\":\\"(.*)\\",.*\\"displayName\\":\\"(.*)\\",.*}.*\\"getSunV3CurrentObservationsUrlConfig\\":{.*\\"iconCode\\":(.*),.*\\"pressureAltimeter\\":(.*),.*\\"relativeHumidity\\":(.*),.*\\"sunriseTimeLocal\\":\\"(.*)\\",.*\\"sunsetTimeLocal\\":\\"(.*)\\",.*\\"temperature\\":(.*),.*\\"temperatureDewPoint\\":(.*),\\"temperatureFeelsLike\\":(.*),.*\\"uvIndex\\":(.*),\\"validTimeLocal\\":\\"(.*)\\",.*\\"visibility\\":(.*),\\"windDirection\\":(.*),\\"windDirectionCardinal\\":\\"(.*)\\",.*\\"windSpeed\\":(.*),\\"wxPhraseLong\\":\\"(.*)\\",.*}.*\\"getSunV3DailyForecastWithHeadersUrlConfig\\":{.*\\"moonPhase\\":.\\"(.*)\\",.*\\"temperatureMax\\":\D(.*),.*\\"temperatureMin\\":\D(.*),.*}
+LocationPoint=(?siU)"v3-location-point":.*{.*"country":"(.*)",.*"displayName":"(.*)",.*}
 
-OneHourForecast=(?siU)\\"getSunV3HourlyForecastUrlConfig\\":{.*\\"duration:1day;.*\\"iconCode\\":\D(.*),.*\\"precipChance\\":\D(.*),.*\\"relativeHumidity\\":\D(.*),.*\\"temperature\\":\D(.*),.*\\"temperatureFeelsLike\\":\D(.*),.*\\"uvIndex\\":\D(.*),.*\\"validTimeLocal\\":.\\"(.*)\\",.*\\"windDirectionCardinal\\":.\\"(.*)\\",.*\\"windSpeed\\":\D(.*),.*\\"wxPhraseLong\\":.\\"(.*)\\",.*}
+CurrentObservations=(?siU)"v3-wx-observations-current":.*{.*"iconCode":(.*),.*"pressureAltimeter":(.*),.*"relativeHumidity":(.*),.*"sunriseTimeLocal":"(.*)",.*"sunsetTimeLocal":"(.*)",.*"temperature":(.*),.*"temperatureDewPoint":(.*),"temperatureFeelsLike":(.*),.*"uvIndex":(.*),"validTimeLocal":"(.*)",.*"visibility":(.*),.*"windDirectionCardinal":"(.*)",.*"windSpeed":(.*),"wxPhraseLong":"(.*)",.*}.*"v3-wx-forecast-daily-15day":.*{.*"moonPhase":."(.*)",.*"temperatureMax":\D(.*),.*"temperatureMin":\D(.*),.*}.*"v3-location-point":.*{.*"country":"(.*)",.*"displayName":"(.*)",.*}
 
-SixHourForecast=(?siU)\\"getSunV3HourlyForecastUrlConfig\\":{.*\\"iconCode\\":\D(.*),(.*),(.*),(.*),(.*),(.*),.*\\"precipChance\\":\D(.*),(.*),(.*),(.*),(.*),(.*),.*\\"temperature\\":\D(.*),(.*),(.*),(.*),(.*),(.*),.*\\"validTimeLocal\\":.\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",.*\\"windDirectionCardinal\\":.\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",.*\\"windSpeed\\":\D(.*),(.*),(.*),(.*),(.*),(.*),.*\\"wxPhraseLong\\":.\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",.*"}
+OneHourForecast=(?siU)"v3-wx-forecast-hourly-12hour":.*{.*"iconCode":\D(.*),.*"precipChance":\D(.*),.*"relativeHumidity":\D(.*),.*"temperature":\D(.*),.*"temperatureFeelsLike":\D(.*),.*"uvIndex":\D(.*),.*"validTimeLocal":."(.*)",.*"windDirectionCardinal":."(.*)",.*"windSpeed":\D(.*),.*"wxPhraseLong":."(.*)",.*}
 
-AirQuality=(?siU)\\"getSunV3GlobalAirQualityUrlConfig\\":.*{.*\\"airQualityIndex\\":(.*),\\"airQualityCategory\\":\\"(.*)\\",.*,\\"primaryPollutant\\":\\"(.*)\\".*}
+SixHourForecast=(?siU)"v3-wx-forecast-hourly-12hour":.*{.*"iconCode":\D(.*),(.*),(.*),(.*),(.*),(.*),.*"precipChance":\D(.*),(.*),(.*),(.*),(.*),(.*),.*"temperature":\D(.*),(.*),(.*),(.*),(.*),(.*),.*"validTimeLocal":."(.*)","(.*)","(.*)","(.*)","(.*)","(.*)",.*"windDirectionCardinal":."(.*)","(.*)","(.*)","(.*)","(.*)","(.*)",.*"windSpeed":\D(.*),(.*),(.*),(.*),(.*),(.*),.*"wxPhraseLong":."(.*)","(.*)","(.*)","(.*)","(.*)","(.*)",.*}
 
-Pollutants=(?siU)\\"getSunV3GlobalAirQualityUrlConfig\\":.*{.*\\"pollutants\\":.*(?(?=.*\\"NO2\\").*:{\\"name\\":\\"(.*)\\",\\"phrase\\":\\"(.*)\\",\\"amount\\":(.*),\\"unit\\":\\"(.*)\\",\\"category\\":\\"(.*)\\",\\"categoryIndex\\":.*,\\"index\\":.*).*(?(?=.*\\"O3\\").*:{\\"name\\":\\"(.*)\\",\\"phrase\\":\\"(.*)\\",\\"amount\\":(.*),\\"unit\\":\\"(.*)\\",\\"category\\":\\"(.*)\\",\\"categoryIndex\\":.*,\\"index\\":.*).*(?(?=.*\\"SO2\\").*:{\\"name\\":\\"(.*)\\",\\"phrase\\":\\"(.*)\\",\\"amount\\":(.*),\\"unit\\":\\"(.*)\\",\\"category\\":\\"(.*)\\",\\"categoryIndex\\":.*,\\"index\\":.*).*(?(?=.*\\"PM2.5\\").*:{\\"name\\":\\"(.*)\\",\\"phrase\\":\\"(.*)\\",\\"amount\\":(.*),\\"unit\\":\\"(.*)\\",\\"category\\":\\"(.*)\\",\\"categoryIndex\\":.*,\\"index\\":.*).*(?(?=.*\\"PM10\\").*:{\\"name\\":\\"(.*)\\",\\"phrase\\":\\"(.*)\\",\\"amount\\":(.*),\\"unit\\":\\"(.*)\\",\\"category\\":\\"(.*)\\",\\"categoryIndex\\":.*,\\"index\\":.*).*(?(?=.*\\"CO\\").*:{\\"name\\":\\"(.*)\\",\\"phrase\\":\\"(.*)\\",\\"amount\\":(.*),\\"unit\\":\\"(.*)\\",\\"category\\":\\"(.*)\\",\\"categoryIndex\\":.*,\\"index\\":.*),.*}
+AirQuality=(?siU)"globalairquality":.*{.*"airQualityIndex":(.*),"airQualityCategory":"(.*)",.*"primaryPollutant":"(.*)",.*}
 
-AirQualityDetails=(?siU)\\"getSunV3GlobalAirQualityUrlConfig\\":.*{.*\\"messages\\":{.*\\"General\\":{.*\\"text\\":\\"(.*)\\"}},.*}
+Pollutants=(?siU)"globalairquality":.*"pollutants":.*(?(?=.*"CO").*:{"name":"(.*)","phrase":"(.*)","amount":(.*),"unit":"(.*)","category":"(.*)","categoryIndex":.*,"index":.*})(?(?=.*"NO2").*:{"name":"(.*)","phrase":"(.*)","amount":(.*),"unit":"(.*)","category":"(.*)","categoryIndex":.*,"index":.*})(?(?=.*"O3").*:{"name":"(.*)","phrase":"(.*)","amount":(.*),"unit":"(.*)","category":"(.*)","categoryIndex":.*,"index":.*})(?(?=.*"PM10").*:{"name":"(.*)","phrase":"(.*)","amount":(.*),"unit":"(.*)","category":"(.*)","categoryIndex":.*,"index":.*})(?(?=.*"PM2.5").*:{"name":"(.*)","phrase":"(.*)","amount":(.*),"unit":"(.*)","category":"(.*)","categoryIndex":.*,"index":.*})(?(?=.*"SO2").*:{"name":"(.*)","phrase":"(.*)","amount":(.*),"unit":"(.*)","category":"(.*)","categoryIndex":.*,"index":.*})
 
-SeverityAlert=(?siU)\\"getSunWeatherAlertHeadlinesUrlConfig\\":.*{.*,\\"alerts\\":.*(?(?=.*{\\"detailKey\\").*:\\".*\\",.*,\\"eventDescription\\":\\"(.*)\\",\\"severityCode\\":(.*),\\"severity\\":\\"(.*)\\",.*,\\"headlineText\\":\\"(.*)\\",.*}).*(?(?=.*{\\"detailKey\\").*:\\".*\\",.*,\\"eventDescription\\":\\"(.*)\\",\\"severityCode\\":(.*),\\"severity\\":\\"(.*)\\",.*,\\"headlineText\\":\\"(.*)\\",.*}).*(?(?=.*{\\"detailKey\\").*:\\".*\\",.*,\\"eventDescription\\":\\"(.*)\\",\\"severityCode\\":(.*),\\"severity\\":\\"(.*)\\",.*,\\"headlineText\\":\\"(.*)\\",.*}).*(?(?=.*{\\"detailKey\\").*:\\".*\\",.*,\\"eventDescription\\":\\"(.*)\\",\\"severityCode\\":(.*),\\"severity\\":\\"(.*)\\",.*,\\"headlineText\\":\\"(.*)\\",.*}).*(?(?=.*{\\"detailKey\\").*:\\".*\\",.*,\\"eventDescription\\":\\"(.*)\\",\\"severityCode\\":(.*),\\"severity\\":\\"(.*)\\",.*,\\"headlineText\\":\\"(.*)\\",.*}).*(?(?=.*{\\"detailKey\\").*:\\".*\\",.*,\\"eventDescription\\":\\"(.*)\\",\\"severityCode\\":(.*),\\"severity\\":\\"(.*)\\",.*,\\"headlineText\\":\\"(.*)\\",.*}).*(?(?=.*{\\"detailKey\\").*:\\".*\\",.*,\\"eventDescription\\":\\"(.*)\\",\\"severityCode\\":(.*),\\"severity\\":\\"(.*)\\",.*,\\"headlineText\\":\\"(.*)\\",.*}).*
+AirQualityDetails=(?siU)"globalairquality":.*{.*"messages":.*"General":{.*"text":"(.*)"},.*}
+
+SeverityAlert=(?siU)"v3alertsHeadlines":(?(?=.*{.*,"alerts":).*{.*,"alerts":.*(?(?=.*{"detailKey").*:".*",.*,"eventDescription":"(.*)","severityCode":(.*),"severity":"(.*)",.*,"headlineText":"(.*)",.*}).*(?(?=.*{"detailKey").*:".*",.*,"eventDescription":"(.*)","severityCode":(.*),"severity":"(.*)",.*,"headlineText":"(.*)",.*}).*(?(?=.*{"detailKey").*:".*",.*,"eventDescription":"(.*)","severityCode":(.*),"severity":"(.*)",.*,"headlineText":"(.*)",.*}).*(?(?=.*{"detailKey").*:".*",.*,"eventDescription":"(.*)","severityCode":(.*),"severity":"(.*)",.*,"headlineText":"(.*)",.*}).*(?(?=.*{"detailKey").*:".*",.*,"eventDescription":"(.*)","severityCode":(.*),"severity":"(.*)",.*,"headlineText":"(.*)",.*}).*(?(?=.*{"detailKey").*:".*",.*,"eventDescription":"(.*)","severityCode":(.*),"severity":"(.*)",.*,"headlineText":"(.*)",.*}).*(?(?=.*{"detailKey").*:".*",.*,"eventDescription":"(.*)","severityCode":(.*),"severity":"(.*)",.*,"headlineText":"(.*)",.*}).*)
 
 ; ===========================================================================
 ; WEATHER TENDAY CORE REGEXP
 
-OneDayForecast=(?siU)\\"getSunV3DailyForecastWithHeadersUrlConfig\\":{.*\\"moonriseTimeLocal\\":.*\\"(.*)\\",\\"(.*)\\",.*\\"moonsetTimeLocal\\":.*\\"(.*)\\",\\"(.*)\\",.*\\"sunriseTimeLocal\\":.*\\"(.*)\\",\\"(.*)\\",.*\\"sunsetTimeLocal\\":.*\\"(.*)\\",\\"(.*)\\",.*\\"daypartName\\":(.*),\\"(.*)\\",\\"(.*)\\",.*\\"iconCode\\":(.*),(.*),(.*),.*\\"precipChance\\":(.*),(.*),(.*),.*\\"relativeHumidity\\":(.*),(.*),(.*),.*\\"temperature\\":(.*),(.*),(.*),.*\\"uvIndex\\":(.*),(.*),(.*),.*\\"windDirectionCardinal\\":(.*),\\"(.*)\\",\\"(.*)\\",.*\\"windSpeed\\":(.*),(.*),(.*),.*\\"wxPhraseLong\\":(.*),\\"(.*)\\",\\"(.*)\\",.*}
+OneDayForecast=(?siU)"v3-wx-forecast-daily-15day":.*{.*"moonriseTimeLocal":.*"(.*)","(.*)",.*"moonsetTimeLocal":.*"(.*)","(.*)",.*"sunriseTimeLocal":.*"(.*)","(.*)",.*"sunsetTimeLocal":.*"(.*)","(.*)",.*"daypartName":(.*),"(.*)","(.*)",.*"iconCode":(.*),(.*),(.*),.*"precipChance":(.*),(.*),(.*),.*"relativeHumidity":(.*),(.*),(.*),.*"temperature":(.*),(.*),(.*),.*"uvIndex":(.*),(.*),(.*),.*"windDirectionCardinal":(.*),"(.*)","(.*)",.*"windSpeed":(.*),(.*),(.*),.*"wxPhraseLong":(.*),"(.*)","(.*)",.*}
 
-SevenDayDOW=(?siU)\\"getSunV3DailyForecastWithHeadersUrlConfig\\":{.*\\"dayOfWeek\\":(.*),\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",.*}
+SevenDayDOW=(?siU)"v3-wx-forecast-daily-15day":.*{.*"dayOfWeek":.*"(.*)","(.*)","(.*)","(.*)","(.*)","(.*)","(.*)",.*}
 
-SevenDayTempMax=(?siU)\\"getSunV3DailyForecastWithHeadersUrlConfig\\":{.*\\"dayOfWeek\\":.*\\"temperatureMax\\":(.*),(.*),(.*),(.*),(.*),(.*),(.*),.*}
+SevenDayTempMax=(?siU)"v3-wx-forecast-daily-15day":.*{.*"temperatureMax":(.*),(.*),(.*),(.*),(.*),(.*),(.*),.*}
 
-SevenDayTempMin=(?siU)\\"getSunV3DailyForecastWithHeadersUrlConfig\\":{.*\\"dayOfWeek\\":.*\\"temperatureMin\\":(.*),(.*),(.*),(.*),(.*),(.*),(.*),.*}
+SevenDayTempMin=(?siU)"v3-wx-forecast-daily-15day":.*{.*"temperatureMin":(.*),(.*),(.*),(.*),(.*),(.*),(.*),.*}
 
-SevenDayIcon=(?siU)\\"getSunV3DailyForecastWithHeadersUrlConfig\\":{.*\\"dayOfWeek\\":.*\\"iconCode\\":(.*),(.*),(.*),(.*),(.*),(.*),(.*),(.*),(.*),(.*),(.*),(.*),(.*),(.*),.*}
+SevenDayIcon=(?siU)"v3-wx-forecast-daily-15day":.*{.*"iconCode":(.*),(.*),(.*),(.*),(.*),(.*),(.*),(.*),(.*),(.*),(.*),(.*),(.*),(.*),(.*),.*}
 
-SevenDayPrecip=(?siU)\\"getSunV3DailyForecastWithHeadersUrlConfig\\":{.*\\"dayOfWeek\\":.*\\"precipChance\\":(.*),(.*),(.*),(.*),(.*),(.*),(.*),(.*),(.*),(.*),(.*),(.*),(.*),(.*),.*}
+SevenDayPrecip=(?siU)"v3-wx-forecast-daily-15day":.*{.*"precipChance":(.*),(.*),(.*),(.*),(.*),(.*),(.*),(.*),(.*),(.*),(.*),(.*),(.*),(.*),(.*),.*}
 
-SevenDayWDC=(?siU)\\"getSunV3DailyForecastWithHeadersUrlConfig\\":{.*\\"dayOfWeek\\":.*\\"windDirectionCardinal\\":(.*),\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",.*}
+SevenDayWDC=(?siU)"v3-wx-forecast-daily-15day":.*{.*"windDirectionCardinal":(.*),"(.*)","(.*)","(.*)","(.*)","(.*)","(.*)","(.*)","(.*)","(.*)","(.*)","(.*)","(.*)","(.*)",.*}
 
-SevenDayWindSpeed=(?siU)\\"getSunV3DailyForecastWithHeadersUrlConfig\\":{.*\\"dayOfWeek\\":.*\\"windSpeed\\":(.*),(.*),(.*),(.*),(.*),(.*),(.*),(.*),(.*),(.*),(.*),(.*),(.*),(.*),.*}
+SevenDayWindSpeed=(?siU)"v3-wx-forecast-daily-15day":.*{.*"windSpeed":(.*),(.*),(.*),(.*),(.*),(.*),(.*),(.*),(.*),(.*),(.*),(.*),(.*),(.*),.*}
 
-SevenDayCondition=(?siU)\\"getSunV3DailyForecastWithHeadersUrlConfig\\":{.*\\"dayOfWeek\\":.*\\"wxPhraseLong\\":(.*),\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",.*}
+SevenDayCondition=(?siU)"v3-wx-forecast-daily-15day":.*{.*"wxPhraseLong":(.*),"(.*)","(.*)","(.*)","(.*)","(.*)","(.*)","(.*)","(.*)","(.*)","(.*)","(.*)","(.*)","(.*)",.*}
 
-SevenDayDetails=(?siU)\\"getSunV3DailyForecastWithHeadersUrlConfig\\":{.*\\"iconCode\\":.*\\"narrative\\":(.*),\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",\\"(.*)\\",.*}
+SevenDayDetails=(?siU)"v3-wx-forecast-daily-15day":.*{.*"narrative":(.*),"(.*)","(.*)","(.*)","(.*)","(.*)","(.*)","(.*)","(.*)","(.*)","(.*)","(.*)","(.*)","(.*)",.*}
 
 ; ===========================================================================
-; WEATHER UNITS REGEXP
+; WEATHER UNITS
 
-CurrentUnits=(?siU)\\"wxu-today-details\\":{.*\\"feelsLike\\":\\"(.*)\\",.*\\"humidity\\":\\"(.*)\\",.*\\"uvIndex\\":\\"(.*)\\",.*\\"wind\\":\\"(.*)\\"}
+URLWeatherUnitsCore=https://weather.com/#LangLoc#/weather/hourbyhour/l/96f2f84af9a5f5d452eb0574d4e4d8a840c71b05e22264ebdc0056433a642c84
+
+URLAQUnitsCore=https://weather.com/#LangLoc#/weather/today/l/96f2f84af9a5f5d452eb0574d4e4d8a840c71b05e22264ebdc0056433a642c84
+
+WeatherUnits=(?siU)\\"wxu-general\\":{.*\\"in\\":\\"(.*)\\",.*\\"km\\":\\"(.*)\\",\\"km/h\\":\\"(.*)\\",.*\\"mb\\":\\"(.*)\\",\\"mi\\":\\"(.*)\\",.*\\"mph\\":\\"(.*)\\",.*\\"uvIndexExtreme\\":\\"(.*)\\",\\"uvIndexVal\\":\\"(.*)\\"}.*\\"wxu-weather-data\\":{.*\\"feelsLike\\":\\"(.*)\\",\\"humidity\\":\\"(.*)\\",\\"moonrise\\":\\"(.*)\\",\\"moonset\\":\\"(.*)\\",.*\\"sunrise\\":\\"(.*)\\",\\"sunset\\":\\"(.*)\\",\\"uvIndex\\":\\"(.*)\\",.*\\"wind\\":\\"(.*)\\"}
 
 AirQualityUnits=(?siU)\\"wxu-air-quality\\":{\\"airQuality\\":\\"(.*)\\",.*\\"allPollutants\\":\\"(.*)\\",.*\\"primaryPollutant\\":\\"(.*)\\",.*}
-
-TendayUnits=(?siU)\\"wxu-weather-data\\":{.*\\"humidity\\":\\"(.*)\\",\\"moonrise\\":\\"(.*)\\",\\"moonset\\":\\"(.*)\\",.*\\"sunrise\\":\\"(.*)\\",\\"sunset\\":\\"(.*)\\",\\"uvIndex\\":\\"(.*)\\",.*}
-
-WeatherUnits=(?siU)\\"wxu-general\\":{.*\\"in\\":\\"(.*)\\",.*\\"km\\":\\"(.*)\\",\\"km/h\\":\\"(.*)\\",.*\\"mb\\":\\"(.*)\\",\\"mi\\":\\"(.*)\\",.*\\"mph\\":\\"(.*)\\",.*\\"uvIndexExtreme\\":\\"(.*)\\",\\"uvIndexVal\\":\\"(.*)\\"}

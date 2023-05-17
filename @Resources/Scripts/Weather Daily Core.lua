@@ -76,7 +76,7 @@ function scaleUpWeather()
 	SKIN:Bang('!WriteKeyValue Variables WeatherScale "(#WeatherScale#+#ScrollMouseIncrement#)" "#@#Variables.inc"')
 	SKIN:Bang('!SetVariable WeatherScale "(#WeatherScale#+#ScrollMouseIncrement#)" "#CoreScaleFilePath#"')
 	SKIN:Bang('!UpdateMeterGroup WeatherScaleGroup')
-	
+
 end
 
 function scaleDownWeather()

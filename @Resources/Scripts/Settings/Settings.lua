@@ -2,88 +2,147 @@
 --; Lua Settings
 --; ============================================================
 
-function setRefreshAction()
+function setAutoRefresh()
 	SKIN:Bang('!FadeDuration "100"')
-	SKIN:Bang('!Move (#ScreenAreaWidth#/2)-640 (#ScreenAreaHeight#/2)-320')
+	SKIN:Bang('!Move "(#ScreenAreaWidth#/2)-640" "(#ScreenAreaHeight#/2)-320"')
 	SKIN:Bang('!Draggable "0"')
+	SKIN:Bang('!UpdateGroup WeatherSetting')
 
 end
 
-settingSelect = {
-	["Info"] = {
-		pageLine = "80"
-	},
-	["Skins"] = {
-		pageLine = "130"
-	},
-	["Weather"] = {
-		pageLine = "180"
-	},
-	["Language"] = {
-		pageLine = "230"
-	}
-}
+function setInfoPage()
+	SKIN:Bang('!WriteKeyValue Variables Page "Info" "#@#Variables.inc"')
+	SKIN:Bang('!WriteKeyValue Variables HiddenLineInfo "0" "#@#Variables.inc"')
 
-function setSettings(selectedSettings)
-	SKIN:Bang('!WriteKeyValue Variables Page "' .. selectedSettings .. '" "#@#Variables.inc"')
-	SKIN:Bang('!WriteKeyValue Variables PageLine "' .. settingSelect[selectedSettings]['pageLine'] .. '" "#@#Variables.inc"')
-	
-	SKIN:Bang('!Refresh')
-	
+	SKIN:Bang('!RefreshGroup WeatherSetting')
+
 end
+
+function setSkinsPage()
+	SKIN:Bang('!WriteKeyValue Variables Page "Skins" "#@#Variables.inc"')
+	SKIN:Bang('!WriteKeyValue Variables HiddenLineInfo "1" "#@#Variables.inc"')
+
+	SKIN:Bang('!RefreshGroup WeatherSetting')
+
+end
+
+function setCoordinatesPage()
+	SKIN:Bang('!WriteKeyValue Variables Page "Coordinates" "#@#Variables.inc"')
+	SKIN:Bang('!WriteKeyValue Variables HiddenLineInfo "1" "#@#Variables.inc"')
+
+	SKIN:Bang('!RefreshGroup WeatherSetting')
+
+end
+
+function setLanguagePage()
+	SKIN:Bang('!WriteKeyValue Variables Page "Language" "#@#Variables.inc"')
+	SKIN:Bang('!WriteKeyValue Variables HiddenLineInfo "1" "#@#Variables.inc"')
+	SKIN:Bang('!RefreshGroup WeatherSetting')
+
+end
+
+--; ============================================================
+--; Sliders
+--; ============================================================
+
+function setSliderRight()
+    SKIN:Bang('!SetVariable W1 "(Clamp(#W1#-10,50,320))"')
+    SKIN:Bang('!SetVariable TextAlpha "(Clamp(#TextAlpha#-10,0,255))"')
+    SKIN:Bang('!SetVariable X1 "(Clamp(#X1#-10,0,135))"')
+
+end
+
+function setSliderLeft()
+    SKIN:Bang('!SetVariable W1 "(Clamp(#W1#+10,50,320))"')
+    SKIN:Bang('!SetVariable TextAlpha "(Clamp(#TextAlpha#+10,0,255))"')
+    SKIN:Bang('!SetVariable X1 "(Clamp(#X1#+10,0,135))"')
+
+end
+
+function setSliderExpand()
+    SKIN:Bang('!CommandMeasure MeasureSliders "Stop 1"')
+    SKIN:Bang('!CommandMeasure MeasureSliders "Execute 2"')
+    SKIN:Bang('!ShowMeter ShapeSliderCollapse')
+    SKIN:Bang('!HideMeter ShapeSliderExpand')
+    SKIN:Bang('!WriteKeyValue Variables TextAlpha "255" "#@#Measures\\Action Timer Settings.inc"')
+    SKIN:Bang('!WriteKeyValue Variables W1 "320" "#@#Measures\\Action Timer Settings.inc"')
+    SKIN:Bang('!WriteKeyValue Variables X1 "135" "#@#Measures\\Action Timer Settings.inc"')
+    SKIN:Bang('!WriteKeyValue Variables StayExpand "1" "#@#Variables.inc"')
+    SKIN:Bang('!WriteKeyValue Variables StayCollapse "0" "#@#Variables.inc"')
+
+end
+
+function setSliderCollapse()
+    SKIN:Bang('!CommandMeasure MeasureSliders "Stop 2"')
+    SKIN:Bang('!CommandMeasure MeasureSliders "Execute 1"')
+    SKIN:Bang('!ShowMeter ShapeSliderExpand')
+    SKIN:Bang('!HideMeter ShapeSliderCollapse')
+    SKIN:Bang('!WriteKeyValue Variables TextAlpha "0" "#@#Measures\\Action Timer Settings.inc"')
+    SKIN:Bang('!WriteKeyValue Variables W1 "50" "#@#Measures\\Action Timer Settings.inc"')
+    SKIN:Bang('!WriteKeyValue Variables X1 "0" "#@#Measures\\Action Timer Settings.inc"')
+    SKIN:Bang('!WriteKeyValue Variables StayExpand "0" "#@#Variables.inc"')
+    SKIN:Bang('!WriteKeyValue Variables StayCollapse "1" "#@#Variables.inc"')
+
+end
+
+--; ============================================================
 
 function closeSettings()
 	SKIN:Bang('!DeactivateConfig "#ROOTCONFIG#" "Settings.ini"')
 	SKIN:Bang('!WriteKeyValue Variables Page "Info" "#@#Variables.inc"')
-	SKIN:Bang('!WriteKeyValue Variables PageLine "80" "#@#Variables.inc"')
-	
+
 end
 
 --; ============================================================
 
 hoverSelect = {
 	["Over"] = {
-		colorInfo = "255,215,0",
-		colorSkins = "255,215,0",
-		colorWeather = "255,215,0",
-		colorApply = "255,215,0",
-		colorClose = "225,65,105"
+		colorInfo = "0 | 0,0,0,1 ; 0.0 | 255,255,255,128 ; 1.0",
+		colorSkins = "0 | 0,0,0,1 ; 0.0 | 255,255,255,128 ; 1.0",
+		colorCoordinates = "0 | 0,0,0,1 ; 0.0 | 255,255,255,128 ; 1.0",
+		ColorLanguage = "0 | 0,0,0,1 ; 0.0 | 255,255,255,128 ; 1.0",
+		colorExit = "0 | 0,0,0,1 ; 0.0 | 255,0,0,128 ; 1.0"
 	},
 	["Leave"] = {
-		colorInfo = "255,255,255",
-		colorSkins = "255,255,255",
-		colorWeather = "255,255,255",
-		colorApply = "255,255,255",
-		colorClose = "255,255,255"
+		colorInfo = "0 | 0,0,0,1 ; 0.0 | 0,0,0,1 ; 1.0",
+		colorSkins = "0 | 0,0,0,1 ; 0.0 | 0,0,0,1 ; 1.0",
+		colorCoordinates = "0 | 0,0,0,1 ; 0.0 | 0,0,0,1 ; 1.0",
+		ColorLanguage = "0 | 0,0,0,1 ; 0.0 | 0,0,0,1 ; 1.0",
+		colorExit = "0 | 0,0,0,1 ; 0.0 | 0,0,0,1 ; 1.0"
 	}
 }
 
 function setSettingsInfo(selectedHover)
-	SKIN:Bang('!SetOption Page1 FontColor "' .. hoverSelect[selectedHover]['colorInfo'] .. '"')
-	SKIN:Bang('!Update')
+	SKIN:Bang('!SetOption ShapeInfo MyFillGradient "' .. hoverSelect[selectedHover]['colorInfo'] .. '"')
+	SKIN:Bang('!UpdateMeter *')
+	SKIN:Bang('!Redraw')
 
 end
 
 function setSettingsSkins(selectedHover)
-	SKIN:Bang('!SetOption Page2 FontColor "' .. hoverSelect[selectedHover]['colorSkins'] .. '"')
-	SKIN:Bang('!Update')
+	SKIN:Bang('!SetOption ShapeSkin MyFillGradient "' .. hoverSelect[selectedHover]['colorSkins'] .. '"')
+	SKIN:Bang('!UpdateMeter *')
+	SKIN:Bang('!Redraw')
 
 end
 
-function setSettingsWeather(selectedHover)
-	SKIN:Bang('!SetOption Page3 FontColor "' .. hoverSelect[selectedHover]['colorWeather'] .. '"')
-	SKIN:Bang('!Update')
+function setSettingsCoordinates(selectedHover)
+	SKIN:Bang('!SetOption ShapeCoordinates MyFillGradient "' .. hoverSelect[selectedHover]['colorCoordinates'] .. '"')
+	SKIN:Bang('!UpdateMeter *')
+	SKIN:Bang('!Redraw')
 
 end
 
 function setSettingsLanguage(selectedHover)
-	SKIN:Bang('!SetOption Page4 FontColor "' .. hoverSelect[selectedHover]['colorApply'] .. '"')
-	SKIN:Bang('!Update')
+	SKIN:Bang('!SetOption ShapeLanguage MyFillGradient "' .. hoverSelect[selectedHover]['ColorLanguage'] .. '"')
+	SKIN:Bang('!UpdateMeter *')
+	SKIN:Bang('!Redraw')
 
 end
 
-function setSettingsClose(selectedHover)
-	SKIN:Bang('!SetOption MeterCloseButton FontColor "' .. hoverSelect[selectedHover]['colorClose'] .. '"')
-	SKIN:Bang('!Update')
+function setSettingsExit(selectedHover)
+	SKIN:Bang('!SetOption ShapeExit MyFillGradient "' .. hoverSelect[selectedHover]['colorExit'] .. '"')
+	SKIN:Bang('!UpdateMeter *')
+	SKIN:Bang('!Redraw')
 
 end

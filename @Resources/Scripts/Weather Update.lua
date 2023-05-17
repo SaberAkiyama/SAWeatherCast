@@ -15,6 +15,12 @@ function netErrorDaily()
 
 	SKIN:Bang('!PauseMeasure MeasureWeatherCore')
 	SKIN:Bang('!DisableMeasure MeasureWeatherCore')
+	SKIN:Bang('!PauseMeasure MeasureAirQualityCore')
+	SKIN:Bang('!DisableMeasure MeasureAirQualityCore')
+	SKIN:Bang('!PauseMeasure MeasureAQUnitsCore')
+	SKIN:Bang('!DisableMeasure MeasureAQUnitsCore')
+	SKIN:Bang('!PauseMeasure MeasureDetailsCore')
+	SKIN:Bang('!DisableMeasure MeasureDetailsCore')
 
 end
 
@@ -27,6 +33,8 @@ function netErrorTenDay()
 
 	SKIN:Bang('!PauseMeasure MeasureWeatherTendayCore')
 	SKIN:Bang('!DisableMeasure MeasureWeatherTendayCore')
+	SKIN:Bang('!PauseMeasure MeasureDetailsCore')
+	SKIN:Bang('!DisableMeasure MeasureDetailsCore')
 
 end
 
@@ -34,6 +42,9 @@ function netConnectDaily()
 	SKIN:Bang('!Log "#NoticeText#" Notice')
 	SKIN:Bang('!Log "#RetrievingCurrentText#"')
 	SKIN:Bang('!EnableMeasure MeasureWeatherCore')
+	SKIN:Bang('!EnableMeasure MeasureAirQualityCore')
+	SKIN:Bang('!EnableMeasure MeasureAQUnitsCore')
+	SKIN:Bang('!EnableMeasure MeasureDetailsCore')
 
 	SKIN:Bang('!UnpauseMeasureGroup WeatherCurrentMeasure')
 	SKIN:Bang('!UnpauseMeasureGroup WeatherCurrentSlimMeasure')
@@ -44,6 +55,12 @@ function netConnectDaily()
 	SKIN:Bang('!UnpauseMeasureGroup WeatherSeverityMeasure')
 	SKIN:Bang('!UnpauseMeasure MeasureWeatherCore')
 	SKIN:Bang('!UpdateMeasure MeasureWeatherCore')
+	SKIN:Bang('!UnpauseMeasure MeasureAirQualityCore')
+	SKIN:Bang('!UpdateMeasure MeasureAirQualityCore')
+	SKIN:Bang('!UnpauseMeasure MeasureAQUnitsCore')
+	SKIN:Bang('!UpdateMeasure MeasureAQUnitsCore')
+	SKIN:Bang('!UnpauseMeasure MeasureDetailsCore')
+	SKIN:Bang('!UpdateMeasure MeasureDetailsCore')
 
 end
 
@@ -57,6 +74,8 @@ function netConnectTenDay()
 	SKIN:Bang('!UnpauseMeasureGroup WeatherSevenDayMeasure')
 	SKIN:Bang('!UnpauseMeasure MeasureWeatherTendayCore')
 	SKIN:Bang('!UpdateMeasure MeasureWeatherTendayCore')
+	SKIN:Bang('!UnpauseMeasure MeasureDetailsCore')
+	SKIN:Bang('!UpdateMeasure MeasureDetailsCore')
 
 end
 

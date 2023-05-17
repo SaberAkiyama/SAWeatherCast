@@ -2,35 +2,22 @@
 --; Lua Skins
 --; ============================================================
 
-skinTypeface = {
+skinSelect = {
 	["Typeface"] = {
 		skinInsert = "ExecuteBatch 1"
+	},
+	["Color Code"] = {
+		skinInsert = "ExecuteBatch 2"
 	}
 }
 
-skinColorPreset = {
-    ["Black"] = {
-        skinPreset = "0,0,0"
-    },
-    ["White"] = {
-        skinPreset = "255,255,255"
-    }
-}
-
-function setColorPreset(selectedPreset)
-    SKIN:Bang('!WriteKeyValue Variables ColorText "' .. selectedPreset .. '" "#@#Variables.inc"')
-    SKIN:Bang('!WriteKeyValue Variables ColorCode "' .. skinColorPreset[selectedPreset]['skinPreset'] .. '" "#@#Variables.inc"')
-
-    SKIN:Bang('!RefreshGroup WeatherSetting')
-end
-
-function setTypeface(selectedTypeface)
-	SKIN:Bang('!CommandMeasure MeterSkinInputTypeface "' .. skinTypeface[selectedTypeface]['skinInsert'] .. '"')
+function setTypeface(selectedSkin)
+	SKIN:Bang('!CommandMeasure MeterSkinInput "' .. skinSelect[selectedSkin]['skinInsert'] .. '"')
 
 end
 
-function setColor(selectedColor)
-	SKIN:Bang('!ActivateConfig "#ROOTCONFIG#\\Context" "Set Color Preset.ini"')
+function setColorCode(selectedSkin)
+	SKIN:Bang('!CommandMeasure MeterSkinInput "' .. skinSelect[selectedSkin]['skinInsert'] .. '"')
 
 end
 
@@ -56,18 +43,21 @@ hoverSkinSelect = {
 
 function setSkinTypeFace(selectedHover)
 	SKIN:Bang('!SetOption MeterTypeFaceActive FontColor "' .. hoverSkinSelect[selectedHover]['colorTypeface'] .. '"')
-	SKIN:Bang('!Update')
+	SKIN:Bang('!UpdateMeter *')
+	SKIN:Bang('!Redraw')
 
 end
 
 function setSkinColorText(selectedHover)
 	SKIN:Bang('!SetOption MeterColorTextActive FontColor "' .. hoverSkinSelect[selectedHover]['colorText'] .. '"')
-	SKIN:Bang('!Update')
+	SKIN:Bang('!UpdateMeter *')
+	SKIN:Bang('!Redraw')
 
 end
 
 function setSkinApply(selectedHover)
 	SKIN:Bang('!SetOption MeterApplyButton FontColor "' .. hoverSkinSelect[selectedHover]['colorApply'] .. '"')
-	SKIN:Bang('!Update')
+	SKIN:Bang('!UpdateMeter *')
+	SKIN:Bang('!Redraw')
 
 end

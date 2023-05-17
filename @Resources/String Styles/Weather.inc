@@ -32,7 +32,7 @@ DynamicVariables=1
 [WeatherInformationStyle]
 StringAlign=LeftCenter
 FontFace=#TypeFace#
-FontSize=(10*#WeatherScale#)
+FontSize=(12*#WeatherScale#)
 FontWeight=300
 FontColor=#ColorCode#
 ClipString=2
