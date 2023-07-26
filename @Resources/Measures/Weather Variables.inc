@@ -6,9 +6,9 @@
 
 [Variables]
 
-Latitude=40.74844637
+Latitude=40.74841244
 
-Longitude=-73.985663658
+Longitude=-73.98568118
 
 TypeUnits=e
 

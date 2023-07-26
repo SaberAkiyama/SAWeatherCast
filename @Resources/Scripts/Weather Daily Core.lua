@@ -4,7 +4,6 @@
 
 function updateDaily()
 	SKIN:Bang('!UpdateMeasure MeasureWeatherCore')
-	SKIN:Bang('!ShowMeter MeterWeatherRetrieve')
 	SKIN:Bang('!HideMeterGroup WeatherCurrentMeter')
 	SKIN:Bang('!HideMeterGroup WeatherCurrentSlimMeter')
 	SKIN:Bang('!HideMeterGroup WeatherCurrentExtraSlimMeter')
@@ -28,7 +27,6 @@ end
 function updateHourly()
 	SKIN:Bang('!UpdateMeasure MeasureWeatherCore')
 	
-	SKIN:Bang('!ShowMeter MeterWeatherRetrieve')
 	SKIN:Bang('!HideMeterGroup WeatherOneHourMeter')
 	SKIN:Bang('!HideMeterGroup WeatherSixHourMeter')
 	SKIN:Bang('!DisableMeasureGroup WeatherOneHourMeasure')
@@ -41,7 +39,6 @@ end
 function finishCurrent()
 	SKIN:Bang('!Log "#RetrievedCurrentText#"')
 
-	SKIN:Bang('!HideMeter MeterWeatherRetrieve')
 	SKIN:Bang('!ShowMeterGroup WeatherCurrentMeter')
 	SKIN:Bang('!ShowMeterGroup WeatherCurrentSlimMeter')
 	SKIN:Bang('!ShowMeterGroup WeatherCurrentExtraSlimMeter')
@@ -60,7 +57,6 @@ end
 --; ==================================================
 
 function finishHourly()
-	SKIN:Bang('!HideMeter MeterWeatherRetrieve')
 	SKIN:Bang('!ShowMeterGroup WeatherOneHourMeter')
 	SKIN:Bang('!ShowMeterGroup WeatherSixHourMeter')
 	SKIN:Bang('!EnableMeasureGroup WeatherOneHourMeasure')

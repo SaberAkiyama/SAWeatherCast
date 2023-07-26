@@ -4,7 +4,6 @@
 
 function netErrorDaily()
 	SKIN:Bang('!Log "#RetryText#" Warning')
-	SKIN:Bang('!ShowMeter MeterWeatherRetrieve')
 	SKIN:Bang('!HideMeterGroup WeatherCurrentMeter')
 	SKIN:Bang('!HideMeterGroup WeatherCurrentSlimMeter')
 	SKIN:Bang('!HideMeterGroup WeatherCurrentExtraSlimMeter')
@@ -26,7 +25,6 @@ end
 
 function netErrorTenDay()
 	SKIN:Bang('!Log "#RetryText#" Warning')
-	SKIN:Bang('!ShowMeter MeterWeatherRetrieveDaily')
 	SKIN:Bang('!HideMeterGroup WeatherOneDayMeter')
 	SKIN:Bang('!HideMeterGroup WeatherOneDaySlimMeter')
 	SKIN:Bang('!HideMeterGroup WeatherSevenDayMeter')

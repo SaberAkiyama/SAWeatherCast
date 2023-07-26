@@ -1,7 +1,7 @@
 [Variables]
 
 Page=Info
-HiddenLineInfo=0
+HiddenLineInfo=1
 
 TypeFace=Roboto
 ColorCode=255,255,255
