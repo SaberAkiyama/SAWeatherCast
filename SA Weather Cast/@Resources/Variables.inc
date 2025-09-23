@@ -19,17 +19,17 @@ PressureUnitShort=In
 
 ; ====================================================================================================
 
-CurrentTimeToggle=1
+CurrentTimeToggle=0
 OneHourTimeToggle=1
 SixHourTimeToggle=0
 OneDayTimeToggle=1
-OneDaySlimTimeToggle=1
+OneDaySlimTimeToggle=0
 
-CurrentTime=12H
+CurrentTime=24H
 OneHourTime=12H
 SixHourTime=24H
 OneDayTime=12H
-OneDaySlimTime=12H
+OneDaySlimTime=24H
 
 ; ====================================================================================================
 
@@ -38,4 +38,4 @@ ScrollMouseIncrement=0.1
 StayExpand=0
 StayCollapse=1
 
-UACore=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+UACore=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.3485.81

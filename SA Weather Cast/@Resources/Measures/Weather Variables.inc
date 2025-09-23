@@ -6,9 +6,9 @@
 
 [Variables]
 
-Latitude=40.74844637
+Latitude=40.751764
 
-Longitude=-73.985663658
+Longitude=-73.9780977
 
 TypeUnits=e
 
@@ -17,7 +17,7 @@ LangLoc=en-US
 ; ===========================================================================
 ; WEATHER CORE
 
-APIKey=21d8a80b3d6b444998a80b3d6b1449d3
+APIKey=71f92ea9dd2f4790b92ea9dd2f779061
 
 URLWeatherCore=https://api.weather.com/v3/aggcommon/v3-wx-observations-current;v3-wx-forecast-daily-15day;v3alertsHeadlines;v3-location-point;v3-wx-forecast-hourly-12hour?format=json&geocode=#Latitude#,#Longitude#&units=#TypeUnits#&language=#LangLoc#&apiKey=#APIKey#
 
@@ -68,9 +68,9 @@ SevenDayDetails=(?siU)"v3-wx-forecast-daily-15day":.*{.*"narrative":(.*),"(.*)",
 ; ===========================================================================
 ; WEATHER UNITS
 
-URLWeatherUnitsCore=https://weather.com/#LangLoc#/weather/hourbyhour/l/96f2f84af9a5f5d452eb0574d4e4d8a840c71b05e22264ebdc0056433a642c84
+URLWeatherUnitsCore=https://weather.com/#LangLoc#/weather/hourbyhour/l/ff5134934983e1045c08679016f0419f292be8a06fa5384ae16cdc10bb015f45
 
-URLAQUnitsCore=https://weather.com/#LangLoc#/weather/today/l/96f2f84af9a5f5d452eb0574d4e4d8a840c71b05e22264ebdc0056433a642c84
+URLAQUnitsCore=https://weather.com/#LangLoc#/weather/today/l/ff5134934983e1045c08679016f0419f292be8a06fa5384ae16cdc10bb015f45
 
 WeatherUnits=(?siU)\\"wxu-general\\":{.*\\"in\\":\\"(.*)\\",.*\\"km\\":\\"(.*)\\",\\"km/h\\":\\"(.*)\\",.*\\"mb\\":\\"(.*)\\",\\"mi\\":\\"(.*)\\",.*\\"mph\\":\\"(.*)\\",.*\\"uvIndexExtreme\\":\\"(.*)\\",\\"uvIndexVal\\":\\"(.*)\\"}.*\\"wxu-weather-data\\":{.*\\"feelsLike\\":\\"(.*)\\",\\"humidity\\":\\"(.*)\\",\\"moonrise\\":\\"(.*)\\",\\"moonset\\":\\"(.*)\\",.*\\"sunrise\\":\\"(.*)\\",\\"sunset\\":\\"(.*)\\",\\"uvIndex\\":\\"(.*)\\",.*\\"wind\\":\\"(.*)\\"}
 

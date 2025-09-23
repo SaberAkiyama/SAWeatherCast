@@ -7,7 +7,7 @@
 
 [Variables]
 
-LatestVersion=1.1.2
+LatestVersion=v2.0.2
 TextUpdate=Update has disabled
 ToggleUpdate=Off
 DisableUpdate=1
